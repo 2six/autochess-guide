@@ -698,9 +698,13 @@
         $('.count_pieces').text(pieces_num);
 
         if(elf<3){
-          $('.elf_synergy').text("　");
-        } else if(elf%3==0) {
-          $('.elf_synergy').text('(' + elf + ')');
+          $('.elf_synergy').text('(3)(6)(9)');
+        } else if(elf==3) {
+          $('.elf_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+        } else if(elf==6) {
+          $('.elf_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(elf==9) {
+          $('.elf_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
         }
         if(elf==0){
           $('.count_elf').css('display','none');
@@ -710,9 +714,13 @@
         }
 
         if(human<2){
-          $('.human_synergy').text("　");
-        } else if(human%2==0) {
-          $('.human_synergy').text('(' + human + ')');
+          $('.human_synergy').text("(2)(4)(6)");
+        } else if(human==2) {
+          $('.human_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        } else if(human==4) {
+          $('.human_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(human==6) {
+          $('.human_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
         }
         if(human==0){
           $('.count_human').css('display','none');
@@ -722,9 +730,13 @@
         }
 
         if(beast<2){
-          $('.beast_synergy').text("　");
-        } else if(beast%2==0) {
-          $('.beast_synergy').text('(' + beast + ')');
+          $('.beast_synergy').text("(3)(6)(9)");
+        } else if(beast==3) {
+          $('.beast_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+        } else if(beast==6) {
+          $('.beast_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(beast==9) {
+          $('.beast_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
         }
         if(beast==0){
           $('.count_beast').css('display','none');
@@ -734,9 +746,11 @@
         }
 
         if(goblin<3){
-          $('.goblin_synergy').text("　");
-        } else if(goblin%3==0) {
-          $('.goblin_synergy').text('(' + goblin + ')');
+          $('.goblin_synergy').text("(3)(6)");
+        } else if(goblin==3) {
+          $('.goblin_synergy').html('<span style="color:white;">(3)</span>(6)');
+        } else if(goblin==6) {
+          $('.goblin_synergy').html('<span style="color:white;">(3)(6)</span>');
         }
         if(goblin==0){
           $('.count_goblin').css('display','none');
@@ -746,9 +760,9 @@
         }
 
         if(demon<1){
-          $('.demon_synergy').text("　");
-        } else if(demon%1==0) {
-          $('.demon_synergy').text('(' + demon + ')');
+          $('.demon_synergy').text("(1)");
+        } else if(demon==1) {
+          $('.demon_synergy').html('<span style="color:white;">(1)</span>');
         }
         if(demon==0){
           $('.count_demon').css('display','none');
@@ -758,9 +772,13 @@
         }
 
         if(undead<2){
-          $('.undead_synergy').text("　");
-        } else if(undead%2==0) {
-          $('.undead_synergy').text('(' + undead + ')');
+          $('.undead_synergy').text("(2)(4)(6)");
+        } else if(undead==2) {
+          $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        } else if(undead==4) {
+          $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(undead==6) {
+          $('.undead_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
         }
         if(undead==0){
           $('.count_undead').css('display','none');
@@ -770,9 +788,11 @@
         }
 
         if(orc<2){
-          $('.orc_synergy').text("　");
-        } else if(orc%2==0) {
-          $('.orc_synergy').text('(' + orc + ')');
+          $('.orc_synergy').text("(2)(4)");
+        } else if(orc==2) {
+          $('.orc_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(orc==4) {
+          $('.orc_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(orc==0){
           $('.count_orc').css('display','none');
@@ -782,9 +802,11 @@
         }
 
         if(naga<2){
-          $('.naga_synergy').text("　");
-        } else if(naga%2==0) {
-          $('.naga_synergy').text('(' + naga + ')');
+          $('.naga_synergy').text("(2)(4)");
+        } else if(naga==2) {
+          $('.naga_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(naga==4) {
+          $('.naga_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(naga==0){
           $('.count_naga').css('display','none');
@@ -794,9 +816,11 @@
         }
 
         if(elementals<2){
-          $('.elementals_synergy').text("　");
-        } else if(elementals%2==0) {
-          $('.elementals_synergy').text('(' + elementals + ')');
+          $('.elementals_synergy').text("(2)(4)");
+        } else if(elementals==2) {
+          $('.elementals_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(elementals==2) {
+          $('.elementals_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(elementals==0){
           $('.count_elementals').css('display','none');
@@ -806,9 +830,11 @@
         }
 
         if(troll<2){
-          $('.troll_synergy').text("　");
-        } else if(troll%2==0) {
-          $('.troll_synergy').text('(' + troll + ')');
+          $('.troll_synergy').text("(2)(4)");
+        } else if(troll==2) {
+          $('.troll_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(troll==4) {
+          $('.troll_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(troll==0){
           $('.count_troll').css('display','none');
@@ -818,9 +844,9 @@
         }
 
         if(dragon<3){
-          $('.dragon_synergy').text("　");
-        } else if(dragon%3==0) {
-          $('.dragon_synergy').text('(' + dragon + ')');
+          $('.dragon_synergy').text("(3)");
+        } else if(dragon==3) {
+          $('.dragon_synergy').html('<span style="color:white;">(3)</span>');
         }
         if(dragon==0){
           $('.count_dragon').css('display','none');
@@ -830,9 +856,9 @@
         }
 
         if(dwarf<2){
-          $('.dwarf_synergy').text("　");
-        } else if(dwarf%2==0) {
-          $('.dwarf_synergy').text('(' + dwarf + ')');
+          $('.dwarf_synergy').text("(2)");
+        } else if(dwarf==2) {
+          $('.dwarf_synergy').html('<span style="color:white;">(2)</span>');
         }
         if(dwarf==0){
           $('.count_dwarf').css('display','none');
@@ -842,9 +868,9 @@
         }
 
         if(satyr<1){
-          $('.satyr_synergy').text("　");
-        } else if(satyr%1==0) {
-          $('.satyr_synergy').text('(' + satyr + ')');
+          $('.satyr_synergy').text("(1)");
+        } else if(satyr==1) {
+          $('.satyr_synergy').html('<span style="color:white;">(1)</span>');
         }
         if(satyr==0){
           $('.count_satyr').css('display','none');
@@ -854,9 +880,9 @@
         }
 
         if(ogre<1){
-          $('.ogre_synergy').text("　");
-        } else if(ogre%1==0) {
-          $('.ogre_synergy').text('(' + ogre + ')');
+          $('.ogre_synergy').text("(1)");
+        } else if(ogre==1) {
+          $('.ogre_synergy').html('<span style="color:white;">(1)</span>');
         }
         if(ogre==0){
           $('.count_ogre').css('display','none');
@@ -866,9 +892,13 @@
         }
 
         if(assassin<3){
-          $('.assassin_synergy').text("　");
-        } else if(assassin%3==0) {
-          $('.assassin_synergy').text('(' + assassin + ')');
+          $('.assassin_synergy').text("(3)(6)(9)");
+        } else if(assassin==3) {
+          $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+        } else if(assassin==6) {
+          $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(assassin==9) {
+          $('.assassin_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
         }
         if(assassin==0){
           $('.count_assassin').css('display','none');
@@ -878,9 +908,13 @@
         }
 
         if(warrior<3){
-          $('.warrior_synergy').text("　");
-        } else if(warrior%3==0) {
-          $('.warrior_synergy').text('(' + warrior + ')');
+          $('.warrior_synergy').text("(3)(6)(9)");
+        } else if(warrior==3) {
+          $('.warrior_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+        } else if(warrior==6) {
+          $('.warrior_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(warrior==9) {
+          $('.warrior_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
         }
         if(warrior==0){
           $('.count_warrior').css('display','none');
@@ -890,9 +924,11 @@
         }
 
         if(mage<3){
-          $('.mage_synergy').text("　");
-        } else if(mage%3==0) {
-          $('.mage_synergy').text('(' + mage + ')');
+          $('.mage_synergy').text("(3)(6)");
+        } else if(mage==3) {
+          $('.mage_synergy').html('<span style="color:white;">(3)</span>(6)');
+        } else if(mage==6) {
+          $('.mage_synergy').html('<span style="color:white;">(3)(6)</span>');
         }
         if(mage==0){
           $('.count_mage').css('display','none');
@@ -902,9 +938,11 @@
         }
 
         if(warlock<3){
-          $('.warlock_synergy').text("　");
-        } else if(warlock%3==0) {
-          $('.warlock_synergy').text('(' + warlock + ')');
+          $('.warlock_synergy').text("(3)(6)");
+        } else if(warlock==3) {
+          $('.warlock_synergy').html('<span style="color:white;">(3)</span>(6)');
+        } else if(warlock==3) {
+          $('.warlock_synergy').html('<span style="color:white;">(3)(6)</span>');
         }
         if(warlock==0){
           $('.count_warlock').css('display','none');
@@ -914,9 +952,11 @@
         }
 
         if(hunter<3){
-          $('.hunter_synergy').text("　");
-        } else if(hunter%3==0) {
-          $('.hunter_synergy').text('(' + hunter + ')');
+          $('.hunter_synergy').text("(3)(6)");
+        } else if(hunter==3) {
+          $('.hunter_synergy').html('<span style="color:white;">(3)</span>(6)');
+        } else if(hunter==6) {
+          $('.hunter_synergy').html('<span style="color:white;">(3)(6)</span>');
         }
         if(hunter==0){
           $('.count_hunter').css('display','none');
@@ -926,9 +966,13 @@
         }
 
         if(knight<2){
-          $('.knight_synergy').text("　");
-        } else if(knight%2==0) {
-          $('.knight_synergy').text('(' + knight + ')');
+          $('.knight_synergy').text("(2)(4)(6)");
+        } else if(knight==2) {
+          $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        } else if(knight==4) {
+          $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(knight==6) {
+          $('.knight_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
         }
         if(knight==0){
           $('.count_knight').css('display','none');
@@ -938,9 +982,11 @@
         }
 
         if(mech<2){
-          $('.mech_synergy').text("　");
-        } else if(mech%2==0) {
-          $('.mech_synergy').text('(' + mech + ')');
+          $('.mech_synergy').text("(2)(4)");
+        } else if(mech==2) {
+          $('.mech_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(mech==4) {
+          $('.mech_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(mech==0){
           $('.count_mech').css('display','none');
@@ -950,9 +996,11 @@
         }
 
         if(druid<2){
-          $('.druid_synergy').text("　");
-        } else if(druid%2==0) {
-          $('.druid_synergy').text('(' + druid + ')');
+          $('.druid_synergy').text("(2)(4)");
+        } else if(druid==2) {
+          $('.druid_synergy').html('<span style="color:white;">(2)</span>(4)');
+        } else if(druid==4) {
+          $('.druid_synergy').html('<span style="color:white;">(2)(4)</span>');
         }
         if(druid==0){
           $('.count_druid').css('display','none');
@@ -962,9 +1010,11 @@
         }
 
         if(demonhunter<1){
-          $('.demonhunter_synergy').text("　");
-        } else if(demonhunter%1==0) {
-          $('.demonhunter_synergy').text('(' + demonhunter + ')');
+          $('.demonhunter_synergy').text("(1)(2)");
+        } else if(demonhunter==1) {
+          $('.demonhunter_synergy').html('<span style="color:white;">(1)</span>(2)');
+        } else if(demonhunter==2) {
+          $('.demonhunter_synergy').html('<span style="color:white;">(1)(2)</span>');
         }
         if(demonhunter==0){
           $('.count_demonhunter').css('display','none');
@@ -974,9 +1024,9 @@
         }
 
         if(shaman<2){
-          $('.shaman_synergy').text("　");
-        } else if(shaman%2==0) {
-          $('.shaman_synergy').text('(' + shaman + ')');
+          $('.shaman_synergy').text("(2)");
+        } else if(shaman==2) {
+          $('.shaman_synergy').html('<span style="color:white;">(2)</span>');
         }
         if(shaman==0){
           $('.count_shaman').css('display','none');
@@ -1019,7 +1069,7 @@
     </b><br>
     <table style="display:inline;">
       <tr class="species">
-        <td id="elf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피 +25%(3), +25%(6), +25%(9)"><span id="elf">엘프</span></label><br><label class="elf_synergy">　</label></td>
+        <td id="elf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피 +25%(3), +25%(6), +25%(9)"><span id="elf">엘프</span></label><br><label class="elf_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><div class="pieces cost_1 anti_mage"><img src=pieces\anti_mage.png><div class="name"><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
         <td><div class="pieces cost_2 treant_protector"><img src=pieces\treant_protector.png><div class="name"><span data-tooltip-text="엘프 드루이드">트렌트</span></div></div></td>
         <td><div class="pieces cost_2 luna"><img src=pieces\luna.png><div class="name"><span data-tooltip-text="엘프 나이트">루나</span></div></div></td>
@@ -1031,7 +1081,7 @@
         <td><div class="pieces cost_4 templar_assassin"><img src=pieces\templar_assassin.png><div class="name"><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="human"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 인간은 공격할 때 20%(2), 25%(4), 30%(6)의 확률로 공격한 적을 4초간 침묵"><span id="human">인간</span></label><br><label class="human_synergy">　</label></td>
+        <td id="human"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 인간은 공격할 때 20%(2), 25%(4), 30%(6)의 확률로 공격한 적을 4초간 침묵"><span id="human">인간</span></label><br><label class="human_synergy" style="color:#505050">(2)(4)(6)</label></td>
         <td><div class="pieces cost_2 crystal"><img src=pieces\crystal.png><div class="name"><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
         <td><div class="pieces cost_3 omniknight"><img src=pieces\omniknight.png><div class="name"><span data-tooltip-text="인간 기사">옴니 나이트</span></div></div></td>
         <td><div class="pieces cost_3 lina"><img src=pieces\lina.png><div class="name"><span data-tooltip-text="인간 법사">리나</span></div></div></td>
@@ -1041,7 +1091,7 @@
         <td><div class="pieces cost_4 dragon_knight"><img src=pieces\dragon_knight.png><div class="name"><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +20%(3), +30%(6), +40%(9)"><span id="beast">야수</span></label><br><label class="beast_synergy">　</label></td>
+        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +20%(3), +30%(6), +40%(9)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><div class="pieces cost_1 enchantress"><img src=pieces\enchantress.png><div class="name"><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
         <td><div class="pieces cost_1 tusk"><img src=pieces\tusk.png><div class="name"><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
         <td><div class="pieces cost_3 venomancer"><img src=pieces\venomancer.png><div class="name"><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
@@ -1049,11 +1099,11 @@
         <td><div class="pieces cost_3 lycan"><img src=pieces\lycan.png><div class="name"><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
         <td><div class="pieces cost_4 lone_druid"><img src=pieces\lone_druid.png><div class="name"><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
         <td></td>
-        <td id="ogre"><br><label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 +10%"><span id="ogre">오거</span></label><br><label class="ogre_synergy">　</label></td>
+        <td id="ogre"><br><label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 +10%"><span id="ogre">오거</span></label><br><label class="ogre_synergy" style="color:#505050">(1)</label></td>
         <td><div class="pieces cost_1 ogre_magi"><img src=pieces\ogre_magi.png><div class="name"><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="goblin"><br><label class="trait_tooltip" data-tooltip-text="무작위 아군 1명(3), 모든 아군 고블린(6)에게 +15 방어력과 10 HP 리젠"><span id="goblin">고블린</span></label><br><label class="goblin_synergy">　</label></td>
+        <td id="goblin"><br><label class="trait_tooltip" data-tooltip-text="무작위 아군 1명(3), 모든 아군 고블린(6)에게 +15 방어력과 10 HP 리젠"><span id="goblin">고블린</span></label><br><label class="goblin_synergy" style="color:#505050">(3)(6)</label></td>
         <td><div class="pieces cost_1 tinker"><img src=pieces\tinker.png><div class="name"><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
         <td><div class="pieces cost_1 clockwerk"><img src=pieces\clockwerk.png><div class="name"><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
         <td><div class="pieces cost_1 bounty_hunter"><img src=pieces\bounty_hunter.png><div class="name"><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
@@ -1061,52 +1111,52 @@
         <td><div class="pieces cost_4 alchemist"><img src=pieces\alchemist.png><div class="name"><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
         <td><div class="pieces cost_5 techies"><img src=pieces\techies.png><div class="name"><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
         <td></td>
-        <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy">　</label></td>
+        <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy" style="color:#505050">(1)</label></td>
         <td><div class="pieces cost_3 riki"><img src=pieces\riki.png><div class="name"><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="demon"><br><label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 50% 추가 순수 데미지"><span id="demon">악마</span></label><br><label class="demon_synergy">　</label></td>
+        <td id="demon"><br><label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 50% 추가 순수 데미지"><span id="demon">악마</span></label><br><label class="demon_synergy" style="color:#505050">(1)</label></td>
         <td><div class="pieces cost_2 queen_of_pain"><img src=pieces\queen_of_pain.png><div class="name"><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
         <td><div class="pieces cost_2 chaos_knight"><img src=pieces\chaos_knight.png><div class="name"><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
         <td><div class="pieces cost_3 terrorblade"><img src=pieces\terrorblade.png><div class="name"><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
         <td><div class="pieces cost_3 shadow_fiend"><img src=pieces\shadow_fiend.png><div class="name"><span data-tooltip-text="악마 흑마">섀도우 핀드</span></div></div></td>
         <td><div class="pieces cost_4 doom"><img src=pieces\doom.png><div class="name"><span data-tooltip-text="악마 전사">둠</span></div></div></td>
         <td></td>
-        <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위 +300"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy">　</label></td>
+        <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위 +300"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy" style="color:#505050">(2)</label></td>
         <td><div class="pieces cost_3 sniper"><img src=pieces\sniper.png><div class="name"><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
         <td><div class="pieces cost_5 gyrocopter"><img src=pieces\gyrocopter.png><div class="name"><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 원소(2), 모든 아군(4)을 공격하는 근접 적은 30%의 확률로 4초간 석화"><span id="undead">언데드</span></label><br><label class="undead_synergy">　</label></td>
+        <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 -5(2), -6(4), -7(6)"><span id="undead">언데드</span></label><br><label class="undead_synergy" style="color:#505050">(2)(4)(6)</label></td>
         <td><div class="pieces cost_1 drow_ranger"><img src=pieces\drow_ranger.png><div class="name"><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
         <td><div class="pieces cost_3 abaddon"><img src=pieces\abaddon.png><div class="name"><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
         <td><div class="pieces cost_4 necrophos"><img src=pieces\necrophos.png><div class="name"><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
         <td><div class="pieces cost_5 lich"><img src=pieces\lich.png><div class="name"><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
         <td><div class="pieces cost_5 death_prophet "><img src=pieces\death_prophet.png><div class="name"><span data-tooltip-text="언데드 흑마">죽음 예언자</span></div></div></td>
-        <td id="dragon"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 모든 아군 용이 마나 100을 가지고 시작(3)"><span id="dragon">용</span></label><br><label class="dragon_synergy">　</label></td>
+        <td id="dragon"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 모든 아군 용이 마나 100을 가지고 시작(3)"><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(3)</label></td>
         <td><div class="pieces cost_2 puck"><img src=pieces\puck.png><div class="name"><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
         <td><div class="pieces cost_3 viper"><img src=pieces\viper.png><div class="name"><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
         <td><div class="pieces cost_4 dragon_knight"><img src=pieces\dragon_knight.png><div class="name"><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="orc"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 오크에게 체력 +200(2), +300(4)"><span id="orc">오크</span></label><br><label class="orc_synergy">　</label></td>
+        <td id="orc"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 오크에게 체력 +200(2), +300(4)"><span id="orc">오크</span></label><br><label class="orc_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 axe"><img src=pieces\axe.png><div class="name"><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
         <td><div class="pieces cost_2 beastmaster"><img src=pieces\beastmaster.png><div class="name"><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
         <td><div class="pieces cost_2 juggernaut"><img src=pieces\juggernaut.png><div class="name"><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
         <td><div class="pieces cost_4 disruptor"><img src=pieces\disruptor.png><div class="name"><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
-        <td id="troll"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 트롤에게 공격속도 +35(2), 모든 아군에게 공격속도 +30(4)"><span id="troll">트롤</span></label><br><label class="troll_synergy">　</label></td>
+        <td id="troll"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 트롤에게 공격속도 +35(2), 모든 아군에게 공격속도 +30(4)"><span id="troll">트롤</span></label><br><label class="troll_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 bat_rider"><img src=pieces\bat_rider.png><div class="name"><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
         <td><div class="pieces cost_1 shadow_shaman"><img src=pieces\shadow_shaman.png><div class="name"><span data-tooltip-text="트롤 주술사">섀도우 샤먼</span></div></div></td>
         <td><div class="pieces cost_2 witch_doctor"><img src=pieces\witch_doctor.png><div class="name"><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
         <td><div class="pieces cost_4 troll_warlord"><img src=pieces\troll_warlord.png><div class="name"><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="naga"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력 +30(2), +30(4)"><span id="naga">나가</span></label><br><label class="naga_synergy">　</label></td>
+        <td id="naga"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력 +30(2), +30(4)"><span id="naga">나가</span></label><br><label class="naga_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_2 slardar"><img src=pieces\slardar.png><div class="name"><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
         <td><div class="pieces cost_2 slark"><img src=pieces\slark.png><div class="name"><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
         <td><div class="pieces cost_4 medusa"><img src=pieces\medusa.png><div class="name"><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
         <td><div class="pieces cost_5 tidehunter"><img src=pieces\tidehunter.png><div class="name"><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
-        <td id="elementals"><label class="trait_tooltip" data-tooltip-text="아군 원소(2), 모든 아군(4)을 공격하는 근접 적은 30% 확률로 4초간 석화"><span id="elementals">원소</span></label><br><label class="elementals_synergy">　</label></td>
+        <td id="elementals"><label class="trait_tooltip" data-tooltip-text="아군 원소(2), 모든 아군(4)을 공격하는 근접 적은 30% 확률로 4초간 석화"><span id="elementals">원소</span></label><br><label class="elementals_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 tiny"><img src=pieces\tiny.png><div class="name"><span data-tooltip-text="원소 전사">타이니</span></div></div></td>
         <td><div class="pieces cost_2 morphling"><img src=pieces\morphling.png><div class="name"><span data-tooltip-text="원소 암살자">모플링</span></div></div></td>
         <td><div class="pieces cost_3 razor"><img src=pieces\razor.png><div class="name"><span data-tooltip-text="원소 법사">레이저</span></div></div></td>
@@ -1115,7 +1165,7 @@
     </table>
     <table style="display:inline;">
       <tr class="class">
-        <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 암살자의 피해량 +10%/3배(3), +15%/4배(6) +20%/5배(9)"><span id="assassin">암살자</span></label><br><label class="assassin_synergy">　</label></td>
+        <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 암살자의 피해량 +10%/3배(3), +15%/4배(6) +20%/5배(9)"><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><div class="pieces cost_1 bounty_hunter"><img src=pieces\bounty_hunter.png><div class="name"><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
         <td><div class="pieces cost_2 morphling"><img src=pieces\morphling.png><div class="name"><span data-tooltip-text="원소 암살자">모플링</span></div></div></td>
         <td><div class="pieces cost_2 slark"><img src=pieces\slark.png><div class="name"><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
@@ -1127,7 +1177,7 @@
         <td><div class="pieces cost_4 templar_assassin"><img src=pieces\templar_assassin.png><div class="name"><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="warrior"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력 +7(3), +8(6), +9(9)"><span id="warrior">전사</span></label><br><label class="warrior_synergy">　</label></td>
+        <td id="warrior"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력 +7(3), +8(6), +9(9)"><span id="warrior">전사</span></label><br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><div class="pieces cost_1 axe"><img src=pieces\axe.png><div class="name"><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
         <td><div class="pieces cost_1 tusk"><img src=pieces\tusk.png><div class="name"><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
         <td><div class="pieces cost_1 tiny"><img src=pieces\tiny.png><div class="name"><span data-tooltip-text="원소 전사">타이니</span></div></div></td>
@@ -1139,7 +1189,7 @@
         <td><div class="pieces cost_4 troll_warlord"><img src=pieces\troll_warlord.png><div class="name"><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="mage"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 -40(3), -40(6) 부여"><span id="mage">법사</span></label><br><label class="mage_synergy">　</label></td>
+        <td id="mage"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 -40(3), -40(6) 부여"><span id="mage">법사</span></label><br><label class="mage_synergy" style="color:#505050">(3)(6)</label></td>
         <td><div class="pieces cost_1 ogre_magi"><img src=pieces\ogre_magi.png><div class="name"><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
         <td><div class="pieces cost_2 crystal"><img src=pieces\crystal.png><div class="name"><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
         <td><div class="pieces cost_2 puck"><img src=pieces\puck.png><div class="name"><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
@@ -1149,7 +1199,7 @@
         <td><div class="pieces cost_5 lich"><img src=pieces\lich.png><div class="name"><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="warlock"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈 +15%(3), +25%(6)"><span id="warlock">흑마</span></label><br><label class="warlock_synergy">　</label></td>
+        <td id="warlock"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈 +15%(3), +25%(6)"><span id="warlock">흑마</span></label><br><label class="warlock_synergy" style="color:#505050">(3)(6)</label></td>
         <td><div class="pieces cost_2 witch_doctor"><img src=pieces\witch_doctor.png><div class="name"><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
         <td><div class="pieces cost_3 venomancer"><img src=pieces\venomancer.png><div class="name"><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
         <td><div class="pieces cost_3 shadow_fiend"><img src=pieces\shadow_fiend.png><div class="name"><span data-tooltip-text="악마 흑마">섀도우 핀드</span></div></div></td>
@@ -1159,7 +1209,7 @@
         <td><div class="pieces cost_5 death_prophet "><img src=pieces\death_prophet.png><div class="name"><span data-tooltip-text="언데드 흑마">죽음 예언자</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="hunter"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 사냥꾼에게 추가 공격력 +30%(3), +25%(6)"><span id="hunter">사냥꾼</span></label><br><label class="hunter_synergy">　</label></td>
+        <td id="hunter"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 사냥꾼에게 추가 공격력 +30%(3), +25%(6)"><span id="hunter">사냥꾼</span></label><br><label class="hunter_synergy" style="color:#505050">(3)(6)</label></td>
         <td><div class="pieces cost_1 drow_ranger"><img src=pieces\drow_ranger.png><div class="name"><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
         <td><div class="pieces cost_2 beastmaster"><img src=pieces\beastmaster.png><div class="name"><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
         <td><div class="pieces cost_3 windranger"><img src=pieces\windranger.png><div class="name"><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
@@ -1169,7 +1219,7 @@
         <td><div class="pieces cost_5 tidehunter"><img src=pieces\tidehunter.png><div class="name"><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="knight"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기사에게 +25%(2), +35%(4), +45%(6)의 확률로 방어막이 생성됨"><span id="knight">기사</span></label><br><label class="knight_synergy">　</label></td>
+        <td id="knight"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기사에게 +25%(2), +35%(4), +45%(6)의 확률로 방어막이 생성됨"><span id="knight">기사</span></label><br><label class="knight_synergy" style="color:#505050">(2)(4)(6)</label></td>
         <td><div class="pieces cost_1 bat_rider"><img src=pieces\bat_rider.png><div class="name"><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
         <td><div class="pieces cost_2 chaos_knight"><img src=pieces\chaos_knight.png><div class="name"><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
         <td><div class="pieces cost_2 luna"><img src=pieces\luna.png><div class="name"><span data-tooltip-text="엘프 기사">루나</span></div></div></td>
@@ -1178,26 +1228,26 @@
         <td><div class="pieces cost_4 dragon_knight"><img src=pieces\dragon_knight.png><div class="name"><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="mech"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기계에게 10(2), 20(4) HP 리젠"><span id="mech">기계</span></label><br><label class="mech_synergy">　</label></td>
+        <td id="mech"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기계에게 10(2), 20(4) HP 리젠"><span id="mech">기계</span></label><br><label class="mech_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 tinker"><img src=pieces\tinker.png><div class="name"><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
         <td><div class="pieces cost_1 clockwerk"><img src=pieces\clockwerk.png><div class="name"><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
         <td><div class="pieces cost_2 timbersaw"><img src=pieces\timbersaw.png><div class="name"><span data-tooltip-text="고블린 기계">팀버쏘우</span></div></div></td>
         <td><div class="pieces cost_5 techies"><img src=pieces\techies.png><div class="name"><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
         <td><div class="pieces cost_5 gyrocopter"><img src=pieces\gyrocopter.png><div class="name"><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
         <td></td>
-        <td id="shaman"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 무작위 적군 변이(2)"><span id="shaman">주술사</span></label><br><label class="shaman_synergy">　</label></td>
+        <td id="shaman"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 무작위 적군 변이(2)"><span id="shaman">주술사</span></label><br><label class="shaman_synergy" style="color:#505050">(2)</label></td>
         <td><div class="pieces cost_1 shadow_shaman"><img src=pieces\shadow_shaman.png><div class="name"><span data-tooltip-text="트롤 주술사">섀도우 샤먼</span></div></div></td>
         <td><div class="pieces cost_4 disruptor"><img src=pieces\disruptor.png><div class="name"><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="druid"><br><label class="trait_tooltip" data-tooltip-text="드루이드들은 2유닛만으로 2성(2), 3성(4)을 만들 수 있음(2)"><span id="druid">드루이드</span></label><br><label class="druid_synergy">　</label></td>
+        <td id="druid"><br><label class="trait_tooltip" data-tooltip-text="드루이드들은 2유닛만으로 2성(2), 3성(4)을 만들 수 있음(2)"><span id="druid">드루이드</span></label><br><label class="druid_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 enchantress"><img src=pieces\enchantress.png><div class="name"><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
         <td><div class="pieces cost_2 treant_protector"><img src=pieces\treant_protector.png><div class="name"><span data-tooltip-text="엘프  드루이드">트렌트</span></div></div></td>
         <td><div class="pieces cost_2 furion"><img src=pieces\furion.png><div class="name"><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
         <td><div class="pieces cost_4 lone_druid"><img src=pieces\lone_druid.png><div class="name"><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
         <td></td>
         <td></td>
-        <td id="demonhunter"><br><label class="trait_tooltip" data-tooltip-text="적군 악마효과제거(1), 아군 악마효과유지(2)"><span id="demonhunter">데몬헌터</span></label><br><label class="demonhunter_synergy">　</label></td>
+        <td id="demonhunter"><br><label class="trait_tooltip" data-tooltip-text="적군 악마효과제거(1), 아군 악마효과유지(2)"><span id="demonhunter">데몬헌터</span></label><br><label class="demonhunter_synergy" style="color:#505050">(1)(2)</label></td>
         <td><div class="pieces cost_1 anti_mage"><img src=pieces\anti_mage.png><div class="name"><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
         <td><div class="pieces cost_3 terrorblade"><img src=pieces\terrorblade.png><div class="name"><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
       </tr>
