@@ -740,13 +740,13 @@
         }
 
         if(beast<2){
-          $('.beast_synergy').text("(3)(6)(9)");
-        } else if(beast==3) {
-          $('.beast_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+          $('.beast_synergy').text("(2)(4)(6)");
+        } else if(beast==2) {
+          $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        } else if(beast==4) {
+          $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
         } else if(beast==6) {
-          $('.beast_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
-        } else if(beast==9) {
-          $('.beast_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+          $('.beast_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
         }
         if(beast==0){
           $('.count_beast').css('display','none');
@@ -782,11 +782,11 @@
         }
 
         if(undead<2){
-          $('.undead_synergy').text("(2)(4)(6)");
+          $('.undead_synergy').text("(2)(4)");
         } else if(undead==2) {
-          $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+          $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)');
         } else if(undead==4) {
-          $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+          $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>');
         } else if(undead==6) {
           $('.undead_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
         }
@@ -1101,7 +1101,7 @@
         <td><div class="pieces cost_4 dragon_knight"><img src=pieces\dragon_knight.png><div class="name"><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +20%(3), +30%(6), +40%(9)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(3)(6)(9)</label></td>
+        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +15%(2), +20%(4), +25%(6)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><div class="pieces cost_1 enchantress"><img src=pieces\enchantress.png><div class="name"><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
         <td><div class="pieces cost_1 tusk"><img src=pieces\tusk.png><div class="name"><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
         <td><div class="pieces cost_3 venomancer"><img src=pieces\venomancer.png><div class="name"><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
@@ -1137,7 +1137,7 @@
         <td><div class="pieces cost_5 gyrocopter"><img src=pieces\gyrocopter.png><div class="name"><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 -5(2), -6(4), -7(6)"><span id="undead">언데드</span></label><br><label class="undead_synergy" style="color:#505050">(2)(4)(6)</label></td>
+        <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 -4(2), -6(4)"><span id="undead">언데드</span></label><br><label class="undead_synergy" style="color:#505050">(2)(4)</label></td>
         <td><div class="pieces cost_1 drow_ranger"><img src=pieces\drow_ranger.png><div class="name"><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
         <td><div class="pieces cost_3 abaddon"><img src=pieces\abaddon.png><div class="name"><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
         <td><div class="pieces cost_4 necrophos"><img src=pieces\necrophos.png><div class="name"><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
