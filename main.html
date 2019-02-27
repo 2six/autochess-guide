@@ -709,12 +709,12 @@
 
         if(elf<3){
           $('.elf_synergy').text('(3)(6)(9)');
-        } else if(elf==3) {
-          $('.elf_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-        } else if(elf==6) {
-          $('.elf_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
-        } else if(elf==9) {
+        } else if(elf>=9) {
           $('.elf_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+        } else if(elf>=6) {
+          $('.elf_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(elf>=3) {
+          $('.elf_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
         }
         if(elf==0){
           $('.count_elf').css('display','none');
@@ -725,12 +725,12 @@
 
         if(human<2){
           $('.human_synergy').text("(2)(4)(6)");
-        } else if(human==2) {
-          $('.human_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
-        } else if(human==4) {
-          $('.human_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
-        } else if(human==6) {
+        } else if(human>=6) {
           $('.human_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        } else if(human>=4) {
+          $('.human_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(human>=2) {
+          $('.human_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
         }
         if(human==0){
           $('.count_human').css('display','none');
@@ -741,12 +741,12 @@
 
         if(beast<2){
           $('.beast_synergy').text("(2)(4)(6)");
-        } else if(beast==2) {
-          $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
-        } else if(beast==4) {
-          $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
-        } else if(beast==6) {
+        } else if(beast>=6) {
           $('.beast_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        } else if(beast>=4) {
+          $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(beast>=2) {
+          $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
         }
         if(beast==0){
           $('.count_beast').css('display','none');
@@ -757,10 +757,10 @@
 
         if(goblin<3){
           $('.goblin_synergy').text("(3)(6)");
-        } else if(goblin==3) {
-          $('.goblin_synergy').html('<span style="color:white;">(3)</span>(6)');
-        } else if(goblin==6) {
+        } else if(goblin>=6) {
           $('.goblin_synergy').html('<span style="color:white;">(3)(6)</span>');
+        } else if(goblin>=3) {
+          $('.goblin_synergy').html('<span style="color:white;">(3)</span>(6)');
         }
         if(goblin==0){
           $('.count_goblin').css('display','none');
@@ -783,12 +783,12 @@
 
         if(undead<2){
           $('.undead_synergy').text("(2)(4)");
-        } else if(undead==2) {
-          $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(undead==4) {
-          $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>');
-        } else if(undead==6) {
+        } else if(undead>=6) {
           $('.undead_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        } else if(undead>=4) {
+          $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(undead>=2) {
+          $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(undead==0){
           $('.count_undead').css('display','none');
@@ -799,10 +799,10 @@
 
         if(orc<2){
           $('.orc_synergy').text("(2)(4)");
-        } else if(orc==2) {
-          $('.orc_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(orc==4) {
+        } else if(orc>=4) {
           $('.orc_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(orc>=2) {
+          $('.orc_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(orc==0){
           $('.count_orc').css('display','none');
@@ -813,10 +813,10 @@
 
         if(naga<2){
           $('.naga_synergy').text("(2)(4)");
-        } else if(naga==2) {
-          $('.naga_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(naga==4) {
+        } else if(naga>=4) {
           $('.naga_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(naga>=2) {
+          $('.naga_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(naga==0){
           $('.count_naga').css('display','none');
@@ -827,10 +827,10 @@
 
         if(elementals<2){
           $('.elementals_synergy').text("(2)(4)");
-        } else if(elementals==2) {
-          $('.elementals_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(elementals==4) {
+        } else if(elementals>=4) {
           $('.elementals_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(elementals>=2) {
+          $('.elementals_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(elementals==0){
           $('.count_elementals').css('display','none');
@@ -841,10 +841,10 @@
 
         if(troll<2){
           $('.troll_synergy').text("(2)(4)");
-        } else if(troll==2) {
-          $('.troll_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(troll==4) {
+        } else if(troll>=4) {
           $('.troll_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(troll>=2) {
+          $('.troll_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(troll==0){
           $('.count_troll').css('display','none');
@@ -903,11 +903,11 @@
 
         if(assassin<3){
           $('.assassin_synergy').text("(3)(6)(9)");
-        } else if(assassin==3) {
-          $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-        } else if(assassin==6) {
+        } else if(assassin>=9) {
+          $('.assassin_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+        } else if(assassin>=6) {
           $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
-        } else if(assassin==9) {
+        } else if(assassin>=3) {
           $('.assassin_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
         }
         if(assassin==0){
@@ -919,12 +919,12 @@
 
         if(warrior<3){
           $('.warrior_synergy').text("(3)(6)(9)");
-        } else if(warrior==3) {
-          $('.warrior_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
-        } else if(warrior==6) {
-          $('.warrior_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
-        } else if(warrior==9) {
+        } else if(warrior>=9) {
           $('.warrior_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+        } else if(warrior>=6) {
+          $('.warrior_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        } else if(warrior>=3) {
+          $('.warrior_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
         }
         if(warrior==0){
           $('.count_warrior').css('display','none');
@@ -935,10 +935,10 @@
 
         if(mage<3){
           $('.mage_synergy').text("(3)(6)");
-        } else if(mage==3) {
-          $('.mage_synergy').html('<span style="color:white;">(3)</span>(6)');
-        } else if(mage==6) {
+        } else if(mage>=6) {
           $('.mage_synergy').html('<span style="color:white;">(3)(6)</span>');
+        } else if(mage>=3) {
+          $('.mage_synergy').html('<span style="color:white;">(3)</span>(6)');
         }
         if(mage==0){
           $('.count_mage').css('display','none');
@@ -949,10 +949,10 @@
 
         if(warlock<3){
           $('.warlock_synergy').text("(3)(6)");
-        } else if(warlock==3) {
-          $('.warlock_synergy').html('<span style="color:white;">(3)</span>(6)');
-        } else if(warlock==6) {
+        } else if(warlock>=6) {
           $('.warlock_synergy').html('<span style="color:white;">(3)(6)</span>');
+        } else if(warlock>=3) {
+          $('.warlock_synergy').html('<span style="color:white;">(3)</span>(6)');
         }
         if(warlock==0){
           $('.count_warlock').css('display','none');
@@ -963,10 +963,10 @@
 
         if(hunter<3){
           $('.hunter_synergy').text("(3)(6)");
-        } else if(hunter==3) {
-          $('.hunter_synergy').html('<span style="color:white;">(3)</span>(6)');
-        } else if(hunter==6) {
+        } else if(hunter>=6) {
           $('.hunter_synergy').html('<span style="color:white;">(3)(6)</span>');
+        } else if(hunter>=3) {
+          $('.hunter_synergy').html('<span style="color:white;">(3)</span>(6)');
         }
         if(hunter==0){
           $('.count_hunter').css('display','none');
@@ -977,12 +977,12 @@
 
         if(knight<2){
           $('.knight_synergy').text("(2)(4)(6)");
-        } else if(knight==2) {
-          $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
-        } else if(knight==4) {
-          $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
-        } else if(knight==6) {
+        } else if(knight>=6) {
           $('.knight_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        } else if(knight>=4) {
+          $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        } else if(knight>=2) {
+          $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
         }
         if(knight==0){
           $('.count_knight').css('display','none');
@@ -993,10 +993,10 @@
 
         if(mech<2){
           $('.mech_synergy').text("(2)(4)");
-        } else if(mech==2) {
-          $('.mech_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(mech==4) {
+        } else if(mech>=4) {
           $('.mech_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(mech>=2) {
+          $('.mech_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(mech==0){
           $('.count_mech').css('display','none');
@@ -1007,10 +1007,10 @@
 
         if(druid<2){
           $('.druid_synergy').text("(2)(4)");
-        } else if(druid==2) {
-          $('.druid_synergy').html('<span style="color:white;">(2)</span>(4)');
-        } else if(druid==4) {
+        } else if(druid>=4) {
           $('.druid_synergy').html('<span style="color:white;">(2)(4)</span>');
+        } else if(druid>=2) {
+          $('.druid_synergy').html('<span style="color:white;">(2)</span>(4)');
         }
         if(druid==0){
           $('.count_druid').css('display','none');
@@ -1101,7 +1101,7 @@
         <td><div class="pieces cost_4 dragon_knight"><img src=pieces\dragon_knight.png><div class="name"><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +15%(2), +20%(4), +25%(6)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(3)(6)(9)</label></td>
+        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +15%(2), +20%(4), +25%(6)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(2)(4)(6)</label></td>
         <td><div class="pieces cost_1 enchantress"><img src=pieces\enchantress.png><div class="name"><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
         <td><div class="pieces cost_1 tusk"><img src=pieces\tusk.png><div class="name"><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
         <td><div class="pieces cost_3 venomancer"><img src=pieces\venomancer.png><div class="name"><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
