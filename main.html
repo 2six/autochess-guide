@@ -497,6 +497,8 @@
 
     ogre_magi = ['ogre_magi', 'ogre', 'mage'];
 
+    star_ = 0;
+
     $(function(){
       $('.anti_mage').mousedown(function(e){
         potrait_opacity(anti_mage, e.which);
@@ -704,10 +706,184 @@
     });
 
     function potrait_opacity(unit_name, input) {
-      if (input == 1){
-        if($('.' + unit_name[0] + ' span.star:first').text() == '　') {
+      if ( star_ == 0) {
+        if (input == 1){
+          if($('.' + unit_name[0] + ' span.star:first').text() == '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '1');
+            $('.' + unit_name[0] + ' span.star').text('★1');
+            pieces_num++;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='elf') {
+                elf++;
+              } else if (unit_name[i]=='human'){
+                human++;
+              } else if (unit_name[i]=='beast'){
+                beast++;
+              } else if (unit_name[i]=='goblin'){
+                goblin++;
+              } else if (unit_name[i]=='demon'){
+                demon++;
+              } else if (unit_name[i]=='undead'){
+                undead++;
+              } else if (unit_name[i]=='orc'){
+                orc++;
+              } else if (unit_name[i]=='naga'){
+                naga++;
+              } else if (unit_name[i]=='elementals'){
+                elementals++;
+              } else if (unit_name[i]=='troll'){
+                troll++;
+              } else if (unit_name[i]=='dragon'){
+                dragon++;
+              } else if (unit_name[i]=='dwarf'){
+                dwarf++;
+              } else if (unit_name[i]=='ogre'){
+                ogre++;
+              } else if (unit_name[i]=='satyr'){
+                satyr++;
+              } else if (unit_name[i]=='assassin'){
+                assassin++;
+              } else if (unit_name[i]=='warrior'){
+                warrior++;
+              } else if (unit_name[i]=='mage'){
+                mage++;
+              } else if (unit_name[i]=='warlock'){
+                warlock++;
+              } else if (unit_name[i]=='hunter'){
+                hunter++;
+              } else if (unit_name[i]=='knight'){
+                knight++;
+              } else if (unit_name[i]=='mech'){
+                mech++;
+              } else if (unit_name[i]=='druid'){
+                druid++;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter++;
+              } else if (unit_name[i]=='shaman'){
+                shaman++;
+              }
+            }
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★1') {
+            $('.' + unit_name[0] + ' span.star').text('★2');
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★2') {
+            $('.' + unit_name[0] + ' span.star').text('★3');
+          }  else {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            pieces_num--;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='elf') {
+                elf--;
+              } else if (unit_name[i]=='human'){
+                human--;
+              } else if (unit_name[i]=='beast'){
+                beast--;
+              } else if (unit_name[i]=='goblin'){
+                goblin--;
+              } else if (unit_name[i]=='demon'){
+                demon--;
+              } else if (unit_name[i]=='undead'){
+                undead--;
+              } else if (unit_name[i]=='orc'){
+                orc--;
+              } else if (unit_name[i]=='naga'){
+                naga--;
+              } else if (unit_name[i]=='elementals'){
+                elementals--;
+              } else if (unit_name[i]=='troll'){
+                troll--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='dwarf'){
+                dwarf--;
+              } else if (unit_name[i]=='ogre'){
+                ogre--;
+              } else if (unit_name[i]=='satyr'){
+                satyr--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='warrior'){
+                warrior--;
+              } else if (unit_name[i]=='mage'){
+                mage--;
+              } else if (unit_name[i]=='warlock'){
+                warlock--;
+              } else if (unit_name[i]=='hunter'){
+                hunter--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='mech'){
+                mech--;
+              } else if (unit_name[i]=='druid'){
+                druid--;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter--;
+              } else if (unit_name[i]=='shaman'){
+                shaman--;
+              }
+            }
+          }
+        } else if (input == 3) {
+          if($('.' + unit_name[0] + ' span.star:first').text() != '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            pieces_num--;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='elf') {
+                elf--;
+              } else if (unit_name[i]=='human'){
+                human--;
+              } else if (unit_name[i]=='beast'){
+                beast--;
+              } else if (unit_name[i]=='goblin'){
+                goblin--;
+              } else if (unit_name[i]=='demon'){
+                demon--;
+              } else if (unit_name[i]=='undead'){
+                undead--;
+              } else if (unit_name[i]=='orc'){
+                orc--;
+              } else if (unit_name[i]=='naga'){
+                naga--;
+              } else if (unit_name[i]=='elementals'){
+                elementals--;
+              } else if (unit_name[i]=='troll'){
+                troll--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='dwarf'){
+                dwarf--;
+              } else if (unit_name[i]=='ogre'){
+                ogre--;
+              } else if (unit_name[i]=='satyr'){
+                satyr--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='warrior'){
+                warrior--;
+              } else if (unit_name[i]=='mage'){
+                mage--;
+              } else if (unit_name[i]=='warlock'){
+                warlock--;
+              } else if (unit_name[i]=='hunter'){
+                hunter--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='mech'){
+                mech--;
+              } else if (unit_name[i]=='druid'){
+                druid--;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter--;
+              } else if (unit_name[i]=='shaman'){
+                shaman--;
+              }
+            }
+          }
+        }
+      } else {
+        if($('.' + unit_name[0] + ' > img').css('opacity') != '1') {
           $('.' + unit_name[0] + ' > img').css('opacity', '1');
-          $('.' + unit_name[0] + ' span.star').text('★1');
           pieces_num++;
           for(i=0;unit_name[i]!=null;i++) {
             if(unit_name[i]=='elf') {
@@ -760,70 +936,8 @@
               shaman++;
             }
           }
-        } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★1') {
-          $('.' + unit_name[0] + ' span.star').text('★2');
-        } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★2') {
-          $('.' + unit_name[0] + ' span.star').text('★3');
-        }  else {
+        } else {
           $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
-          $('.' + unit_name[0] + ' span.star').text('　');
-          pieces_num--;
-          for(i=0;unit_name[i]!=null;i++) {
-            if(unit_name[i]=='elf') {
-              elf--;
-            } else if (unit_name[i]=='human'){
-              human--;
-            } else if (unit_name[i]=='beast'){
-              beast--;
-            } else if (unit_name[i]=='goblin'){
-              goblin--;
-            } else if (unit_name[i]=='demon'){
-              demon--;
-            } else if (unit_name[i]=='undead'){
-              undead--;
-            } else if (unit_name[i]=='orc'){
-              orc--;
-            } else if (unit_name[i]=='naga'){
-              naga--;
-            } else if (unit_name[i]=='elementals'){
-              elementals--;
-            } else if (unit_name[i]=='troll'){
-              troll--;
-            } else if (unit_name[i]=='dragon'){
-              dragon--;
-            } else if (unit_name[i]=='dwarf'){
-              dwarf--;
-            } else if (unit_name[i]=='ogre'){
-              ogre--;
-            } else if (unit_name[i]=='satyr'){
-              satyr--;
-            } else if (unit_name[i]=='assassin'){
-              assassin--;
-            } else if (unit_name[i]=='warrior'){
-              warrior--;
-            } else if (unit_name[i]=='mage'){
-              mage--;
-            } else if (unit_name[i]=='warlock'){
-              warlock--;
-            } else if (unit_name[i]=='hunter'){
-              hunter--;
-            } else if (unit_name[i]=='knight'){
-              knight--;
-            } else if (unit_name[i]=='mech'){
-              mech--;
-            } else if (unit_name[i]=='druid'){
-              druid--;
-            } else if (unit_name[i]=='demonhunter'){
-              demonhunter--;
-            } else if (unit_name[i]=='shaman'){
-              shaman--;
-            }
-          }
-        }
-      } else if (input == 3) {
-        if($('.' + unit_name[0] + ' span.star:first').text() != '　') {
-          $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
-          $('.' + unit_name[0] + ' span.star').text('　');
           pieces_num--;
           for(i=0;unit_name[i]!=null;i++) {
             if(unit_name[i]=='elf') {
@@ -1239,8 +1353,23 @@
           $('.tier').css('display','block');
         }
       });
-      $('input#rink').click(function(){
-        $('#rink_popup').bPopup({
+      $('input#star_button').click(function(){
+        if ( star_ == 0) {
+          star_ = 1;
+          $('#star_button').val('별 OFF');
+          $('span.star').text('　');
+        } else {
+          star_ = 0;
+          $('#star_button').val('별 ON');
+          elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0;
+          assassin = 0, warrior = 0, mage = 0, warlock = 0, hunter = 0, knight = 0, mech = 0, druid = 0, demonhunter = 0, shaman = 0;
+          pieces_num = 0;
+          $('.pieces > img').css('opacity', '0.3');
+          squad_synergy();
+        }
+      });
+      $('input#link').click(function(){
+        $('#link_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
@@ -1261,7 +1390,7 @@
       <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
       현재조합
     </div>
-    <div style="float: right;display: inline; text-align: right;">Dcinside 체크메이트 갤러리 26<span style="font-size:18px"><br><input type="button" id="rink" value="공략글"> <input type="button" id="tier" value="티어"> <input type="button" id="reset" value="리셋"></span></div><br><b>
+    <div style="float: right;display: inline; text-align: right;">Dcinside 체크메이트 갤러리 26<span style="font-size:18px"><br><input type="button" id="link" value="공략글"> <input type="button" id="star_button" value="별 ON"> <input type="button" id="tier" value="티어"> <input type="button" id="reset" value="리셋"></span></div><br><b>
     <label class="count_elf" style="display: none;color: #2a6392;">엘프 x 0</label>
     <label class="count_human" style="display: none;color: #b8bcbd;">인간 x 0</label>
     <label class="count_beast" style="display: none;color: #00be00;">야수 x 0</label>
@@ -2537,7 +2666,7 @@
         </ul>
       </div>
     </div>
-    <div id="rink_popup" class="info">
+    <div id="link_popup" class="info">
     <a class="b-close">x<a/>
       <ul class="info_list">
         <li>초보자가 참고하면 좋은 글들입니다.</li>
