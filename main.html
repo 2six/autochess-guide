@@ -40,6 +40,15 @@
         left:50%;
         transform:translate(-50%, -50%)
       }
+      .squad {
+        display:inline;
+        position:absolute;
+        left:50%;
+        top: 6%;
+        text-align: center;
+        font-size: 16px;
+        transform:translate(-50%, -50%)
+      }
       .species td {
         width: 90px;
         height: 90px;
@@ -50,18 +59,18 @@
         height: 90px;
         padding: 0px;
       }
-			.pieces{
+  		.pieces{
         max-width: 100%;
         height: auto;
         padding: 3px;
         position: relative;
         border: 3px;
-			}
+  		}
       .pieces img {
         width: 100%;
         opacity: 0.3;
       }
-			.name {
+  		.name {
         color: white;
         font-weight: 700;
         font-size: 14px;
@@ -69,7 +78,7 @@
         position: absolute;
         bottom: 12px;
         left: 6px;
-			}
+  		}
       .effect {
         vertical-align: middle;
         font-size: 14px;
@@ -332,6 +341,15 @@
         text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
       }
 
+
+      .info_icon {
+        position: absolute;
+        width:20px;
+        opacity: 0.5;
+        border-left: 7px solid rgba(0, 0, 0, 0);
+        border-top: 7px solid rgba(0, 0, 0, 0);
+        z-index: 10;
+      }
       .info {
         background-color:#ffffff;
         border-radius:15px;
@@ -480,7 +498,6 @@
       ogre_magi = ['ogre_magi', 'ogre', 'mage'];
 
       $(function(){
-
         $('.anti_mage').mousedown(function(e){
           potrait_opacity(anti_mage, e.which);
         });
@@ -668,6 +685,22 @@
         $('.ogre_magi').mousedown(function(e){
           potrait_opacity(ogre_magi, e.which);
         });
+
+
+        $('.info_icon').mouseover(function(){
+          $(this).css('opacity', '1');
+        });
+        $('.info_icon').mouseout(function(){
+          $(this).css('opacity', '0.5');
+        });
+        $('.info_icon').click(function(){
+          $('#' + $(this).next('div').attr('class').substr(14) + '_info').bPopup({
+            follow: [false, false], //x, y
+            position: ['auto', 'auto'], //x, y
+            onOpen: function() {$('body').css('overflow', 'hidden');},
+            onClose: function() {$('body').css('overflow', '');},
+          });
+        });
       });
 
       function potrait_opacity(unit_name, input) {
@@ -844,13 +877,6 @@
               }
             }
           }
-        } else if (input == 2) {
-          $('#' + unit_name[0] + '_info').bPopup({
-            follow: [false, false], //x, y
-            position: ['auto', 'auto'], //x, y
-            onOpen: function() {$('body').css('overflow', 'hidden');},
-            onClose: function() {$('body').css('overflow', '');},
-          });
         }
         squad_synergy();
       }
@@ -1197,11 +1223,6 @@
         }
       }
 
-
-      window.oncontextmenu = function () {
-        return false;
-      };
-
       $(function(){
         $('input#reset').click(function(){
           elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0;
@@ -1228,6 +1249,7 @@
         });
       });
     </script>
+
 
   </head>
   <body>
@@ -1262,186 +1284,186 @@
     <table style="display:inline;">
       <tr class="species">
         <td id="elf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피 +25%(3), +25%(6), +25%(9)"><span id="elf">엘프</span></label><br><label class="elf_synergy" style="color:#505050">(3)(6)(9)</label></td>
-        <td><div class="pieces cost_1 anti_mage"><div class="tier tier_aa">A+</div><img src=pieces\anti_mage.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
-        <td><div class="pieces cost_2 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div></div></td>
-        <td><div class="pieces cost_2 luna"><div class="tier tier_b">B</div><img src=pieces\luna.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 나이트">루나</span></div></div></td>
-        <td><div class="pieces cost_2 furion"><div class="tier tier_d">D</div><img src=pieces\furion.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
-        <td><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
-        <td><div class="pieces cost_3 windranger"><div class="tier tier_a">A</div><img src=pieces\windranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
-        <td><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
-        <td><div class="pieces cost_3 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
-        <td><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 anti_mage"><div class="tier tier_aa">A+</div><img src=pieces\anti_mage.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 luna"><div class="tier tier_b">B</div><img src=pieces\luna.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 나이트">루나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 furion"><div class="tier tier_d">D</div><img src=pieces\furion.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 windranger"><div class="tier tier_a">A</div><img src=pieces\windranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="human"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 인간은 공격할 때 20%(2), 25%(4), 30%(6)의 확률로 공격한 적을 4초간 침묵"><span id="human">인간</span></label><br><label class="human_synergy" style="color:#505050">(2)(4)(6)</label></td>
-        <td><div class="pieces cost_2 crystal"><div class="tier tier_c">C</div><img src=pieces\crystal.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
-        <td><div class="pieces cost_3 omniknight"><div class="tier tier_b">B</div><img src=pieces\omniknight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div></div></td>
-        <td><div class="pieces cost_3 lina"><div class="tier tier_c">C</div><img src=pieces\lina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div></div></td>
-        <td><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
-        <td><div class="pieces cost_4 kunkka"><div class="tier tier_aa">A+</div><img src=pieces\kunkka.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div></div></td>
-        <td><div class="pieces cost_4 light_keeper"><div class="tier tier_c">C</div><img src=pieces\light_keeper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div></div></td>
-        <td><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 crystal"><div class="tier tier_c">C</div><img src=pieces\crystal.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 omniknight"><div class="tier tier_b">B</div><img src=pieces\omniknight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lina"><div class="tier tier_c">C</div><img src=pieces\lina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 kunkka"><div class="tier tier_aa">A+</div><img src=pieces\kunkka.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 light_keeper"><div class="tier tier_c">C</div><img src=pieces\light_keeper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +15%(2), +20%(4), +25%(6)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(2)(4)(6)</label></td>
-        <td><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
-        <td><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
-        <td><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
-        <td><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
-        <td><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
-        <td><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
         <td></td>
         <td id="ogre"><br><label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 +10%"><span id="ogre">오거</span></label><br><label class="ogre_synergy" style="color:#505050">(1)</label></td>
-        <td><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="goblin"><br><label class="trait_tooltip" data-tooltip-text="무작위 아군 1명(3), 모든 아군 고블린(6)에게 +15 방어력과 10 HP 리젠"><span id="goblin">고블린</span></label><br><label class="goblin_synergy" style="color:#505050">(3)(6)</label></td>
-        <td><div class="pieces cost_1 tinker"><div class="tier tier_d">D</div><img src=pieces\tinker.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
-        <td><div class="pieces cost_1 clockwerk"><div class="tier tier_s">S</div><img src=pieces\clockwerk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
-        <td><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
-        <td><div class="pieces cost_2 timbersaw"><div class="tier tier_s">S</div><img src=pieces\timbersaw.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div></div></td>
-        <td><div class="pieces cost_4 alchemist"><div class="tier tier_f">F</div><img src=pieces\alchemist.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
-        <td><div class="pieces cost_5 techies"><div class="tier tier_s">S</div><img src=pieces\techies.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tinker"><div class="tier tier_d">D</div><img src=pieces\tinker.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 clockwerk"><div class="tier tier_s">S</div><img src=pieces\clockwerk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 timbersaw"><div class="tier tier_s">S</div><img src=pieces\timbersaw.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 alchemist"><div class="tier tier_f">F</div><img src=pieces\alchemist.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 techies"><div class="tier tier_s">S</div><img src=pieces\techies.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
         <td></td>
         <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy" style="color:#505050">(1)</label></td>
-        <td><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="demon"><br><label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 50% 추가 순수 데미지"><span id="demon">악마</span></label><br><label class="demon_synergy" style="color:#505050">(1)</label></td>
-        <td><div class="pieces cost_2 queen_of_pain"><div class="tier tier_a">A</div><img src=pieces\queen_of_pain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
-        <td><div class="pieces cost_2 chaos_knight"><div class="tier tier_b">B</div><img src=pieces\chaos_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
-        <td><div class="pieces cost_3 terrorblade"><div class="tier tier_c">C</div><img src=pieces\terrorblade.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
-        <td><div class="pieces cost_3 shadow_fiend"><div class="tier tier_a">A</div><img src=pieces\shadow_fiend.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div></div></td>
-        <td><div class="pieces cost_4 doom"><div class="tier tier_aa">A+</div><img src=pieces\doom.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 queen_of_pain"><div class="tier tier_a">A</div><img src=pieces\queen_of_pain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 chaos_knight"><div class="tier tier_b">B</div><img src=pieces\chaos_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 terrorblade"><div class="tier tier_c">C</div><img src=pieces\terrorblade.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shadow_fiend"><div class="tier tier_a">A</div><img src=pieces\shadow_fiend.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 doom"><div class="tier tier_aa">A+</div><img src=pieces\doom.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div></div></td>
         <td></td>
         <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위 +300"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy" style="color:#505050">(2)</label></td>
-        <td><div class="pieces cost_3 sniper"><div class="tier tier_d">D</div><img src=pieces\sniper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
-        <td><div class="pieces cost_5 gyrocopter"><div class="tier tier_aa">A+</div><img src=pieces\gyrocopter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sniper"><div class="tier tier_d">D</div><img src=pieces\sniper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 gyrocopter"><div class="tier tier_aa">A+</div><img src=pieces\gyrocopter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="undead"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 방어력 -4(2), -6(4)"><span id="undead">언데드</span></label><br><label class="undead_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 drow_ranger"><div class="tier tier_b">B</div><img src=pieces\drow_ranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
-        <td><div class="pieces cost_3 abaddon"><div class="tier tier_b">B</div><img src=pieces\abaddon.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
-        <td><div class="pieces cost_4 necrophos"><div class="tier tier_aa">A+</div><img src=pieces\necrophos.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
-        <td><div class="pieces cost_5 lich"><div class="tier tier_b">B</div><img src=pieces\lich.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
-        <td><div class="pieces cost_5 death_prophet "><div class="tier tier_b">B</div><img src=pieces\death_prophet.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 drow_ranger"><div class="tier tier_b">B</div><img src=pieces\drow_ranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 abaddon"><div class="tier tier_b">B</div><img src=pieces\abaddon.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 necrophos"><div class="tier tier_aa">A+</div><img src=pieces\necrophos.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 lich"><div class="tier tier_b">B</div><img src=pieces\lich.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 death_prophet "><div class="tier tier_b">B</div><img src=pieces\death_prophet.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div></div></td>
         <td id="dragon"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 모든 아군 용이 마나 100을 가지고 시작(3)"><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(3)</label></td>
-        <td><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
-        <td><div class="pieces cost_3 viper"><div class="tier tier_b">B</div><img src=pieces\viper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
-        <td><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 viper"><div class="tier tier_b">B</div><img src=pieces\viper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="orc"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 오크에게 체력 +200(2), +300(4)"><span id="orc">오크</span></label><br><label class="orc_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 axe"><div class="tier tier_a">A</div><img src=pieces\axe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
-        <td><div class="pieces cost_2 beastmaster"><div class="tier tier_a">A</div><img src=pieces\beastmaster.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
-        <td><div class="pieces cost_2 juggernaut"><div class="tier tier_a">A</div><img src=pieces\juggernaut.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
-        <td><div class="pieces cost_4 disruptor"><div class="tier tier_s">S</div><img src=pieces\disruptor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 axe"><div class="tier tier_a">A</div><img src=pieces\axe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 beastmaster"><div class="tier tier_a">A</div><img src=pieces\beastmaster.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 juggernaut"><div class="tier tier_a">A</div><img src=pieces\juggernaut.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 disruptor"><div class="tier tier_s">S</div><img src=pieces\disruptor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
         <td id="troll"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 트롤에게 공격속도 +35(2), 모든 아군에게 공격속도 +30(4)"><span id="troll">트롤</span></label><br><label class="troll_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 bat_rider"><div class="tier tier_f">F</div><img src=pieces\bat_rider.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
-        <td><div class="pieces cost_1 shadow_shaman"><div class="tier tier_d">D</div><img src=pieces\shadow_shaman.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div></div></td>
-        <td><div class="pieces cost_2 witch_doctor"><div class="tier tier_d">D</div><img src=pieces\witch_doctor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
-        <td><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bat_rider"><div class="tier tier_f">F</div><img src=pieces\bat_rider.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 shadow_shaman"><div class="tier tier_d">D</div><img src=pieces\shadow_shaman.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 witch_doctor"><div class="tier tier_d">D</div><img src=pieces\witch_doctor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="species">
         <td id="naga"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력 +30(2), +30(4)"><span id="naga">나가</span></label><br><label class="naga_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
-        <td><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
-        <td><div class="pieces cost_4 medusa"><div class="tier tier_s">S+</div><img src=pieces\medusa.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
-        <td><div class="pieces cost_5 tidehunter"><div class="tier tier_s">S+</div><img src=pieces\tidehunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 medusa"><div class="tier tier_s">S+</div><img src=pieces\medusa.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 tidehunter"><div class="tier tier_s">S+</div><img src=pieces\tidehunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
         <td id="elementals"><label class="trait_tooltip" data-tooltip-text="아군 정령(2), 모든 아군(4)을 공격하는 근접 적은 30% 확률로 4초간 석화"><span id="elementals">정령</span></label><br><label class="elementals_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 tiny"><div class="tier tier_d">D</div><img src=pieces\tiny.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div></div></td>
-        <td><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
-        <td><div class="pieces cost_3 razor"><div class="tier tier_a">A</div><img src=pieces\razor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div></div></td>
-        <td><div class="pieces cost_5 enigma"><div class="tier tier_s">S+</div><img src=pieces\enigma.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tiny"><div class="tier tier_d">D</div><img src=pieces\tiny.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 razor"><div class="tier tier_a">A</div><img src=pieces\razor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 enigma"><div class="tier tier_s">S+</div><img src=pieces\enigma.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div></div></td>
       </tr>
     </table>
     <table style="display:inline;">
       <tr class="class">
         <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 암살자의 피해량 +10%/3배(3), +15%/4배(6) +20%/5배(9)"><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)(9)</label></td>
-        <td><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
-        <td><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
-        <td><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
-        <td><div class="pieces cost_3 queen_of_pain"><div class="tier tier_a">A</div><img src=pieces\queen_of_pain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
-        <td><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
-        <td><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
-        <td><div class="pieces cost_3 viper"><div class="tier tier_b">B</div><img src=pieces\viper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
-        <td><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
-        <td><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 queen_of_pain"><div class="tier tier_a">A</div><img src=pieces\queen_of_pain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 viper"><div class="tier tier_b">B</div><img src=pieces\viper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="warrior"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력 +7(3), +8(6), +9(9)"><span id="warrior">전사</span></label><br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label></td>
-        <td><div class="pieces cost_1 axe"><div class="tier tier_a">A</div><img src=pieces\axe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
-        <td><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
-        <td><div class="pieces cost_1 tiny"><div class="tier tier_d">D</div><img src=pieces\tiny.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div></div></td>
-        <td><div class="pieces cost_2 juggernaut"><div class="tier tier_a">A</div><img src=pieces\juggernaut.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
-        <td><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
-        <td><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
-        <td><div class="pieces cost_4 doom"><div class="tier tier_aa">A+</div><img src=pieces\doom.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div></div></td>
-        <td><div class="pieces cost_4 kunkka"><div class="tier tier_aa">A+</div><img src=pieces\kunkka.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div></div></td>
-        <td><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 axe"><div class="tier tier_a">A</div><img src=pieces\axe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tiny"><div class="tier tier_d">D</div><img src=pieces\tiny.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 juggernaut"><div class="tier tier_a">A</div><img src=pieces\juggernaut.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 doom"><div class="tier tier_aa">A+</div><img src=pieces\doom.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 kunkka"><div class="tier tier_aa">A+</div><img src=pieces\kunkka.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 전사">컨카</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="mage"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 -40(3), -40(6) 부여"><span id="mage">법사</span></label><br><label class="mage_synergy" style="color:#505050">(3)(6)</label></td>
-        <td><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
-        <td><div class="pieces cost_2 crystal"><div class="tier tier_c">C</div><img src=pieces\crystal.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
-        <td><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
-        <td><div class="pieces cost_3 razor"><div class="tier tier_a">A</div><img src=pieces\razor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div></div></td>
-        <td><div class="pieces cost_3 lina"><div class="tier tier_c">C</div><img src=pieces\lina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div></div></td>
-        <td><div class="pieces cost_4 light_keeper"><div class="tier tier_c">C</div><img src=pieces\light_keeper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div></div></td>
-        <td><div class="pieces cost_5 lich"><div class="tier tier_b">B</div><img src=pieces\lich.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 crystal"><div class="tier tier_c">C</div><img src=pieces\crystal.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 razor"><div class="tier tier_a">A</div><img src=pieces\razor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 법사">레이저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lina"><div class="tier tier_c">C</div><img src=pieces\lina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 light_keeper"><div class="tier tier_c">C</div><img src=pieces\light_keeper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 lich"><div class="tier tier_b">B</div><img src=pieces\lich.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="warlock"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈 +15%(3), +25%(6)"><span id="warlock">흑마</span></label><br><label class="warlock_synergy" style="color:#505050">(3)(6)</label></td>
-        <td><div class="pieces cost_2 witch_doctor"><div class="tier tier_d">D</div><img src=pieces\witch_doctor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
-        <td><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
-        <td><div class="pieces cost_3 shadow_fiend"><div class="tier tier_a">A</div><img src=pieces\shadow_fiend.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div></div></td>
-        <td><div class="pieces cost_4 necrophos"><div class="tier tier_aa">A+</div><img src=pieces\necrophos.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
-        <td><div class="pieces cost_4 alchemist"><div class="tier tier_f">F</div><img src=pieces\alchemist.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
-        <td><div class="pieces cost_5 enigma"><div class="tier tier_s">S+</div><img src=pieces\enigma.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div></div></td>
-        <td><div class="pieces cost_5 death_prophet "><div class="tier tier_b">B</div><img src=pieces\death_prophet.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 witch_doctor"><div class="tier tier_d">D</div><img src=pieces\witch_doctor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 흑마">위치 닥터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shadow_fiend"><div class="tier tier_a">A</div><img src=pieces\shadow_fiend.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 necrophos"><div class="tier tier_aa">A+</div><img src=pieces\necrophos.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">네크로포스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 alchemist"><div class="tier tier_f">F</div><img src=pieces\alchemist.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 enigma"><div class="tier tier_s">S+</div><img src=pieces\enigma.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 흑마">에니그마</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 death_prophet "><div class="tier tier_b">B</div><img src=pieces\death_prophet.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 흑마">데스 프로펫</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="hunter"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 사냥꾼에게 추가 공격력 +30%(3), +25%(6)"><span id="hunter">사냥꾼</span></label><br><label class="hunter_synergy" style="color:#505050">(3)(6)</label></td>
-        <td><div class="pieces cost_1 drow_ranger"><div class="tier tier_b">B</div><img src=pieces\drow_ranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
-        <td><div class="pieces cost_2 beastmaster"><div class="tier tier_a">A</div><img src=pieces\beastmaster.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
-        <td><div class="pieces cost_3 windranger"><div class="tier tier_a">A</div><img src=pieces\windranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
-        <td><div class="pieces cost_3 sniper"><div class="tier tier_d">D</div><img src=pieces\sniper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
-        <td><div class="pieces cost_3 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
-        <td><div class="pieces cost_4 medusa"><div class="tier tier_ss">S+</div><img src=pieces\medusa.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
-        <td><div class="pieces cost_5 tidehunter"><div class="tier tier_ss">S+</div><img src=pieces\tidehunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 drow_ranger"><div class="tier tier_b">B</div><img src=pieces\drow_ranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 사냥꾼">드로우레인저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 beastmaster"><div class="tier tier_a">A</div><img src=pieces\beastmaster.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 사냥꾼">비스트마스터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 windranger"><div class="tier tier_a">A</div><img src=pieces\windranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sniper"><div class="tier tier_d">D</div><img src=pieces\sniper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 medusa"><div class="tier tier_ss">S+</div><img src=pieces\medusa.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 tidehunter"><div class="tier tier_ss">S+</div><img src=pieces\tidehunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="knight"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기사에게 +25%(2), +35%(4), +45%(6)의 확률로 방어막이 생성됨"><span id="knight">기사</span></label><br><label class="knight_synergy" style="color:#505050">(2)(4)(6)</label></td>
-        <td><div class="pieces cost_1 bat_rider"><div class="tier tier_f">F</div><img src=pieces\bat_rider.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
-        <td><div class="pieces cost_2 chaos_knight"><div class="tier tier_b">B</div><img src=pieces\chaos_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
-        <td><div class="pieces cost_2 luna"><div class="tier tier_b">B</div><img src=pieces\luna.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 기사">루나</span></div></div></td>
-        <td><div class="pieces cost_3 abaddon"><div class="tier tier_b">B</div><img src=pieces\abaddon.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
-        <td><div class="pieces cost_3 omniknight"><div class="tier tier_b">B</div><img src=pieces\omniknight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div></div></td>
-        <td><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bat_rider"><div class="tier tier_f">F</div><img src=pieces\bat_rider.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 기사">뱃 라이더</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 chaos_knight"><div class="tier tier_b">B</div><img src=pieces\chaos_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 기사">카오스나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 luna"><div class="tier tier_b">B</div><img src=pieces\luna.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 기사">루나</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 abaddon"><div class="tier tier_b">B</div><img src=pieces\abaddon.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 기사">아바돈</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 omniknight"><div class="tier tier_b">B</div><img src=pieces\omniknight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 기사">옴니 나이트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="mech"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 기계에게 10(2), 20(4) HP 리젠"><span id="mech">기계</span></label><br><label class="mech_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 tinker"><div class="tier tier_d">D</div><img src=pieces\tinker.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
-        <td><div class="pieces cost_1 clockwerk"><div class="tier tier_s">S</div><img src=pieces\clockwerk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
-        <td><div class="pieces cost_2 timbersaw"><div class="tier tier_s">S</div><img src=pieces\timbersaw.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div></div></td>
-        <td><div class="pieces cost_5 techies"><div class="tier tier_s">S</div><img src=pieces\techies.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
-        <td><div class="pieces cost_5 gyrocopter"><div class="tier tier_aa">A+</div><img src=pieces\gyrocopter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tinker"><div class="tier tier_d">D</div><img src=pieces\tinker.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 clockwerk"><div class="tier tier_s">S</div><img src=pieces\clockwerk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 timbersaw"><div class="tier tier_s">S</div><img src=pieces\timbersaw.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팀버쏘우</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 techies"><div class="tier tier_s">S</div><img src=pieces\techies.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 gyrocopter"><div class="tier tier_aa">A+</div><img src=pieces\gyrocopter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
         <td></td>
         <td id="shaman"><br><label class="trait_tooltip" data-tooltip-text="라운드 시작시 무작위 적군 변이(2)"><span id="shaman">주술사</span></label><br><label class="shaman_synergy" style="color:#505050">(2)</label></td>
-        <td><div class="pieces cost_1 shadow_shaman"><div class="tier tier_d">D</div><img src=pieces\shadow_shaman.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div></div></td>
-        <td><div class="pieces cost_4 disruptor"><div class="tier tier_s">S</div><img src=pieces\disruptor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 shadow_shaman"><div class="tier tier_d">D</div><img src=pieces\shadow_shaman.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 주술사">쉐도우 샤먼</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 disruptor"><div class="tier tier_s">S</div><img src=pieces\disruptor.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 주술사">디스럽터</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="druid"><br><label class="trait_tooltip" data-tooltip-text="드루이드들은 2유닛만으로 2성(2), 3성(4)을 만들 수 있음(2)"><span id="druid">드루이드</span></label><br><label class="druid_synergy" style="color:#505050">(2)(4)</label></td>
-        <td><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
-        <td><div class="pieces cost_2 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프  드루이드">트렌트</span></div></div></td>
-        <td><div class="pieces cost_2 furion"><div class="tier tier_d">D</div><img src=pieces\furion.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
-        <td><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프  드루이드">트렌트</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 furion"><div class="tier tier_d">D</div><img src=pieces\furion.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
         <td></td>
         <td></td>
         <td id="demonhunter"><br><label class="trait_tooltip" data-tooltip-text="적군 악마효과제거(1), 아군 악마효과유지(2)"><span id="demonhunter">데몬헌터</span></label><br><label class="demonhunter_synergy" style="color:#505050">(1)(2)</label></td>
-        <td><div class="pieces cost_1 anti_mage"><div class="tier tier_aa">A+</div><img src=pieces\anti_mage.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
-        <td><div class="pieces cost_3 terrorblade"><div class="tier tier_c">C</div><img src=pieces\terrorblade.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 anti_mage"><div class="tier tier_aa">A+</div><img src=pieces\anti_mage.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 terrorblade"><div class="tier tier_c">C</div><img src=pieces\terrorblade.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 데몬헌터">테러블레이드</span></div></div></td>
       </tr>
     </table>
     <!--기물 정보 -->
