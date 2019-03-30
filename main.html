@@ -247,6 +247,15 @@
       font-weight: 900;
       text-shadow: none;
     }
+    #god {
+      width: 90px;
+      color: #00a3d2;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+
     #assassin {
       width: 90px;
       color: #f3e46e;
@@ -430,7 +439,7 @@
     (function(b){b.fn.bPopup=function(z,F){function K(){a.contentContainer=b(a.contentContainer||c);switch(a.content){case "iframe":var h=b('<iframe class="b-iframe" '+a.iframeAttr+"></iframe>");h.appendTo(a.contentContainer);r=c.outerHeight(!0);s=c.outerWidth(!0);A();h.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":A();b("<img />").load(function(){k(a.loadCallback);G(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:A(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);G(b(this))}).hide().appendTo(a.contentContainer)}}function A(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+t}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);D();c.data("bPopup",a).data("id",e).css({left:"slideIn"==a.transition||"slideBack"==a.transition?"slideBack"==a.transition?g.scrollLeft()+u:-1*(v+s):l(!(!a.follow[0]&&m||f)),position:a.positionStyle||"absolute",top:"slideDown"==a.transition||"slideUp"==a.transition?"slideUp"==a.transition?g.scrollTop()+w:x+-1*r:n(!(!a.follow[1]&&p||f)),"z-index":a.zIndex+t+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});H(!0)}function q(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");g.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,q).data("bPopup",null);H();return!1}function G(h){var b=h.width(),e=h.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());r=c.outerHeight(!0);s=c.outerWidth(!0);D();a.contentContainer.css({height:"auto",width:"auto"});d.left=l(!(!a.follow[0]&&m||f));d.top=n(!(!a.follow[1]&&p||f));c.animate(d,250,function(){h.show();B=E()})}function L(){d.data("bPopup",t);c.delegate(".bClose, ."+a.closeClass,"click."+e,q);a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",q);M||!a.follow[0]&&!a.follow[1]||d.bind("scroll."+e,function(){B&&c.dequeue().animate({left:a.follow[0]?l(!f):"auto",top:a.follow[1]?n(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){w=y.innerHeight||d.height();u=y.innerWidth||d.width();if(B=E())clearTimeout(I),I=setTimeout(function(){D();c.dequeue().each(function(){f?b(this).css({left:v,top:x}):b(this).animate({left:a.follow[0]?l(!0):"auto",top:a.follow[1]?n(!0):"auto"},a.followSpeed,a.followEasing)})},50)});a.escClose&&g.bind("keydown."+e,function(a){27==a.which&&q()})}function H(b){function d(e){c.css({display:"block",opacity:1}).animate(e,a.speed,a.easing,function(){J(b)})}switch(b?a.transition:a.transitionClose||a.transition){case "slideIn":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()-(s||c.outerWidth(!0))-C});break;case "slideBack":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()+u+C});break;case "slideDown":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()-(r||c.outerHeight(!0))-C});break;case "slideUp":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()+w+C});break;default:c.stop().fadeTo(a.speed,b?1:0,function(){J(b)})}}function J(b){b?(L(),k(F),a.autoClose&&setTimeout(q,a.autoClose)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function l(a){return a?v+g.scrollLeft():v}function n(a){return a?x+g.scrollTop():x}function k(a){b.isFunction(a)&&a.call(c)}function D(){x=p?a.position[1]:Math.max(0,(w-c.outerHeight(!0))/2-a.amsl);v=m?a.position[0]:(u-c.outerWidth(!0))/2;B=E()}function E(){return w>c.outerHeight(!0)&&u>c.outerWidth(!0)}b.isFunction(z)&&(F=z,z=null);var a=b.extend({},b.fn.bPopup.defaults,z);a.scrollBar||b("html").css("overflow","hidden");var c=this,g=b(document),y=window,d=b(y),w=y.innerHeight||d.height(),u=y.innerWidth||d.width(),M=/OS 6(_\d)+/i.test(navigator.userAgent),C=200,t=0,e,B,p,m,f,x,v,r,s,I;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";q()};return c.each(function(){b(this).data("bPopup")||(k(a.onOpen),t=(d.data("bPopup")||0)+1,e="__b-popup"+t+"__",p="auto"!==a.position[1],m="auto"!==a.position[0],f="fixed"===a.positionStyle,r=c.outerHeight(!0),s=c.outerWidth(!0),a.loadUrl?K():A())})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",autoClose:!1,closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,iframeAttr:'scrolling="no" frameborder="0"',loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",transitionClose:!1,zIndex:9997}})(jQuery);
   </script>
   <script type="text/javascript">
-    var elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0;
+    var elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0, god = 0;
     var assassin = 0, warrior = 0, mage = 0, warlock = 0, hunter = 0, knight = 0, mech = 0, druid = 0, demonhunter = 0, shaman = 0;
     var pieces_num = 0;
     anti_mage = ['anti_mage', 'elf','demonhunter'];
@@ -505,6 +514,8 @@
 
     ogre_magi = ['ogre_magi', 'ogre', 'mage'];
 
+    zeus = ['zeus', 'god', 'mage'];
+    mars = ['mars', 'god', 'warrior'];
     star_ = 1;
 
     $(function(){
@@ -696,6 +707,13 @@
         potrait_opacity(ogre_magi, e.which);
       });
 
+      $('.zeus').mousedown(function(e){
+        potrait_opacity(zeus, e.which);
+      });      
+      $('.mars').mousedown(function(e){
+        potrait_opacity(mars, e.which);
+      });
+
 
       $('.info_icon').mouseover(function(){
         $(this).css('opacity', '1');
@@ -769,6 +787,8 @@
                 demonhunter++;
               } else if (unit_name[i]=='shaman'){
                 shaman++;
+              } else if (unit_name[i]=='god'){
+                god++;
               }
             }
           } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★1') {
@@ -828,6 +848,8 @@
                 demonhunter--;
               } else if (unit_name[i]=='shaman'){
                 shaman--;
+              } else if (unit_name[i]=='god'){
+                god--;
               }
             }
           }
@@ -885,6 +907,8 @@
                 demonhunter--;
               } else if (unit_name[i]=='shaman'){
                 shaman--;
+              } else if (unit_name[i]=='god'){
+                god--;
               }
             }
           }
@@ -942,6 +966,8 @@
               demonhunter++;
             } else if (unit_name[i]=='shaman'){
               shaman++;
+            } else if (unit_name[i]=='god'){
+              god++;
             }
           }
         } else {
@@ -996,6 +1022,8 @@
               demonhunter--;
             } else if (unit_name[i]=='shaman'){
               shaman--;
+            } else if (unit_name[i]=='god'){
+              god--;
             }
           }
         }
@@ -1039,13 +1067,11 @@
       }
 
       if(beast<2){
-        $('.beast_synergy').text("(2)(4)(6)");
-      } else if(beast>=6) {
-        $('.beast_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+        $('.beast_synergy').text("(2)(4)");
       } else if(beast>=4) {
-        $('.beast_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+        $('.beast_synergy').html('<span style="color:white;">(2)(4)');
       } else if(beast>=2) {
-        $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+        $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)');
       }
       if(beast==0){
         $('.count_beast').css('display','none');
@@ -1111,11 +1137,9 @@
       }
 
       if(naga<2){
-        $('.naga_synergy').text("(2)(4)");
-      } else if(naga>=4) {
-        $('.naga_synergy').html('<span style="color:white;">(2)(4)</span>');
+        $('.naga_synergy').text("(2)");
       } else if(naga>=2) {
-        $('.naga_synergy').html('<span style="color:white;">(2)</span>(4)');
+        $('.naga_synergy').html('<span style="color:white;">(2)');
       }
       if(naga==0){
         $('.count_naga').css('display','none');
@@ -1200,14 +1224,24 @@
         $('.count_ogre').text("오거 x " + ogre);
       }
 
+      if(god<1){
+        $('.god_synergy').text("(1)");
+      } else if(ogre==1) {
+        $('.god_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(god==0){
+        $('.count_god').css('display','none');
+      } else {
+        $('.count_god').css('display','inline');
+        $('.count_god').text("신 x " + god);
+      }
+
       if(assassin<3){
-        $('.assassin_synergy').text("(3)(6)(9)");
-      } else if(assassin>=9) {
-        $('.assassin_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+        $('.assassin_synergy').text("(3)(6)");
       } else if(assassin>=6) {
-        $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+        $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>');
       } else if(assassin>=3) {
-        $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+        $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)');
       }
       if(assassin==0){
         $('.count_assassin').css('display','none');
@@ -1347,7 +1381,7 @@
 
     $(function(){
       $('input#reset').click(function(){
-        elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0;
+        elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0, god = 0
         assassin = 0, warrior = 0, mage = 0, warlock = 0, hunter = 0, knight = 0, mech = 0, druid = 0, demonhunter = 0, shaman = 0;
         pieces_num = 0;
         $('.pieces > img').css('opacity', '0.3');
@@ -1369,7 +1403,7 @@
         } else {
           star_ = 0;
           $('#star_button').val('별 ON');
-          elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0;
+          elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, dwarf = 0, satyr = 0, ogre = 0, god = 0
           assassin = 0, warrior = 0, mage = 0, warlock = 0, hunter = 0, knight = 0, mech = 0, druid = 0, demonhunter = 0, shaman = 0;
           pieces_num = 0;
           $('.pieces > img').css('opacity', '0.3');
@@ -1413,6 +1447,7 @@
     <label class="count_dwarf" style="display: none;color: #ab6043;">드워프 x 0</label>
     <label class="count_ogre" style="display: none;color: #357788;">오거 x 0</label>
     <label class="count_satyr" style="display: none;color: #343181;">사티로스 x 0</label><br>
+    <label class="count_god" style="display: none;color: #343181;">신 x 0</label><br>
 
     <label class="count_assassin" style="display: none;color: #f3e46e;">암살자 x 0</label>
     <label class="count_warrior" style="display: none;color: #9d9283;">전사 x 0</label>
@@ -1427,15 +1462,16 @@
   </b><br>
     <table style="display:inline;">
       <tr class="species">
-        <td id="elf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피 +25%(3), +25%(6), +25%(9)"><span id="elf">엘프</span></label><br><label class="elf_synergy" style="color:#505050">(3)(6)(9)</label></td>
+        <td id="elf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 엘프에게 회피율 증가 20%(3), 25%(6), 30%(9)"><span id="elf">엘프</span></label><br><label class="elf_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 anti_mage"><div class="tier tier_aa">A+</div><img src=pieces\anti_mage.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 데몬헌터">안티 메이지</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div></div></td>
+        
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 luna"><div class="tier tier_b">B</div><img src=pieces\luna.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 나이트">루나</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 furion"><div class="tier tier_d">D</div><img src=pieces\furion.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">퓨리온</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 windranger"><div class="tier tier_a">A</div><img src=pieces\windranger.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">윈드레인저</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 treant_protector"><div class="tier tier_c">C</div><img src=pieces\treant_protector.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">트렌트</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 mirana"><div class="tier tier_b">B</div><img src=pieces\mirana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 사냥꾼">미라나</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="species">
@@ -1449,18 +1485,6 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 dragon_knight"><div class="tier tier_ss">S+</div><img src=pieces\dragon_knight.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 용 기사">드래곤나이트</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 공격력 +15%(2), +20%(4), +25%(6)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(2)(4)(6)</label></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
-        <td></td>
-        <td id="ogre"><br><label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 +10%"><span id="ogre">오거</span></label><br><label class="ogre_synergy" style="color:#505050">(1)</label></td>
-        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
-      </tr>
-      <tr class="species">
         <td id="goblin"><br><label class="trait_tooltip" data-tooltip-text="무작위 아군 1명(3), 모든 아군 고블린(6)에게 +15 방어력과 10 HP 리젠"><span id="goblin">고블린</span></label><br><label class="goblin_synergy" style="color:#505050">(3)(6)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tinker"><div class="tier tier_d">D</div><img src=pieces\tinker.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">팅커</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 clockwerk"><div class="tier tier_s">S</div><img src=pieces\clockwerk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">클록워크</span></div></div></td>
@@ -1469,8 +1493,28 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 alchemist"><div class="tier tier_f">F</div><img src=pieces\alchemist.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 흑마">알케미스트</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 techies"><div class="tier tier_s">S</div><img src=pieces\techies.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 기계">테키</span></div></div></td>
         <td></td>
-        <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy" style="color:#505050">(1)</label></td>
+        <td id="ogre"><br><label class="trait_tooltip" data-tooltip-text="모든 오거 생명력 +10%"><span id="ogre">오거</span></label><br><label class="ogre_synergy" style="color:#505050">(1)</label></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
+        
+      </tr>
+      <tr class="species">
+        <td id="beast"><br><label class="trait_tooltip" data-tooltip-text="소환수를 포함한 모든 아군 공격력 증가 10%(2), 20%(4)"><span id="beast">야수</span></label><br><label class="beast_synergy" style="color:#505050">(2)(4)(6)</label></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 enchantress"><div class="tier tier_c">C</div><img src=pieces\enchantress.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">인챈트리스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 venomancer"><div class="tier tier_f">F</div><img src=pieces\venomancer.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 흑마">베노맨서</span></div></div></td>
+        <!--
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
+      -->
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 lone_druid"><div class="tier tier_s">S</div><img src=pieces\lone_druid.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 드루이드">론 드루이드</span></div></div></td>
+        <td></td>
+        <!-- <td id="satyr"><br><label class="trait_tooltip" data-tooltip-text="아군 벤치를 투명화시킴"><span id="satyr">사티로스</span></label><br><label class="satyr_synergy" style="color:#505050">(1)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
+        -->
+        <td id="god"><br><label class="trait_tooltip" data-tooltip-text="신을 제외한 종족시너지가 없을때 발동합니다.(1)모든 아군 유닛들의 스킬 재사용 대기시간이 절반으로 감소합니다.(2)모든 아군 유닛들의 스킬 재사용 대기시간이 추가로 절반이 감소합니다."><span id="god">신</span></label><br><label class="god_synergy" style="color:#505050">(1)</label></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 mars"><div class="tier tier_d">D</div><img src=pieces\mars.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 zeus"><div class="tier tier_s">S</div><img src=pieces\zeus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="신 법사">제우스</span></div></div></td>
+        
       </tr>
       <tr class="species">
         <td id="demon"><br><label class="trait_tooltip" data-tooltip-text="아군에 한 종류의 악마만 있을 경우 50% 추가 순수 데미지"><span id="demon">악마</span></label><br><label class="demon_synergy" style="color:#505050">(1)</label></td>
@@ -1509,9 +1553,11 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="species">
-        <td id="naga"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력 +30(2), +30(4)"><span id="naga">나가</span></label><br><label class="naga_synergy" style="color:#505050">(2)(4)</label></td>
+        <td id="naga"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 마법 방어력 +40(2)"><span id="naga">나가</span></label><br><label class="naga_synergy" style="color:#505050">(2)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
+        <!--
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
+      -->
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 medusa"><div class="tier tier_s">S+</div><img src=pieces\medusa.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">메두사</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 tidehunter"><div class="tier tier_s">S+</div><img src=pieces\tidehunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 사냥꾼">타이드 헌터</span></div></div></td>
         <td id="elementals"><label class="trait_tooltip" data-tooltip-text="아군 정령(2), 모든 아군(4)을 공격하는 근접 적은 30% 확률로 4초간 석화"><span id="elementals">정령</span></label><br><label class="elementals_synergy" style="color:#505050">(2)(4)</label></td>
@@ -1523,22 +1569,29 @@
     </table>
     <table style="display:inline;">
       <tr class="class">
-        <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 암살자의 피해량 +10%/3배(3), +15%/4배(6) +20%/5배(9)"><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)(9)</label></td>
+        <td id="assassin"><br><label class="trait_tooltip" data-tooltip-text="(3) +15% 확률로 암살자가 3.5배의 피해를 입힙니다. (6) +20% 확률로 암살자가 4.5배의 피해를 입힙니다."><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">바운티 헌터</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
+        <!--
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slark"><div class="tier tier_d">D</div><img src=pieces\slark.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 암살자">슬라크</span></div></div></td>
+      -->
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 queen_of_pain"><div class="tier tier_a">A</div><img src=pieces\queen_of_pain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">퀸 오브 페인</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 phantom_assassin"><div class="tier tier_c">C</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">팬텀 어쌔신</span></div></div></td>
+        <!--
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sand_king"><div class="tier tier_f">F</div><img src=pieces\sand_king.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 암살자">샌드 킹</span></div></div></td>
+      -->
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 viper"><div class="tier tier_b">B</div><img src=pieces\viper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 암살자">바이퍼</span></div></div></td>
+        <!--
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 riki"><div class="tier tier_f">F</div><img src=pieces\riki.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="사티로스 암살자">리키</span></div></div></td>
+      -->
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 templar_assassin"><div class="tier tier_a">A</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">템플러어쌔신</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="warrior"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력 +7(3), +8(6), +9(9)"><span id="warrior">전사</span></label><br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label></td>
+        <td id="warrior"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 전사에게 추가 방어력 +5(3), +7(6), +9(9)"><span id="warrior">전사</span></label><br><label class="warrior_synergy" style="color:#505050">(3)(6)(9)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 axe"><div class="tier tier_a">A</div><img src=pieces\axe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">엑스</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tusk"><div class="tier tier_d">D</div><img src=pieces\tusk.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야수 전사">터스크</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tiny"><div class="tier tier_d">D</div><img src=pieces\tiny.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 전사">타이니</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 mars"><div class="tier tier_d">D</div><img src=pieces\mars.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="신 전사">마르스</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 juggernaut"><div class="tier tier_a">A</div><img src=pieces\juggernaut.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오크 전사">저거넛</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 slardar"><div class="tier tier_c">C</div><img src=pieces\slardar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="나가 전사">슬라다</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lycan"><div class="tier tier_b">B</div><img src=pieces\lycan.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 야수 전사">라이칸</span></div></div></td>
@@ -1547,7 +1600,7 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 troll_warlord"><div class="tier tier_b">B</div><img src=pieces\troll_warlord.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 워로드</span></div></div></td>
       </tr>
       <tr class="class">
-        <td id="mage"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 -40(3), -40(6) 부여"><span id="mage">법사</span></label><br><label class="mage_synergy" style="color:#505050">(3)(6)</label></td>
+        <td id="mage"><br><label class="trait_tooltip" data-tooltip-text="모든 적군에게 마법 방어력 감소 +40%(3), +40%(6)"><span id="mage">법사</span></label><br><label class="mage_synergy" style="color:#505050">(3)(6)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 ogre_magi"><div class="tier tier_d">D</div><img src=pieces\ogre_magi.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="오거 법사">오거 마기</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 crystal"><div class="tier tier_c">C</div><img src=pieces\crystal.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">크리스탈</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 puck"><div class="tier tier_c">C</div><img src=pieces\puck.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 용 법사">퍽</span></div></div></td>
@@ -1555,6 +1608,7 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 lina"><div class="tier tier_c">C</div><img src=pieces\lina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">리나</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 light_keeper"><div class="tier tier_c">C</div><img src=pieces\light_keeper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="인간 법사">라이트 키퍼</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 lich"><div class="tier tier_b">B</div><img src=pieces\lich.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="언데드 법사">리치</span></div></div></td>
+        <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 zeus"><div class="tier tier_b">B</div><img src=pieces\zeus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="신 법사">제우스</span></div></div></td>
       </tr>
       <tr class="class">
         <td id="warlock"><br><label class="trait_tooltip" data-tooltip-text="모든 아군에게 흡혈 +15%(3), +25%(6)"><span id="warlock">흑마</span></label><br><label class="warlock_synergy" style="color:#505050">(3)(6)</label></td>
@@ -1631,11 +1685,11 @@
       <div id="treant_protector_info" class="info">
       <a class="b-close">x<a/>
         <ul class="info_list">
-          <li>트렌트 프로텍터(Treant Protector) - 엘프 드루이드</li><br>
-          <li>체력 : 650 / 1300 / 2300</li>
+          <li>나무정령 수호자(Treant Protector) - 엘프 드루이드</li><br>
+          <li>체력 : 750 / 1500 / 3000</li>
           <li>아머 : 5</li>
           <li>마저 : 0</li>
-          <li>공격력 : 60-90 / 120-180 / 240-360</li>
+          <li>공격력 : 70-100 / 140-200 / 280-400</li>
           <li>공격속도 : 2</li>
           <li>사거리 : 205</li><br>
           <li>궁극기 :  씨뿌리기</li>
@@ -2671,6 +2725,50 @@
           <li>자신 공격속도 증가 : 30 / 50 / 70 / 90</li>
           <li>지속시간 : 30</li>
           <li>쿨다운 : 5</li>
+        </ul>
+      </div>
+      <div id="zeus_info" class="info">
+      <a class="b-close">x<a/>
+        <ul class="info_list">
+          <li>제우스(Zeus) - 신 법사</li><br>
+          <li>체력 : 950 / 1900 / 3800</li>
+          <li>아머 : 0</li>
+          <li>마저 : 0</li>
+          <li>공격력 : 50-70 / 100-140 / 200-280</li>
+          <li>공격속도 : 1.4</li>
+          <li>사거리 : 400</li><br>
+          <li>궁극기 : 번개신의 분노</li>
+          <li>제우스가 모든 적 유닛을 번개로 강타합니다. 번개는 각각 50% 확률로 적들에게 피해를 입힙니다. 고정된 데미지와 적들의 현재 체력에 비례한 피해를 입힙니다. 최소 1명의 적은 적중합니다.</li>
+          <li>스킬 데미지 : 300 / 400 / 500</li>
+          <li>쿨다운 : 15 / 12 / 9</li>
+          <li>데미지 퍼센트 : 20% / 30% / 40%</li>
+          <li>캐스팅 시간 : 0.35</li>
+          <br />
+          <li>원정 경기에서 살아남은 번개의 신은 적 플레이어에게 현재 체력에 비례한 피해를 입힙니다.</li>
+          <li>플레이어에게 입히는 데미지 : 10% / 15% / 20%</li>
+          <li>(현재체력 비례)</li>
+        </ul>
+      </div>
+      <div id="mars_info" class="info">
+      <a class="b-close">x<a/>
+        <ul class="info_list">
+          <li>마르스(mars) - 신 전사</li><br>
+          <li>체력 : 650 / 1300 / 2600</li>
+          <li>아머 : 5</li>
+          <li>마저 : 0</li>
+          <li>공격력 : 0</li>
+          <li>공격속도 : 1.4</li>
+          <li>사거리 : 250</li><br>
+          <li>궁극기 : 방벽</li>
+          <li>마르스는 평타 공격을 하지 못합니다. 전방과 측면에서 받는 물리피해를 마스는 일정 비율을 막아냅니다.</li>
+          <li>마르스는 일정 시간 마다 전방 3칸 안에 있는 적을 방패로 강타하여 물리피해를 입힙니다.</li>
+          <li>전방 감소% : 30 / 50 / 70</li>
+          <li>전방 각도 : 90</li>
+          <li>측면 감소% : 15 / 25 / 35</li>
+          <li>측면 각도 : 180</li>
+          <li>방패 강타 범위 : 200</li>
+          <li>방패 강타 데미지 : 150 / 300/ 450</li>
+          <li>재사용 대기 시간 : 8</li>
         </ul>
       </div>
     </div>
