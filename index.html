@@ -1227,7 +1227,7 @@
       if(god<1){
         $('.god_synergy').text("(1)(2)");
       } else {
-        if(elf>3||human>1||goblin>2||beast>1||undead>1||orc>1||naga>2||ogre>0||dwarf>1||dragon>2||troll>1||elementals>1||assassin>2||warrior>2||mage>2||warlock>2||hunter>2||knight>1||mech>1||druid>1||shaman>1||demonhunter>0||demon==1){
+        if(elf>3||human>1||goblin>2||beast>1||undead>1||orc>1||naga>2||ogre>0||dwarf>1||dragon>2||troll>1||elementals>1||(demonhunter<2&&demon==1)){
           if(god==1) {
           $('.god_synergy').html('<span style="color:crimson;">(1)</span>(2)');
           } else if(god==2) {
