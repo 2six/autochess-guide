@@ -1188,10 +1188,10 @@
         $('.count_dragon').text("용 x " + dragon);
       }
 
-      if(dwarf<2){
-        $('.dwarf_synergy').text("(2)");
-      } else if(dwarf==2) {
-        $('.dwarf_synergy').html('<span style="color:white;">(2)</span>');
+      if(dwarf<1){
+        $('.dwarf_synergy').text("(1)");
+      } else if(dwarf==1) {
+        $('.dwarf_synergy').html('<span style="color:white;">(1)</span>');
       }
       if(dwarf==0){
         $('.count_dwarf').css('display','none');
@@ -1227,7 +1227,7 @@
       if(god<1){
         $('.god_synergy').text("(1)(2)");
       } else {
-        if(elf>2||human>1||goblin>2||beast>1||undead>1||orc>1||naga>2||ogre>0||dwarf>1||dragon>2||troll>1||elementals>1||(demonhunter<2&&demon==1)){
+        if(elf>3||human>1||goblin>2||beast>1||undead>1||orc>1||naga>2||ogre>0||dwarf>0||dragon>2||troll>1||elementals>1||(demon==1&&demonhunter<2)){
           if(god==1) {
           $('.god_synergy').html('<span style="color:crimson;">(1)</span>(2)');
           } else if(god==2) {
@@ -1537,7 +1537,7 @@
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shadow_fiend"><div class="tier tier_a">A</div><img src=pieces\shadow_fiend.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 흑마">쉐도우 핀드</span></div></div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 doom"><div class="tier tier_aa">A+</div><img src=pieces\doom.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 전사">둠</span></div></div></td>
         <td></td>
-        <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위 +300"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy" style="color:#505050">(2)</label></td>
+        <td id="dwarf"><br><label class="trait_tooltip" data-tooltip-text="모든 아군 드워프 공격 범위 +300"><span id="dwarf">드워프</span></label><br><label class="dwarf_synergy" style="color:#505050">(1)</label></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 sniper"><div class="tier tier_d">D</div><img src=pieces\sniper.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 사냥꾼">스나이퍼</div></td>
         <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 gyrocopter"><div class="tier tier_aa">A+</div><img src=pieces\gyrocopter.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="드워프 기계">자이로콥터</span></div></div></td>
       </tr>
