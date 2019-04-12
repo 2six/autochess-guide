@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135270720-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-135270720-1');
+  </script>
+    
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7994875041910921",
+            enable_page_level_ads: true
+       });
+  </script>
+
+  <title>도타2 오토체스 아이템 가이드</title>
+  <meta charset="utf-8"/>
+  <style type="text/css">
+    body {
+      color: #ffffff;
+      background-color: #000000;
+      font-size: 20px;
+      height: 100%;
+    }
+    html {
+        overflow: -moz-scrollbars-none;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    /* optional: show position indicator in red */
+    table {
+     -ms-user-select: none;
+     -moz-user-select: -moz-none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+    }
+    .asd{
+      font-size: 14px;
+      position:absolute;
+      left:50%;
+      transform:translate(-50%, -50%)
+    }
+    .squad {
+      display:inline;
+      position:absolute;
+      left:50%;
+      top: 6%;
+      text-align: center;
+      font-size: 16px;
+      transform:translate(-50%, -50%)
+    }
+    .species td {
+      width: 86px;
+      height: auto;
+      padding: 0px;
+    }
+    .speciesCombine td {
+      width: 60px;
+      height: auto;
+      padding: 0px;
+    }
+    .class td {
+      width: 86px;
+      height: 86px;
+      padding: 0px;
+    }
+    .pieces{
+      max-width: 100%;
+      height: auto;
+      padding: 3px;
+      position: relative;
+      border: 3px;
+    }
+    .pieces img {
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+    }
+    .pieces2 img {
+      width: 80%;
+      height: auto;
+      opacity: 0.5;
+    }
+    .combine img {
+      width: 160%;
+      height: auto;
+      opacity: 0.5;
+    }
+    .name {
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+      position: absolute;
+      bottom: 12px;
+      left: 6px;
+    }
+    .name2 {
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+      position: relative;
+      bottom: 40px;
+      left: 4px;
+    }
+
+    .effect {
+      vertical-align: middle;
+      font-size: 14px;
+      padding: 0px;
+      display: none;
+    }
+    .trait {
+      vertical-align: top;
+      text-align: center;
+      font-size: 12px;
+      padding: 0px;
+      display: none;
+    }
+    .star {
+      color : yellow;
+    }
+    .star2 {
+      left: -40px;
+      position: relative;
+      color : yellow;
+    }
+    .tier {
+      position: absolute;
+      top: 0px;
+      right: 2px;
+      opacity: 0.7;
+      display: none;
+      color:red;
+    }
+    .tier_ss {
+      color: #ffbf7f;
+    }
+    .tier_s {
+      color: #ffbf7f;
+    }
+    .tier_aa {
+      color: #ffdf7f;
+    }
+    .tier_a {
+      color: #7f7fff;
+    }
+    .tier_b {
+      color: #7fbfff;
+    }
+    .tier_c {
+      color: #ffffff;
+    }
+    .tier_d {
+      color: #aaaaaa;
+    }
+    .tier_f {
+      color: #888888;
+    }
+    .cost_1 img {
+      border: 3px solid #ffffff;
+    }
+    .cost_2 img {
+      border: 3px solid #888888;
+    }
+    .cost_3 img {
+      border: 3px solid #463fe0;
+    }
+    .cost_4 img {
+      border: 3px solid #ec10f0;
+    }
+    .cost_5 img {
+      border: 3px solid #f38b19;
+    }
+
+    .trait_tooltip {
+      color:black;
+      text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
+    }
+    .info_explain {
+      max-width: 90%;
+      height: auto;
+      padding: 20px;
+      position: center;
+      text-align:center;
+      border: 3px;
+    }
+
+    .info_icon {
+      position: absolute;
+      width:20px;
+      opacity: 0.5;
+      border-left: 7px solid rgba(0, 0, 0, 0);
+      border-top: 7px solid rgba(0, 0, 0, 0);
+      z-index: 10;
+    }
+    .info_icon2 {
+      position: relative;
+      width:20px;
+      opacity: 0.5;
+      border-left: 7px solid rgba(0, 0, 0, 0);
+      border-top: 7px solid rgba(0, 0, 0, 0);
+      z-index: -10;
+    }
+    .info {
+      background-color:#ffffff;
+      border-radius:15px;
+      color:#000;
+      display:none;
+      min-width:400px;
+      min-height: 180px;
+      width: 500px;
+    }
+    .info2 {
+      background-color:#ffffff;
+      border-radius:15px;
+      color:#000;
+      display:none;
+      min-width:200px;
+      min-height: 90px;
+      width: 210px;
+      height: 250px;
+    }
+    .info_list {
+      list-style:none;
+      position: relative;
+      left:-15px;
+    }
+    .b-close{
+      cursor:pointer;
+      position:absolute;
+      right:10px;
+      top:5px;
+      font-weight: 900;
+    }
+
+    [data-tooltip-text]:hover {
+      position: relative;
+    }
+
+    [data-tooltip-text]:after {
+      -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+      -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-weight:900;
+
+      color: #fffff;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      position: absolute;
+      width: auto;
+      min-width: 300px;
+      max-width: 3000px;
+      word-wrap: break-word;
+      text-align: left;
+
+      z-index: 9999;
+
+      opacity: 0;
+      left: -9999px;
+      top: 90%;
+
+      content: attr(data-tooltip-text);
+    }
+
+    [data-tooltip-text]:hover:after {
+      top: 130%;
+      left: 0;
+      opacity: 1;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    (function(b){b.fn.bPopup=function(z,F){function K(){a.contentContainer=b(a.contentContainer||c);switch(a.content){case "iframe":var h=b('<iframe class="b-iframe" '+a.iframeAttr+"></iframe>");h.appendTo(a.contentContainer);r=c.outerHeight(!0);s=c.outerWidth(!0);A();h.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":A();b("<img />").load(function(){k(a.loadCallback);G(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:A(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);G(b(this))}).hide().appendTo(a.contentContainer)}}function A(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+t}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);D();c.data("bPopup",a).data("id",e).css({left:"slideIn"==a.transition||"slideBack"==a.transition?"slideBack"==a.transition?g.scrollLeft()+u:-1*(v+s):l(!(!a.follow[0]&&m||f)),position:a.positionStyle||"absolute",top:"slideDown"==a.transition||"slideUp"==a.transition?"slideUp"==a.transition?g.scrollTop()+w:x+-1*r:n(!(!a.follow[1]&&p||f)),"z-index":a.zIndex+t+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});H(!0)}function q(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");g.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,q).data("bPopup",null);H();return!1}function G(h){var b=h.width(),e=h.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());r=c.outerHeight(!0);s=c.outerWidth(!0);D();a.contentContainer.css({height:"auto",width:"auto"});d.left=l(!(!a.follow[0]&&m||f));d.top=n(!(!a.follow[1]&&p||f));c.animate(d,250,function(){h.show();B=E()})}function L(){d.data("bPopup",t);c.delegate(".bClose, ."+a.closeClass,"click."+e,q);a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",q);M||!a.follow[0]&&!a.follow[1]||d.bind("scroll."+e,function(){B&&c.dequeue().animate({left:a.follow[0]?l(!f):"auto",top:a.follow[1]?n(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){w=y.innerHeight||d.height();u=y.innerWidth||d.width();if(B=E())clearTimeout(I),I=setTimeout(function(){D();c.dequeue().each(function(){f?b(this).css({left:v,top:x}):b(this).animate({left:a.follow[0]?l(!0):"auto",top:a.follow[1]?n(!0):"auto"},a.followSpeed,a.followEasing)})},50)});a.escClose&&g.bind("keydown."+e,function(a){27==a.which&&q()})}function H(b){function d(e){c.css({display:"block",opacity:1}).animate(e,a.speed,a.easing,function(){J(b)})}switch(b?a.transition:a.transitionClose||a.transition){case "slideIn":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()-(s||c.outerWidth(!0))-C});break;case "slideBack":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()+u+C});break;case "slideDown":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()-(r||c.outerHeight(!0))-C});break;case "slideUp":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()+w+C});break;default:c.stop().fadeTo(a.speed,b?1:0,function(){J(b)})}}function J(b){b?(L(),k(F),a.autoClose&&setTimeout(q,a.autoClose)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function l(a){return a?v+g.scrollLeft():v}function n(a){return a?x+g.scrollTop():x}function k(a){b.isFunction(a)&&a.call(c)}function D(){x=p?a.position[1]:Math.max(0,(w-c.outerHeight(!0))/2-a.amsl);v=m?a.position[0]:(u-c.outerWidth(!0))/2;B=E()}function E(){return w>c.outerHeight(!0)&&u>c.outerWidth(!0)}b.isFunction(z)&&(F=z,z=null);var a=b.extend({},b.fn.bPopup.defaults,z);a.scrollBar||b("html").css("overflow","hidden");var c=this,g=b(document),y=window,d=b(y),w=y.innerHeight||d.height(),u=y.innerWidth||d.width(),M=/OS 6(_\d)+/i.test(navigator.userAgent),C=200,t=0,e,B,p,m,f,x,v,r,s,I;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";q()};return c.each(function(){b(this).data("bPopup")||(k(a.onOpen),t=(d.data("bPopup")||0)+1,e="__b-popup"+t+"__",p="auto"!==a.position[1],m="auto"!==a.position[0],f="fixed"===a.positionStyle,r=c.outerHeight(!0),s=c.outerWidth(!0),a.loadUrl?K():A())})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",autoClose:!1,closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,iframeAttr:'scrolling="no" frameborder="0"',loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",transitionClose:!1,zIndex:9997}})(jQuery);
+  </script>
+  <script type="text/javascript">
+    var iiattackBlade = 0, iblightStone = 0, ichainMail = 0, icloak = 0, icrown = 0, imorbidMask = 0, iquarterstaff = 0, iRingofRegen = 0, iRingofHealth = 0, irobeoftheMagi = 0, istoutSheild = 0, ivoidStone = 0;
+    var iblinkDagger = 0, ibroadSword = 0, ijavellin = 0, imithrilHammer = 0, iplateMail = 0, istaffOfWizardry = 0, ivitalityBooster = 0;
+    var idemonEdge = 0, ihyperStone = 0, iultimageOrb = 0;
+    var imysticStaff = 0, ireaver = 0, isacredRelic = 0;
+    var assultCuirass = 0, battleFury = 0, bladeMail = 0, crystalys = 0, daedalus = 0, dagon1 = 0, dagon2 = 0, dagon3 = 0, dagon4 = 0, dagon5 = 0, desolator = 0, divineRapier = 0, heartOfTarrasque = 0, hoodOfDefiance = 0, kaya = 0, mom = 0, maelstrom = 0, mjollnir = 0, monkeykingBar = 0, moonShard = 0, perseverance = 0, refresherOrb = 0, scytheOfVyse = 0, vanguard = 0;
+    attackBlade = ['attackBlade'];blightStone = ['blightStone'];chainMail = ['chainMail'];cloak=['cloak'];crown=['crown'];morbidMask=['morbidMask'];quarterstaff=['quarterstaff'];RingofHealth=['RingofHealth'];RingofRegen=['RingofRegen'];robeoftheMagi=['robeoftheMagi'];stoutSheild=['stoutSheild'];voidStone=['voidStone'];
+    blinkDagger=['blinkDagger'];broadSword=['broadSword'];javellin=['javellin'];mithrilHammer=['mithrilHammer'];plateMail=['plateMail'];staffOfWizardry=['staffOfWizardry'];vitalityBooster=['vitalityBooster'];demonEdge=['demonEdge'];hyperStone=['hyperStone'];ultimageOrb=['ultimageOrb'];mysticStaff=['mysticStaff'];reaver=['reaver'];sacredRelic=['sacredRelic'];
+    assultCuirass=['assultCuirass'];battleFury=['battleFury'];bladeMail=['bladeMail'];crystalys=['crystalys'];daedalus=['daedalus'];dagon1=['dagon1'];dagon2=['dagon2'];dagon3=['dagon3'];dagon4=['dagon4'];dagon5=['dagon5'];desolator=['desolator'];divineRapier=['divineRapier'];heartOfTarrasque=['heartOfTarrasque'];hoodOfDefiance=['hoodOfDefiance'];kaya=['kaya'];mom=['mom'];maelstrom=['maelstrom'];mjollnir=['mjollnir'];monkeykingBar=['monkeykingBar'];moonShard=['moonShard'];perseverance=['perseverance'];refresherOrb=['refresherOrb'];scytheOfVyse=['scytheOfVyse'];vanguard=['vanguard'];
+    star_ = 0;
+
+    $(function(){
+      $('.attackBlade').mousedown(function(e){
+        potrait_opacity(attackBlade, e.which);
+      });
+      $('.blightStone').mousedown(function(e){
+        potrait_opacity(blightStone, e.which);
+      });
+      $('.chainMail').mousedown(function(e){
+        potrait_opacity(chainMail, e.which);
+      });
+      $('.cloak').mousedown(function(e){
+        potrait_opacity(cloak, e.which);
+      });
+      $('.crown').mousedown(function(e){
+        potrait_opacity(crown, e.which);
+      });
+      $('.morbidMask').mousedown(function(e){
+        potrait_opacity(morbidMask, e.which);
+      });
+      $('.quarterstaff').mousedown(function(e){
+        potrait_opacity(quarterstaff, e.which);
+      });
+      $('.RingofRegen').mousedown(function(e){
+        potrait_opacity(RingofRegen, e.which);
+      });
+      $('.robeoftheMagi').mousedown(function(e){
+        potrait_opacity(robeoftheMagi, e.which);
+      });
+      $('.stoutSheild').mousedown(function(e){
+        potrait_opacity(stoutSheild, e.which);
+      });
+      $('.voidStone').mousedown(function(e){
+        potrait_opacity(voidStone, e.which);
+      });
+      $('.blinkDagger').mousedown(function(e){
+        potrait_opacity(blinkDagger, e.which);
+      });
+      $('.broadSword').mousedown(function(e){
+        potrait_opacity(broadSword, e.which);
+      });
+      $('.javellin').mousedown(function(e){
+        potrait_opacity(javellin, e.which);
+      });
+      $('.mithrilHammer').mousedown(function(e){
+        potrait_opacity(mithrilHammer, e.which);
+      });
+      $('.plateMail').mousedown(function(e){
+        potrait_opacity(plateMail, e.which);
+      });
+      $('.staffOfWizardry').mousedown(function(e){
+        potrait_opacity(staffOfWizardry, e.which);
+      });
+      $('.vitalityBooster').mousedown(function(e){
+        potrait_opacity(vitalityBooster, e.which);
+      });
+      $('.demonEdge').mousedown(function(e){
+        potrait_opacity(demonEdge, e.which);
+      });
+      $('.hyperStone').mousedown(function(e){
+        potrait_opacity(hyperStone, e.which);
+      });
+      $('.ultimageOrb').mousedown(function(e){
+        potrait_opacity(ultimageOrb, e.which);
+      });
+      $('.mysticStaff').mousedown(function(e){
+        potrait_opacity(mysticStaff, e.which);
+      });
+      $('.reaver').mousedown(function(e){
+        potrait_opacity(reaver, e.which);
+      });
+      $('.sacredRelic').mousedown(function(e){
+        potrait_opacity(sacredRelic, e.which);
+      });
+
+
+      $('.info_icon').mouseover(function(){
+        $(this).css('opacity', '1');
+      });
+      $('.info_icon').mouseout(function(){
+        $(this).css('opacity', '0.5');
+      });
+      $('.info_icon').click(function(){
+        $('#' + $(this).next('div').attr('class').substr(14) + '_info').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+    });
+
+    function potrait_opacity(unit_name, input) {
+      if (input == 1){
+
+          if($('.' + unit_name[0] + ' span.star:first').text() == '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '1');
+            $('.' + unit_name[0] + ' span.star').text('★1');
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='attackBlade') {
+                iattackBlade++;
+              } else if (unit_name[i]=='blightStone'){
+                iblightStone++;
+              } else if (unit_name[i]=='chainMail'){
+                ichainMail++;
+              } else if (unit_name[i]=='cloak'){
+                icloak++;
+              } else if (unit_name[i]=='crown'){
+                icrown++;
+              } else if (unit_name[i]=='morbidMask'){
+                imorbidMask++;
+              } else if (unit_name[i]=='quarterstaff'){
+                iquarterstaff++;
+              } else if (unit_name[i]=='RingofRegen'){
+                iRingofRegen++;
+              } else if (unit_name[i]=='RingofHealth'){
+                iRingofHealth++;
+              } else if (unit_name[i]=='robeoftheMagi'){
+                irobeoftheMagi++;
+              } else if (unit_name[i]=='stoutSheild'){
+                istoutSheild++;
+              } else if (unit_name[i]=='voidStone'){
+                ivoidStone++;
+              } else if (unit_name[i]=='blinkDagger'){
+                iblinkDagger++;
+              } else if (unit_name[i]=='broadSword'){
+                ibroadSword++;
+              } else if (unit_name[i]=='javellin'){
+                ijavellin++;
+              } else if (unit_name[i]=='mithrilHammer'){
+                imithrilHammer++;
+              } else if (unit_name[i]=='plateMail'){
+                iplateMail++;
+              } else if (unit_name[i]=='warlock'){
+                warlock++;
+              } else if (unit_name[i]=='hunter'){
+                hunter++;
+              } else if (unit_name[i]=='knight'){
+                knight++;
+              } else if (unit_name[i]=='mech'){
+                mech++;
+              } else if (unit_name[i]=='druid'){
+                druid++;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter++;
+              } else if (unit_name[i]=='shaman'){
+                shaman++;
+              } else if (unit_name[i]=='hyperStone'){
+                ihyperStone++;
+              }
+            }
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★1') {
+            $('.' + unit_name[0] + ' span.star').text('★2');
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★2') {
+            $('.' + unit_name[0] + ' span.star').text('★3');
+          }  else {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.5');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='attackBlade') {
+                iattackBlade=0;
+              } else if (unit_name[i]=='blightStone'){
+                iblightStone=0;
+              } else if (unit_name[i]=='chainMail'){
+                ichainMail=0;
+              } else if (unit_name[i]=='cloak'){
+                icloak=0;
+              } else if (unit_name[i]=='crown'){
+                icrown=0;
+              } else if (unit_name[i]=='morbidMask'){
+                imorbidMask=0;
+              } else if (unit_name[i]=='quarterstaff'){
+                iquarterstaff=0;
+              } else if (unit_name[i]=='RingofRegen'){
+                iRingofRegen=0;
+              } else if (unit_name[i]=='RingofHealth'){
+                iRingofHealth=0;
+              } else if (unit_name[i]=='robeoftheMagi'){
+                irobeoftheMagi=0;
+              } else if (unit_name[i]=='stoutSheild'){
+                istoutSheild=0;
+              } else if (unit_name[i]=='voidStone'){
+                ivoidStone=0;
+              } else if (unit_name[i]=='blinkDagger'){
+                iblinkDagger=0;
+              } else if (unit_name[i]=='broadSword'){
+                ibroadSword=0;
+              } else if (unit_name[i]=='javellin'){
+                ijavellin=0;
+              } else if (unit_name[i]=='mithrilHammer'){
+                imithrilHammer=0;
+              } else if (unit_name[i]=='plateMail'){
+                iplateMail=0;
+              } else if (unit_name[i]=='warlock'){
+                warlock++;
+              } else if (unit_name[i]=='hunter'){
+                hunter++;
+              } else if (unit_name[i]=='knight'){
+                knight++;
+              } else if (unit_name[i]=='mech'){
+                mech++;
+              } else if (unit_name[i]=='druid'){
+                druid++;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter++;
+              } else if (unit_name[i]=='shaman'){
+                shaman++;
+              } else if (unit_name[i]=='hyperStone'){
+                ihyperStone=0;
+              }
+            }
+          }
+        } else if (input == 3) {
+          if($('.' + unit_name[0] + ' span.star:first').text() != '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.5');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            pieces_num--;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='attackBlade') {
+                attackBlade--;
+              } else if (unit_name[i]=='blightStone'){
+                blightStone--;
+              } else if (unit_name[i]=='beast'){
+                beast--;
+              } else if (unit_name[i]=='goblin'){
+                goblin--;
+              } else if (unit_name[i]=='demon'){
+                demon--;
+              } else if (unit_name[i]=='undead'){
+                undead--;
+              } else if (unit_name[i]=='orc'){
+                orc--;
+              } else if (unit_name[i]=='naga'){
+                naga--;
+              } else if (unit_name[i]=='elementals'){
+                elementals--;
+              } else if (unit_name[i]=='troll'){
+                troll--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='dwarf'){
+                dwarf--;
+              } else if (unit_name[i]=='ogre'){
+                ogre--;
+              } else if (unit_name[i]=='satyr'){
+                satyr--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='warrior'){
+                warrior--;
+              } else if (unit_name[i]=='mage'){
+                mage--;
+              } else if (unit_name[i]=='warlock'){
+                warlock--;
+              } else if (unit_name[i]=='hunter'){
+                hunter--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='mech'){
+                mech--;
+              } else if (unit_name[i]=='druid'){
+                druid--;
+              } else if (unit_name[i]=='demonhunter'){
+                demonhunter--;
+              } else if (unit_name[i]=='shaman'){
+                shaman--;
+              } else if (unit_name[i]=='god'){
+                god--;
+              }
+            }
+          }
+        }
+      squad_synergy();
+    }
+
+    function squad_synergy() {
+
+      if(ichainMail > 0 && iplateMail > 0 && ihyperStone > 0){
+        $('.assultCuirass > img').css('opacity', '1.0');
+      }
+      else{
+        $('.assultCuirass > img').css('opacity', '0.5');
+      }
+      if(elf==0){
+        $('.count_elf').css('display','none');
+      } else {
+        $('.count_elf').css('display','inline');
+        $('.count_elf').text("엘프 x " + elf);
+      }
+
+      if(human<2){
+        $('.human_synergy').text("(2)(4)(6)");
+      } else if(human>=6) {
+        $('.human_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(human>=4) {
+        $('.human_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+      } else if(human>=2) {
+        $('.human_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+      }
+      if(human==0){
+        $('.count_human').css('display','none');
+      } else {
+        $('.count_human').css('display','inline');
+        $('.count_human').text("인간 x " + human);
+      }
+
+      if(beast<2){
+        $('.beast_synergy').text("(2)(4)");
+      } else if(beast>=4) {
+        $('.beast_synergy').html('<span style="color:white;">(2)(4)');
+      } else if(beast>=2) {
+        $('.beast_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(beast==0){
+        $('.count_beast').css('display','none');
+      } else {
+        $('.count_beast').css('display','inline');
+        $('.count_beast').text("야수 x " + beast);
+      }
+
+      if(goblin<3){
+        $('.goblin_synergy').text("(3)(6)");
+      } else if(goblin>=6) {
+        $('.goblin_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(goblin>=3) {
+        $('.goblin_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(goblin==0){
+        $('.count_goblin').css('display','none');
+      } else {
+        $('.count_goblin').css('display','inline');
+        $('.count_goblin').text("고블린 x " + goblin);
+      }
+
+      if(demon<1){
+        $('.demon_synergy').text("(1)");
+      } else if(demon==1) {
+        $('.demon_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(demon==0){
+        $('.count_demon').css('display','none');
+      } else {
+        $('.count_demon').css('display','inline');
+        $('.count_demon').text("데몬 x " + demon);
+      }
+
+      if(undead<2){
+        $('.undead_synergy').text("(2)(4)");
+      } else if(undead>=6) {
+        $('.undead_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(undead>=4) {
+        $('.undead_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(undead>=2) {
+        $('.undead_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(undead==0){
+        $('.count_undead').css('display','none');
+      } else {
+        $('.count_undead').css('display','inline');
+        $('.count_undead').text("언데드 x " + undead);
+      }
+
+      if(orc<2){
+        $('.orc_synergy').text("(2)(4)");
+      } else if(orc>=4) {
+        $('.orc_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(orc>=2) {
+        $('.orc_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(orc==0){
+        $('.count_orc').css('display','none');
+      } else {
+        $('.count_orc').css('display','inline');
+        $('.count_orc').text("오크 x " + orc);
+      }
+
+      if(naga<2){
+        $('.naga_synergy').text("(2)");
+      } else if(naga>=2) {
+        $('.naga_synergy').html('<span style="color:white;">(2)');
+      }
+      if(naga==0){
+        $('.count_naga').css('display','none');
+      } else {
+        $('.count_naga').css('display','inline');
+        $('.count_naga').text("나가 x " + naga);
+      }
+
+      if(elementals<2){
+        $('.elementals_synergy').text("(2)(4)");
+      } else if(elementals>=4) {
+        $('.elementals_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(elementals>=2) {
+        $('.elementals_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(elementals==0){
+        $('.count_elementals').css('display','none');
+      } else {
+        $('.count_elementals').css('display','inline');
+        $('.count_elementals').text("정령 x " + elementals);
+      }
+
+      if(troll<2){
+        $('.troll_synergy').text("(2)(4)");
+      } else if(troll>=4) {
+        $('.troll_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(troll>=2) {
+        $('.troll_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(troll==0){
+        $('.count_troll').css('display','none');
+      } else {
+        $('.count_troll').css('display','inline');
+        $('.count_troll').text("트롤 x " + troll);
+      }
+
+      if(dragon<3){
+        $('.dragon_synergy').text("(3)");
+      } else if(dragon==3) {
+        $('.dragon_synergy').html('<span style="color:white;">(3)</span>');
+      }
+      if(dragon==0){
+        $('.count_dragon').css('display','none');
+      } else {
+        $('.count_dragon').css('display','inline');
+        $('.count_dragon').text("용 x " + dragon);
+      }
+
+      if(dwarf<1){
+        $('.dwarf_synergy').text("(1)");
+      } else if(dwarf==1) {
+        $('.dwarf_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(dwarf==0){
+        $('.count_dwarf').css('display','none');
+      } else {
+        $('.count_dwarf').css('display','inline');
+        $('.count_dwarf').text("드워프 x " + dwarf);
+      }
+
+      if(satyr<1){
+        $('.satyr_synergy').text("(1)");
+      } else if(satyr==1) {
+        $('.satyr_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(satyr==0){
+        $('.count_satyr').css('display','none');
+      } else {
+        $('.count_satyr').css('display','inline');
+        $('.count_satyr').text("사티로스 x " + satyr);
+      }
+
+      if(ogre<1){
+        $('.ogre_synergy').text("(1)");
+      } else if(ogre==1) {
+        $('.ogre_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(ogre==0){
+        $('.count_ogre').css('display','none');
+      } else {
+        $('.count_ogre').css('display','inline');
+        $('.count_ogre').text("오거 x " + ogre);
+      }
+
+      if(god<1){
+        $('.god_synergy').text("(1)(2)");
+      } else {
+        if(elf>2||human>1||goblin>2||beast>1||undead>1||orc>1||naga>1||ogre>0||dwarf>0||dragon>2||troll>1||elementals>1||(demon==1&&demonhunter<2)||(demon>1&&demonhunter>1)){
+          if(god==1) {
+          $('.god_synergy').html('<span style="color:crimson;">(1)</span>(2)');
+          } else if(god==2) {
+          $('.god_synergy').html('<span style="color:crimson;">(1)(2)');
+          }
+        }
+        else{
+          if(god==1) {
+          $('.god_synergy').html('<span style="color:white;">(1)</span>(2)');
+          } else if(god==2) {
+          $('.god_synergy').html('<span style="color:white;">(1)(2)');
+          }
+        }
+      }
+      if(god==0){
+        $('.count_god').css('display','none');
+      } else {
+        $('.count_god').css('display','inline');
+        $('.count_god').text("신 x " + god);
+      }
+
+      if(assassin<3){
+        $('.assassin_synergy').text("(3)(6)");
+      } else if(assassin>=6) {
+        $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(assassin>=3) {
+        $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(assassin==0){
+        $('.count_assassin').css('display','none');
+      } else {
+        $('.count_assassin').css('display','inline');
+        $('.count_assassin').text("암살자 x " + assassin);
+      }
+
+      if(warrior<3){
+        $('.warrior_synergy').text("(3)(6)(9)");
+      } else if(warrior>=9) {
+        $('.warrior_synergy').html('<span style="color:white;">(3)(6)(9)</span>');
+      } else if(warrior>=6) {
+        $('.warrior_synergy').html('<span style="color:white;">(3)(6)</span>(9)');
+      } else if(warrior>=3) {
+        $('.warrior_synergy').html('<span style="color:white;">(3)</span>(6)(9)');
+      }
+      if(warrior==0){
+        $('.count_warrior').css('display','none');
+      } else {
+        $('.count_warrior').css('display','inline');
+        $('.count_warrior').text("전사 x " + warrior);
+      }
+
+      if(mage<3){
+        $('.mage_synergy').text("(3)(6)");
+      } else if(mage>=6) {
+        $('.mage_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(mage>=3) {
+        $('.mage_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(mage==0){
+        $('.count_mage').css('display','none');
+      } else {
+        $('.count_mage').css('display','inline');
+        $('.count_mage').text("법사 x " + mage);
+      }
+
+      if(warlock<3){
+        $('.warlock_synergy').text("(3)(6)");
+      } else if(warlock>=6) {
+        $('.warlock_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(warlock>=3) {
+        $('.warlock_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(warlock==0){
+        $('.count_warlock').css('display','none');
+      } else {
+        $('.count_warlock').css('display','inline');
+        $('.count_warlock').text("흑마 x " + warlock);
+      }
+
+      if(hunter<3){
+        $('.hunter_synergy').text("(3)(6)");
+      } else if(hunter>=6) {
+        $('.hunter_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(hunter>=3) {
+        $('.hunter_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(hunter==0){
+        $('.count_hunter').css('display','none');
+      } else {
+        $('.count_hunter').css('display','inline');
+        $('.count_hunter').text("사냥꾼 x " + hunter);
+      }
+
+      if(knight<2){
+        $('.knight_synergy').text("(2)(4)(6)");
+      } else if(knight>=6) {
+        $('.knight_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(knight>=4) {
+        $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+      } else if(knight>=2) {
+        $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+      }
+      if(knight==0){
+        $('.count_knight').css('display','none');
+      } else {
+        $('.count_knight').css('display','inline');
+        $('.count_knight').text("기사 x " + knight);
+      }
+
+      if(mech<2){
+        $('.mech_synergy').text("(2)(4)");
+      } else if(mech>=4) {
+        $('.mech_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(mech>=2) {
+        $('.mech_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(mech==0){
+        $('.count_mech').css('display','none');
+      } else {
+        $('.count_mech').css('display','inline');
+        $('.count_mech').text("기계 x " + mech);
+      }
+
+      if(druid<2){
+        $('.druid_synergy').text("(2)(4)");
+      } else if(druid>=4) {
+        $('.druid_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(druid>=2) {
+        $('.druid_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(druid==0){
+        $('.count_druid').css('display','none');
+      } else {
+        $('.count_druid').css('display','inline');
+        $('.count_druid').text("드루이드 x " + druid);
+      }
+
+      if(demonhunter<1){
+        $('.demonhunter_synergy').text("(1)(2)");
+      } else if(demonhunter==1) {
+        $('.demonhunter_synergy').html('<span style="color:white;">(1)</span>(2)');
+      } else if(demonhunter==2) {
+        $('.demonhunter_synergy').html('<span style="color:white;">(1)(2)</span>');
+      }
+      if(demonhunter==0){
+        $('.count_demonhunter').css('display','none');
+      } else {
+        $('.count_demonhunter').css('display','inline');
+        $('.count_demonhunter').text("데몬헌터 x " + demonhunter);
+      }
+
+      if(shaman<2){
+        $('.shaman_synergy').text("(2)");
+      } else if(shaman==2) {
+        $('.shaman_synergy').html('<span style="color:white;">(2)</span>');
+      }
+      if(shaman==0){
+        $('.count_shaman').css('display','none');
+      } else {
+        $('.count_shaman').css('display','inline');
+        $('.count_shaman').text("샤먼 x " + shaman);
+      }
+    }
+
+    $(function(){
+      $('input#reset').click(function(){
+        $('.pieces > img').css('opacity', '0.3');
+        $('span.star').text('　');
+        squad_synergy();
+      });
+      $('input#tier').click(function(){
+        if($('.tier').css('display')!='none') {
+          $('.tier').css('display','none');
+        } else {
+          $('.tier').css('display','block');
+        }
+      });
+      $('input#star_button').click(function(){
+        if ( star_ == 0) {
+          star_ = 1;
+          $('#star_button').val('별 OFF');
+          $('span.star').text('　');
+        } else {
+          star_ = 0;
+          $('#star_button').val('별 ON');
+          $('.pieces > img').css('opacity', '0.3');
+          squad_synergy();
+        }
+      });
+      $('input#link').click(function(){
+        $('#link_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+      $('input#horse_num').click(function(){
+        $('#horse_num_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+    });
+  </script>
+
+  </head>
+  <body>
+      체스말 수 : <label class="count_pieces">0</label>
+      <div class="squad" style="display:none"></div>
+      <div style="float: right;display: inline; text-align: right;">Dcinside 체크메이트 갤러리 26<span style="font-size:18px"><br><input type="button" id="horse_num" value="체스 말 등장 개수"><br><input type="button" id="link" value="공략글"> <input type="button" id="star_button" value="별 OFF"> <input type="button" id="tier" value="티어"> <input type="button" id="reset" value="리셋"></span></div>
+      <br><b>
+      </b><br>
+      <table style="display:inline;">
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 attackBlade"><img src=item\ab.png><div class="name"><span class="star">　</span><br>갈퀴 발톱</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 blightStone"><img src=item\bs.png><div class="name"><span class="star">　</span><br>황폐석</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 chainMail"><img src=item\cm.png><div class="name"><span class="star">　</span><br>체인 메일</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 cloak"><img src=item\cl.png><div class="name"><span class="star">　</span><br>망토</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 crown"><img src=item\cr.png><div class="name"><span class="star">　</span><br>왕관</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 stoutSheild"><img src=item\ss.png><div class="name"><span class="star">　</span><br>ss</div></div></td>
+          </tr>
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 morbidMask"><img src=item\mm.png><div class="name"><span class="star">　</span><br>mm</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 quarterstaff"><img src=item\qu.png><div class="name"><span class="star">　</span><br>qu</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 RingofRegen"><img src=item\ror.png><div class="name"><span class="star">　</span><br>ror</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 RingofHealth"><img src=item\roh.png><div class="name"><span class="star">　</span><br>roh</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 robeoftheMagi"><img src=item\rotm.png><div class="name"><span class="star">　</span><br>rotm</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 voidStone"><img src=item\vs.png><div class="name"><span class="star">　</span><br>vs</div></div></td>
+          </tr>
+      </table>
+      <table style="display:inline;">
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 broadSword"><img src=item\bsword.png><div class="name"><span class="star">　</span><br>bsw</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 javellin"><img src=item\ja.png><div class="name"><span class="star">　</span><br>자벨린</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 mithrilHammer"><img src=item\mh.png><div class="name"><span class="star">　</span><br>mh</div></div></td>
+          </tr>
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 staffOfWizardry"><img src=item\sow.png><div class="name"><span class="star">　</span><br>sow</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 plateMail"><img src=item\pm.png><div class="name"><span class="star">　</span><br>pm</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 vitalityBooster"><img src=item\vb.png><div class="name"><span class="star">　</span><br>vb</div></div></td>
+          </tr>
+      </table>
+      <table style="display:inline;">
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 demonEdge"><img src=item\de.png><div class="name"><span class="star">　</span><br>de</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 hyperStone"><img src=item\hyper.png><div class="name"><span class="star">　</span><br>hs</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 ultimageOrb"><img src=item\uo.png><div class="name"><span class="star">　</span><br>uo</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blinkDagger"><img src=item\bd.png><div class="name"><span class="star">　</span><br>bd</div></div></td>
+          </tr>
+          <tr class="species">
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 mysticStaff"><img src=item\ms.png><div class="name"><span class="star">　</span><br>ms</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 reaver"><img src=item\rea.png><div class="name"><span class="star">　</span><br>vb</div></div></td>
+            <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 sacredRelic"><img src=item\sr.png><div class="name"><span class="star">　</span><br>sr</div></div></td>
+          </tr>
+      </table>
+      <br>
+      <table style="display: inline;">
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 mom"><img src=item\mom.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_1 morbidMask"><img src=item\mm.png></div>
+            <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 assultCuirass"><img src=item\ac.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_4 hyperStone"><img src=item\hyper.png></div>
+            <td><div class="pieces2 cost_2 plateMail"><img src=item\pm.png></div>
+            <td><div class="pieces2 cost_1 chainMail"><img src=item\cm.png></div>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 bladeMail"><img src=item\bm.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div>
+            <td><div class="pieces2 cost_1 chainMail"><img src=item\cm.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 crystalys"><img src=item\cry.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div>
+            <td><div class="pieces2 cost_1 attackBlade"><img src=item\ab.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 battleFury"><img src=item\bf.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div>
+            <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 daedalus"><img src=item\dae.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_5 crystalys"><img src=item\cry.png></div>
+            <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 divineRapier"><img src=item\dr.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_4 sacredRelic"><img src=item\sr.png></div>
+            <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 monkeykingBar"><img src=item\mkb.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div>
+            <td><div class="pieces2 cost_2 javellin"><img src=item\ja.png></div>
+            <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div>
+            <td></td>
+          </tr>
+      </table>
+      <table style="display: inline;">
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 kaya"><img src=item\kaya.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_2 robeoftheMagi"><img src=item\rotm.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 dagon1"><img src=item\d1.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_1 crown"><img src=item\cr.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 dagon2"><img src=item\d2.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_5 dagon1"><img src=item\d1.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 dagon3"><img src=item\d3.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_5 dagon2"><img src=item\d2.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 dagon4"><img src=item\d4.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_5 dagon3"><img src=item\d3.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 dagon5"><img src=item\d5.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div>
+            <td><div class="pieces2 cost_5 dagon4"><img src=item\d4.png></div>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="speciesCombine">
+            <td><img class="info_icon" src="img\info.png"><div class="combine cost_5 scytheOfVyse"><img src=item\sov.png></div></td>
+            <td></td>
+            <td><div class="pieces2 cost_1 voidStone"><img src=item\vs.png></div>
+            <td><div class="pieces2 cost_3 ultimageOrb"><img src=item\uo.png></div>
+            <td><div class="pieces2 cost_4 mysticStaff"><img src=item\ms.png></div>
+            <td></td>
+          </tr>
+      </table>
+
+      <!--기물 정보 -->
+      <div id="link_popup" class="info">
+          <a class="b-close">x</a>
+              <ul class="info_list">
+                  <li>초보자가 참고하면 좋은 글들입니다.</li>
+                  <li>　</li>
+                  <li><a href="https://gall.dcinside.com/atcs/6173" target="_blank">체스말 티어리스트/유닛별해석</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/635" target="_blank">시너지 조합 및 해석</a></li>
+                  <li><a href="https://blog.naver.com/kiminnav/221472311556" target="_blank">아이템 획득 확률 및 정보</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">오토체스의 기초</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">초반에 어떤 유닛을 사 모아야 하는가</a></li>
+              </ul>
+      </div>
+      <div id="horse_num_popup" class="info2">
+          <a class="b-close">x</a>
+               <div class="info_explain">
+                   <img src=pieces\autochess_horse_num.PNG />
+               </div>
+      <br>
+      <br>
+      <br>
+      <br>
+  </body>
+</html>
