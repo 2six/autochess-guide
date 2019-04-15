@@ -3,15 +3,15 @@
 <link rel="shortcut icon" href="img/favicon2.ico" type="img/x-icon">
 <link rel="icon" href="img/favicon2.ico" type="image/x-icon">
 <head>
- <!-- Global site tag (gtag.js) - Google Analytics -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
- <script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-137393427-1');
-</script>
+  </script>
 
 <title>도타2 오토체스 아이템 가이드</title>
 <meta charset="utf-8"/>
@@ -69,6 +69,7 @@
     width: 60px;
     height: auto;
     padding: 0px;
+    position: relative;
   }
   .class td {
     width: 86px;
@@ -108,12 +109,13 @@
   }
   .name2 {
     color: white;
+    width: 100px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 14px;
     text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-    position: relative;
-    bottom: 0px;
-    left: 0px;
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
   }
 
   .effect {
@@ -759,7 +761,7 @@ $(function(){
   </b><br>
   <table style="display: inline;">
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 bladeMail"><img src=item\bm.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 bladeMail"><img src=item\bm.png><div class="name2">칼날 갑옷</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div></td>
       <td><div class="pieces2 cost_1 chainMail"><img src=item\cm.png></div></td>
@@ -767,7 +769,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 crystalys"><img src=item\cry.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 crystalys"><img src=item\cry.png><div class="name2">수정검</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div></td>
       <td><div class="pieces2 cost_1 attackBlade"><img src=item\ab.png></div></td>
@@ -775,7 +777,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 battleFury"><img src=item\bf.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 battleFury"><img src=item\bf.png><div class="name2">전장격노</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
       <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
@@ -783,7 +785,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 daedalus"><img src=item\dae.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 daedalus"><img src=item\dae.png><div class="name2">다이달로스</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_5 crystalys"><img src=item\cry.png></div></td>
       <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
@@ -791,7 +793,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 divineRapier"><img src=item\dr.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 divineRapier"><img src=item\dr.png><div class="name2">신의 양날검</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_4 sacredRelic"><img src=item\sr.png></div></td>
       <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
@@ -799,7 +801,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 monkeykingBar"><img src=item\mkb.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 monkeykingBar"><img src=item\mkb.png><div class="name2">여의봉</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div></td>
       <td><div class="pieces2 cost_2 javellin"><img src=item\ja.png></div></td>
@@ -808,9 +810,9 @@ $(function(){
     </tr>
   </table>
 
-  <table style="display: inline;">
+  <table style="display: inline;" >
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mom"><img src=item\mom.png><div class="name2"></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mom"><img src=item\mom.png><div class="name2">광기의 가면</div></td>
       <td></td>
       <td><div class="pieces2 cost_1 morbidMask"><img src=item\mm.png></div></td>
       <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div></td>
@@ -818,7 +820,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 desolator"><img src=item\des.png><div class="name2"></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 desolator"><img src=item\des.png><div class="name2">심판도</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 blightStone"><img src=item\bs.png></div></td>
       <td><div class="pieces2 cost_2 mithrilHammer"><img src=item\mh.png></div></td>
@@ -826,7 +828,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 maelstrom"><img src=item\mae.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 maelstrom"><img src=item\mae.png><div class="name2">혼돈의 망치</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 javellin"><img src=item\ja.png></div></td>
       <td><div class="pieces2 cost_2 mithrilHammer"><img src=item\mh.png></div></td>
@@ -834,7 +836,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mjollnir"><img src=item\mjo.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mjollnir"><img src=item\mjo.png><div class="name2">묠니르</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
       <td><div class="pieces2 cost_5 maelstrom"><img src=item\mae.png></div></td>
@@ -842,7 +844,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 assultCuirass"><img src=item\ac.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 assultCuirass"><img src=item\ac.png><div class="name2">돌격 흉갑</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
       <td><div class="pieces2 cost_2 plateMail"><img src=item\pm.png></div></td>
@@ -850,7 +852,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 moonShard"><img src=item\msh.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 moonShard"><img src=item\msh.png><div class="name2">달 조각</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
       <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
@@ -861,7 +863,7 @@ $(function(){
 
   <table style="display: inline;">
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 perseverance"><img src=item\per.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 perseverance"><img src=item\per.png><div class="name2">인내의 반지</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 voidStone"><img src=item\vs.png></div></td>
       <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
@@ -869,7 +871,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 hoodOfDefiance"><img src=item\hod.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 hoodOfDefiance"><img src=item\hod.png><div class="name2">도전의 두건</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 cloak"><img src=item\cl.png></div></td>
       <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
@@ -877,7 +879,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 vanguard"><img src=item\van.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 vanguard"><img src=item\van.png><div class="name2">선봉 방패</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 stoutSheild"><img src=item\ss.png></div></td>
       <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
@@ -885,7 +887,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 heartOfTarrasque"><img src=item\hot.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 heartOfTarrasque"><img src=item\hot.png><div class="name2" style="font-size:12px">타라스크의 심장</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_4 reaver"><img src=item\rea.png></div></td>
       <td><div class="pieces2 cost_2 vitalityBooster"><img src=item\vb.png></div></td>
@@ -893,7 +895,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 refresherOrb"><img src=item\ro.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 refresherOrb"><img src=item\ro.png><div class="name2">재생의 구슬</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
       <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
@@ -901,7 +903,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 scytheOfVyse"><img src=item\sov.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 scytheOfVyse"><img src=item\sov.png><div class="name2">바이스의 낫</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_1 voidStone"><img src=item\vs.png></div></td>
       <td><div class="pieces2 cost_3 ultimageOrb"><img src=item\uo.png></div></td>
@@ -911,7 +913,7 @@ $(function(){
   </table>
   <table style="display: inline;">
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 kaya"><img src=item\kaya.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 kaya"><img src=item\kaya.png><div class="name2">카야</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_2 robeoftheMagi"><img src=item\rotm.png></div></td>
@@ -919,7 +921,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon1"><img src=item\d1.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon1"><img src=item\d1.png><div class="name2" style="font-size:10px">다곤 1</div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_1 crown"><img src=item\cr.png></div></td>
@@ -927,7 +929,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon2"><img src=item\d2.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon2"><img src=item\d2.png><div class="name2" style="font-size:12px">다곤 2</div></div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_5 dagon1"><img src=item\d1.png></div></td>
@@ -935,7 +937,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon3"><img src=item\d3.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon3"><img src=item\d3.png><div class="name2" style="font-size:14px">다곤 3</div></div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_5 dagon2"><img src=item\d2.png></div></td>
@@ -943,7 +945,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon4"><img src=item\d4.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon4"><img src=item\d4.png><div class="name2" style="font-size:16px">다곤 4</div></div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_5 dagon3"><img src=item\d3.png></div></td>
@@ -951,7 +953,7 @@ $(function(){
       <td></td>
     </tr>
     <tr class="speciesCombine">
-      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon5"><img src=item\d5.png></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon5"><img src=item\d5.png><div class="name2" style="font-size:18px">다곤 5</div></div></div></td>
       <td></td>
       <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
       <td><div class="pieces2 cost_5 dagon4"><img src=item\d4.png></div></td>
