@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+<link rel="shortcut icon" href="img/favicon2.ico" type="img/x-icon">
+<link rel="icon" href="img/favicon2.ico" type="image/x-icon">
 <head>
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'UA-137393427-1');
-  </script>
+  gtag('config', 'UA-137393427-1');
+</script>
 
 <title>도타2 오토체스 아이템 가이드</title>
 <meta charset="utf-8"/>
@@ -20,266 +22,273 @@
     font-size: 20px;
     height: 100%;
   }
-  html {
-    overflow: -moz-scrollbars-none;
-  }
-  ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-  }
   /* optional: show position indicator in red */
   table {
-   -ms-user-select: none;
-   -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
- }
- .asd{
-  font-size: 14px;
-  position:absolute;
-  left:50%;
-  transform:translate(-50%, -50%)
-}
-.squad {
-  display:inline;
-  position:absolute;
-  left:50%;
-  top: 6%;
-  text-align: center;
-  font-size: 16px;
-  transform:translate(-50%, -50%)
-}
-.species td {
-  width: 86px;
-  height: auto;
-  padding: 0px;
-}
-.speciesCombine td {
-  width: 60px;
-  height: auto;
-  padding: 0px;
-}
-.class td {
-  width: 86px;
-  height: 86px;
-  padding: 0px;
-}
-.pieces{
-  max-width: 100%;
-  height: auto;
-  padding: 3px;
-  position: relative;
-  border: 3px;
-}
-.pieces img {
-  width: 100%;
-  height: auto;
-  opacity: 0.5;
-}
-.pieces2 img {
-  width: 80%;
-  height: auto;
-  opacity: 0.5;
-}
-.combin img {
-  width: 160%;
-  height: auto;
-  opacity: 0.5;
-}
-.name {
-  color: white;
-  font-weight: 700;
-  font-size: 12px;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-  position: absolute;
-  bottom: 12px;
-  left: 6px;
-}
-.name2 {
-  color: white;
-  font-weight: 700;
-  font-size: 24px;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-}
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  input.btnOpgg {
+    background: url( "img/opgg_logo.png" ) no-repeat;
+    border: none;
+    width: 115px;
+    height: 48px;
+    cursor: pointer;
+  }
+  input.btnGall {
+    background: url( "img/gall_logo.png" ) no-repeat;
+    border: none;
+    width: 115px;
+    height: 48px;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+  .asd{
+    font-size: 14px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, -50%)
+  }
+  .squad {
+    display:inline;
+    position:absolute;
+    left:50%;
+    top: 6%;
+    text-align: center;
+    font-size: 16px;
+    transform:translate(-50%, -50%)
+  }
+  .species td {
+    width: 86px;
+    height: auto;
+    padding: 0px;
+  }
+  .speciesCombine td {
+    width: 60px;
+    height: auto;
+    padding: 0px;
+  }
+  .class td {
+    width: 86px;
+    height: 86px;
+    padding: 0px;
+  }
+  .pieces{
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+    position: relative;
+    border: 3px;
+  }
+  .pieces img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .pieces2 img {
+    width: 80%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .combin img {
+    width: 160%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .name {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
+  }
+  .name2 {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+  }
 
-.effect {
-  vertical-align: middle;
-  font-size: 14px;
-  padding: 0px;
-  display: none;
-}
-.trait {
-  vertical-align: top;
-  text-align: center;
-  font-size: 12px;
-  padding: 0px;
-  display: none;
-}
-.star {
-  color : yellow;
-}
-.star2 {
-  left: -40px;
-  position: relative;
-  color : yellow;
-}
-.tier {
-  position: absolute;
-  top: 0px;
-  right: 2px;
-  opacity: 0.7;
-  display: none;
-  color:red;
-}
-.tier_ss {
-  color: #ffbf7f;
-}
-.tier_s {
-  color: #ffbf7f;
-}
-.tier_aa {
-  color: #ffdf7f;
-}
-.tier_a {
-  color: #7f7fff;
-}
-.tier_b {
-  color: #7fbfff;
-}
-.tier_c {
-  color: #ffffff;
-}
-.tier_d {
-  color: #aaaaaa;
-}
-.tier_f {
-  color: #888888;
-}
-.cost_1 img {
-  border: 3px solid #ffffff;
-}
-.cost_2 img {
-  border: 3px solid #888888;
-}
-.cost_3 img {
-  border: 3px solid #463fe0;
-}
-.cost_4 img {
-  border: 3px solid #ec10f0;
-}
-.cost_5 img {
-  border: 3px solid #f38b19;
-}
+  .effect {
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 0px;
+    display: none;
+  }
+  .trait {
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px;
+    display: none;
+  }
+  .star {
+    color : yellow;
+  }
+  .star2 {
+    left: -40px;
+    position: relative;
+    color : yellow;
+  }
+  .tier {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    opacity: 0.7;
+    display: none;
+    color:red;
+  }
+  .tier_ss {
+    color: #ffbf7f;
+  }
+  .tier_s {
+    color: #ffbf7f;
+  }
+  .tier_aa {
+    color: #ffdf7f;
+  }
+  .tier_a {
+    color: #7f7fff;
+  }
+  .tier_b {
+    color: #7fbfff;
+  }
+  .tier_c {
+    color: #ffffff;
+  }
+  .tier_d {
+    color: #aaaaaa;
+  }
+  .tier_f {
+    color: #888888;
+  }
+  .cost_1 img {
+    border: 3px solid #ffffff;
+  }
+  .cost_2 img {
+    border: 3px solid #888888;
+  }
+  .cost_3 img {
+    border: 3px solid #463fe0;
+  }
+  .cost_4 img {
+    border: 3px solid #ec10f0;
+  }
+  .cost_5 img {
+    border: 3px solid #f38b19;
+  }
 
-.trait_tooltip {
-  color:black;
-  text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
-}
-.info_explain {
-  max-width: 90%;
-  height: auto;
-  padding: 20px;
-  position: center;
-  text-align:center;
-  border: 3px;
-}
+  .trait_tooltip {
+    color:black;
+    text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
+  }
+  .info_explain {
+    max-width: 90%;
+    height: auto;
+    padding: 20px;
+    position: center;
+    text-align:center;
+    border: 3px;
+  }
 
-.info_icon {
-  position: absolute;
-  width:20px;
-  opacity: 0.5;
-  border-left: 7px solid rgba(0, 0, 0, 0);
-  border-top: 7px solid rgba(0, 0, 0, 0);
-  z-index: 10;
-}
-.info_icon2 {
-  position: relative;
-  width:20px;
-  opacity: 0.5;
-  border-left: 7px solid rgba(0, 0, 0, 0);
-  border-top: 7px solid rgba(0, 0, 0, 0);
-  z-index: -10;
-}
-.info {
-  background-color:#ffffff;
-  border-radius:15px;
-  color:#000;
-  display:none;
-  min-width:400px;
-  min-height: 180px;
-  width: 500px;
-}
-.info2 {
-  background-color:#ffffff;
-  border-radius:15px;
-  color:#000;
-  display:none;
-  min-width:200px;
-  min-height: 90px;
-  width: 210px;
-  height: 250px;
-}
-.info_list {
-  list-style:none;
-  position: relative;
-  left:-15px;
-}
-.b-close{
-  cursor:pointer;
-  position:absolute;
-  width: 20px;
-  height: 20px;
-  right:0px;
-  top:0px;
-  font-weight: 900;
-}
+  .info_icon {
+    position: absolute;
+    width:20px;
+    opacity: 0.5;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    z-index: 10;
+  }
+  .info_icon2 {
+    position: relative;
+    width:20px;
+    opacity: 0.5;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    z-index: -10;
+  }
+  .info {
+    background-color:#ffffff;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    min-width:400px;
+    min-height: 180px;
+    width: 500px;
+  }
+  .info2 {
+    background-color:#ffffff;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    min-width: 810px;
+    width: auto;
+    height: auto;
+  }
+  .info_list {
+    list-style:none;
+    position: relative;
+    left:-15px;
+  }
+  .b-close{
+    cursor:pointer;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    right:0px;
+    top:0px;
+    font-weight: 900;
+  }
 
-[data-tooltip-text]:hover {
-  position: relative;
-}
+  [data-tooltip-text]:hover {
+    position: relative;
+  }
 
-[data-tooltip-text]:after {
-  -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
-  -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
-  transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+  [data-tooltip-text]:after {
+    -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+    transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
 
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
-  -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
-  box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
 
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-weight:900;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight:900;
 
-  color: #fffff;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  position: absolute;
-  width: auto;
-  min-width: 300px;
-  max-width: 3000px;
-  word-wrap: break-word;
-  text-align: left;
+    color: #fffff;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    position: absolute;
+    width: auto;
+    min-width: 300px;
+    max-width: 3000px;
+    word-wrap: break-word;
+    text-align: left;
 
-  z-index: 9999;
+    z-index: 9999;
 
-  opacity: 0;
-  left: -9999px;
-  top: 90%;
+    opacity: 0;
+    left: -9999px;
+    top: 90%;
 
-  content: attr(data-tooltip-text);
-}
+    content: attr(data-tooltip-text);
+  }
 
-[data-tooltip-text]:hover:after {
-  top: 130%;
-  left: 0;
-  opacity: 1;
-}
+  [data-tooltip-text]:hover:after {
+    top: 130%;
+    left: 0;
+    opacity: 1;
+  }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -392,309 +401,313 @@
     });
   });
 
-  function potrait_opacity(unit_name, input) {
-    if($('.' + unit_name[0] + ' > img').css('opacity') != '1') {
-      $('.' + unit_name[0] + ' > img').css('opacity', '1');
-      for(i=0;unit_name[i]!=null;i++) {
-        if(unit_name[i]=='attackBlade') {
-          iattackBlade=1;
-        } else if (unit_name[i]=='blightStone'){
-          iblightStone=1;
-        } else if (unit_name[i]=='chainMail'){
-          ichainMail=1;
-        } else if (unit_name[i]=='cloak'){
-          icloak=1;
-        } else if (unit_name[i]=='crown'){
-          icrown=1;
-        } else if(unit_name[i]=='stoutSheild') {
-          istoutSheild=1;
-        } else if (unit_name[i]=='broadSword'){
-          ibroadSword=1;
-        } else if (unit_name[i]=='javellin'){
-          ijavellin=1;
-        } else if (unit_name[i]=='mithrilHammer'){
-          imithrilHammer=1;
-        } else if (unit_name[i]=='morbidMask'){
-          imorbidMask=1;
-        } else if(unit_name[i]=='quarterstaff') {
-          iquarterstaff=1;
-        } else if (unit_name[i]=='RingofRegen'){
-          iRingofRegen=1;
-        } else if (unit_name[i]=='RingofHealth'){
-          iRingofHealth=1;
-        } else if (unit_name[i]=='robeoftheMagi'){
-          irobeoftheMagi=1;
-        } else if (unit_name[i]=='voidStone'){
-          ivoidStone=1;
-        } else if(unit_name[i]=='staffOfWizardry') {
-          istaffOfWizardry=1;
-        } else if (unit_name[i]=='plateMail'){
-          iplateMail=1;
-        } else if (unit_name[i]=='vitalityBooster'){
-          ivitalityBooster=1;
-        } else if (unit_name[i]=='demonEdge'){
-          idemonEdge=1;
-        } else if (unit_name[i]=='hyperStone'){
-          ihyperStone=1;
-        } else if(unit_name[i]=='ultimageOrb') {
-          iultimageOrb=1;
-        } else if (unit_name[i]=='blinkDagger'){
-          iblinkDagger=1;
-        } else if (unit_name[i]=='mysticStaff'){
-          imysticStaff=1;
-        } else if (unit_name[i]=='reaver'){
-          ireaver=1;
-        } else if (unit_name[i]=='sacredRelic'){
-          isacredRelic=1;
-        }
-      }
-    } else {
-      $('.' + unit_name[0] + ' > img').css('opacity', '0.5');
-      for(i=0;unit_name[i]!=null;i++) {
-        if(unit_name[i]=='attackBlade') {
-          iattackBlade0;
-        } else if (unit_name[i]=='blightStone'){
-          iblightStone=0;
-        } else if (unit_name[i]=='chainMail'){
-          ichainMail=0;
-        } else if (unit_name[i]=='cloak'){
-          icloak=0;
-        } else if (unit_name[i]=='crown'){
-          icrown=0;
-        } else if(unit_name[i]=='stoutSheild') {
-          istoutSheild=0;
-        } else if (unit_name[i]=='broadSword'){
-          ibroadSword=0;
-        } else if (unit_name[i]=='javellin'){
-          ijavellin=0;
-        } else if (unit_name[i]=='mithrilHammer'){
-          imithrilHammer=0;
-        } else if (unit_name[i]=='morbidMask'){
-          imorbidMask=0;
-        } else if(unit_name[i]=='quarterstaff') {
-          iquarterstaff=0;
-        } else if (unit_name[i]=='RingofRegen'){
-          iRingofRegen=0;
-        } else if (unit_name[i]=='RingofHealth'){
-          iRingofHealth=0;
-        } else if (unit_name[i]=='robeoftheMagi'){
-          irobeoftheMagi=0;
-        } else if (unit_name[i]=='voidStone'){
-          ivoidStone=0;
-        } else if(unit_name[i]=='staffOfWizardry') {
-          istaffOfWizardry=0;
-        } else if (unit_name[i]=='plateMail'){
-          iplateMail=0;
-        } else if (unit_name[i]=='vitalityBooster'){
-          ivitalityBooster=0;
-        } else if (unit_name[i]=='demonEdge'){
-          idemonEdge=0;
-        } else if (unit_name[i]=='hyperStone'){
-          ihyperStone=0;
-        } else if(unit_name[i]=='ultimageOrb') {
-          iultimageOrb=0;
-        } else if (unit_name[i]=='blinkDagger'){
-          iblinkDagger=0;
-        } else if (unit_name[i]=='mysticStaff'){
-          imysticStaff=0;
-        } else if (unit_name[i]=='reaver'){
-          ireaver=0;
-        } else if (unit_name[i]=='sacredRelic'){
-          isacredRelic=0;
-        }
+
+ function potrait_opacity(unit_name, input) {
+  if($('.' + unit_name[0] + ' > img').css('opacity') != '1') {
+    $('.' + unit_name[0] + ' > img').css('opacity', '1');
+    for(i=0;unit_name[i]!=null;i++) {
+      if(unit_name[i]=='attackBlade') {
+        iattackBlade=1;
+      } else if (unit_name[i]=='blightStone'){
+        iblightStone=1;
+      } else if (unit_name[i]=='chainMail'){
+        ichainMail=1;
+      } else if (unit_name[i]=='cloak'){
+        icloak=1;
+      } else if (unit_name[i]=='crown'){
+        icrown=1;
+      } else if(unit_name[i]=='stoutSheild') {
+        istoutSheild=1;
+      } else if (unit_name[i]=='broadSword'){
+        ibroadSword=1;
+      } else if (unit_name[i]=='javellin'){
+        ijavellin=1;
+      } else if (unit_name[i]=='mithrilHammer'){
+        imithrilHammer=1;
+      } else if (unit_name[i]=='morbidMask'){
+        imorbidMask=1;
+      } else if(unit_name[i]=='quarterstaff') {
+        iquarterstaff=1;
+      } else if (unit_name[i]=='RingofRegen'){
+        iRingofRegen=1;
+      } else if (unit_name[i]=='RingofHealth'){
+        iRingofHealth=1;
+      } else if (unit_name[i]=='robeoftheMagi'){
+        irobeoftheMagi=1;
+      } else if (unit_name[i]=='voidStone'){
+        ivoidStone=1;
+      } else if(unit_name[i]=='staffOfWizardry') {
+        istaffOfWizardry=1;
+      } else if (unit_name[i]=='plateMail'){
+        iplateMail=1;
+      } else if (unit_name[i]=='vitalityBooster'){
+        ivitalityBooster=1;
+      } else if (unit_name[i]=='demonEdge'){
+        idemonEdge=1;
+      } else if (unit_name[i]=='hyperStone'){
+        ihyperStone=1;
+      } else if(unit_name[i]=='ultimageOrb') {
+        iultimageOrb=1;
+      } else if (unit_name[i]=='blinkDagger'){
+        iblinkDagger=1;
+      } else if (unit_name[i]=='mysticStaff'){
+        imysticStaff=1;
+      } else if (unit_name[i]=='reaver'){
+        ireaver=1;
+      } else if (unit_name[i]=='sacredRelic'){
+        isacredRelic=1;
       }
     }
+  } else {
+    $('.' + unit_name[0] + ' > img').css('opacity', '0.5');
+    for(i=0;unit_name[i]!=null;i++) {
+      if(unit_name[i]=='attackBlade') {
+        iattackBlade0;
+      } else if (unit_name[i]=='blightStone'){
+        iblightStone=0;
+      } else if (unit_name[i]=='chainMail'){
+        ichainMail=0;
+      } else if (unit_name[i]=='cloak'){
+        icloak=0;
+      } else if (unit_name[i]=='crown'){
+        icrown=0;
+      } else if(unit_name[i]=='stoutSheild') {
+        istoutSheild=0;
+      } else if (unit_name[i]=='broadSword'){
+        ibroadSword=0;
+      } else if (unit_name[i]=='javellin'){
+        ijavellin=0;
+      } else if (unit_name[i]=='mithrilHammer'){
+        imithrilHammer=0;
+      } else if (unit_name[i]=='morbidMask'){
+        imorbidMask=0;
+      } else if(unit_name[i]=='quarterstaff') {
+        iquarterstaff=0;
+      } else if (unit_name[i]=='RingofRegen'){
+        iRingofRegen=0;
+      } else if (unit_name[i]=='RingofHealth'){
+        iRingofHealth=0;
+      } else if (unit_name[i]=='robeoftheMagi'){
+        irobeoftheMagi=0;
+      } else if (unit_name[i]=='voidStone'){
+        ivoidStone=0;
+      } else if(unit_name[i]=='staffOfWizardry') {
+        istaffOfWizardry=0;
+      } else if (unit_name[i]=='plateMail'){
+        iplateMail=0;
+      } else if (unit_name[i]=='vitalityBooster'){
+        ivitalityBooster=0;
+      } else if (unit_name[i]=='demonEdge'){
+        idemonEdge=0;
+      } else if (unit_name[i]=='hyperStone'){
+        ihyperStone=0;
+      } else if(unit_name[i]=='ultimageOrb') {
+        iultimageOrb=0;
+      } else if (unit_name[i]=='blinkDagger'){
+        iblinkDagger=0;
+      } else if (unit_name[i]=='mysticStaff'){
+        imysticStaff=0;
+      } else if (unit_name[i]=='reaver'){
+        ireaver=0;
+      } else if (unit_name[i]=='sacredRelic'){
+        isacredRelic=0;
+      }
+    }
+  }
+  squad_synergy();
+}
+
+function squad_synergy() {
+  if(ibroadSword > 0 && ichainMail > 0){
+    $('.bladeMail > img').css('opacity', '1.0');
+  }else{
+    $('.bladeMail > img').css('opacity', '0.5');
+  }
+  if(ibroadSword > 0 && iattackBlade > 0){
+    $('.crystalys > img').css('opacity', '1.0');
+    icrystalys = 1;
+  }else{
+    $('.crystalys > img').css('opacity', '0.5');
+    icrystalys = 0;
+  }
+  if(iperseverance > 0 && idemonEdge > 0){
+    $('.battleFury > img').css('opacity', '1.0');
+  }else{
+    $('.battleFury > img').css('opacity', '0.5');
+  }
+  if(icrystalys > 0 && idemonEdge > 0){
+    $('.daedalus > img').css('opacity', '1.0');
+  }else{
+    $('.daedalus > img').css('opacity', '0.5');
+  }
+  if(isacredRelic > 0 && idemonEdge > 0){
+    $('.divineRapier > img').css('opacity', '1.0');
+  }else{
+    $('.divineRapier > img').css('opacity', '0.5');
+  }
+  if(iquarterstaff > 0 && ijavellin > 0 && idemonEdge > 0){
+    $('.monkeykingBar > img').css('opacity', '1.0');
+  }else{
+    $('.monkeykingBar > img').css('opacity', '0.5');
+  }
+  if(istaffOfWizardry > 0 && irobeoftheMagi){
+    $('.kaya > img').css('opacity', '1.0');
+  }else{
+    $('.kaya > img').css('opacity', '0.5');
+  }
+  if(istaffOfWizardry > 0 && icrown){
+    $('.dagon1 > img').css('opacity', '1.0');
+    idagon1 = 1;
+  }else{
+    $('.dagon1 > img').css('opacity', '0.5');
+    idagon1 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon1){
+    $('.dagon2 > img').css('opacity', '1.0');
+    idagon2 = 1;
+  }else{
+    $('.dagon2 > img').css('opacity', '0.5');
+    idagon2 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon2){
+    $('.dagon3 > img').css('opacity', '1.0');
+    idagon3 = 1;
+  }else{
+    $('.dagon3 > img').css('opacity', '0.5');
+    idagon3 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon3){
+    $('.dagon4 > img').css('opacity', '1.0');
+    idagon4 = 1;
+  }else{
+    $('.dagon4 > img').css('opacity', '0.5');
+    idagon4 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon4){
+    $('.dagon5 > img').css('opacity', '1.0');
+    idagon5 = 1;
+  }else{
+    $('.dagon5 > img').css('opacity', '0.5');
+    idagon5 = 0;
+  }
+  if(imorbidMask > 0 && iquarterstaff > 0){
+    $('.mom > img').css('opacity', '1.0');
+  } else{
+    $('.mom > img').css('opacity', '0.5');
+  }
+  if(iblightStone > 0 && imithrilHammer > 0){
+    $('.desolator > img').css('opacity', '1.0');
+  } else{
+    $('.desolator > img').css('opacity', '0.5');
+  }
+  if(ijavellin > 0 && imithrilHammer > 0){
+    $('.maelstrom > img').css('opacity', '1.0');
+    imaelstrom = 1;
+  } else{
+    $('.maelstrom > img').css('opacity', '0.5');
+    imaelstrom = 0;
+  }
+  if(imaelstrom > 0 && ihyperStone > 0){
+    $('.mjollnir > img').css('opacity', '1.0');
+  } else{
+    $('.mjollnir > img').css('opacity', '0.5');
+  }
+  if(ichainMail > 0 && iplateMail > 0 && ihyperStone > 0){
+    $('.assultCuirass > img').css('opacity', '1.0');
+  }else{
+    $('.assultCuirass > img').css('opacity', '0.5');
+  }
+  if(ihyperStone > 0){
+    $('.moonShard > img').css('opacity', '1.0');
+  }else{
+    $('.moonShard > img').css('opacity', '0.5');
+  }
+  if(ivoidStone > 0 && iRingofHealth > 0){
+    $('.perseverance > img').css('opacity', '1.0');
+    iperseverance = 1;
+  }else{
+    $('.perseverance > img').css('opacity', '0.5');
+    iperseverance = 0;
+  }
+  if(icloak > 0 && iRingofHealth > 0 && iRingofRegen > 0){
+    $('.hoodOfDefiance > img').css('opacity', '1.0');
+  }else{
+    $('.hoodOfDefiance > img').css('opacity', '0.5');
+  }
+  if(istoutSheild > 0 && iRingofHealth > 0 && ivitalityBooster > 0){
+    $('.vanguard > img').css('opacity', '1.0');
+  }else{
+    $('.vanguard > img').css('opacity', '0.5');
+  }
+  if(ireaver > 0 && iRingofHealth > 0 && ivitalityBooster > 0){
+    $('.heartOfTarrasque > img').css('opacity', '1.0');
+  }else{
+    $('.heartOfTarrasque > img').css('opacity', '0.5');
+  }
+  if(iperseverance > 0){
+    $('.refresherOrb > img').css('opacity', '1.0');
+  }else{
+    $('.refresherOrb > img').css('opacity', '0.5');
+  }
+  if(ivoidStone > 0 && iultimageOrb > 0 && imysticStaff > 0){
+    $('.scytheOfVyse > img').css('opacity', '1.0');
+  }else{
+    $('.scytheOfVyse > img').css('opacity', '0.5');
+  }
+}
+
+$(function(){
+  $('input#reset').click(function(){
+    $('.pieces > img').css('opacity', '0.3');
+    $('span.star').text('　');
     squad_synergy();
-  }
-
-  function squad_synergy() {
-    if(ibroadSword > 0 && ichainMail > 0){
-      $('.bladeMail > img').css('opacity', '1.0');
-    }else{
-      $('.bladeMail > img').css('opacity', '0.5');
-    }
-    if(ibroadSword > 0 && iattackBlade > 0){
-      $('.crystalys > img').css('opacity', '1.0');
-      icrystalys = 1;
-    }else{
-      $('.crystalys > img').css('opacity', '0.5');
-      icrystalys = 0;
-    }
-    if(iperseverance > 0 && idemonEdge > 0){
-      $('.battleFury > img').css('opacity', '1.0');
-    }else{
-      $('.battleFury > img').css('opacity', '0.5');
-    }
-    if(icrystalys > 0 && idemonEdge > 0){
-      $('.daedalus > img').css('opacity', '1.0');
-    }else{
-      $('.daedalus > img').css('opacity', '0.5');
-    }
-    if(isacredRelic > 0 && idemonEdge > 0){
-      $('.divineRapier > img').css('opacity', '1.0');
-    }else{
-      $('.divineRapier > img').css('opacity', '0.5');
-    }
-    if(iquarterstaff > 0 && ijavellin > 0 && idemonEdge > 0){
-      $('.monkeykingBar > img').css('opacity', '1.0');
-    }else{
-      $('.monkeykingBar > img').css('opacity', '0.5');
-    }
-    if(istaffOfWizardry > 0 && irobeoftheMagi){
-      $('.kaya > img').css('opacity', '1.0');
-    }else{
-      $('.kaya > img').css('opacity', '0.5');
-    }
-    if(istaffOfWizardry > 0 && icrown){
-      $('.dagon1 > img').css('opacity', '1.0');
-      idagon1 = 1;
-    }else{
-      $('.dagon1 > img').css('opacity', '0.5');
-      idagon1 = 0;
-    }
-    if(istaffOfWizardry > 0 && idagon1){
-      $('.dagon2 > img').css('opacity', '1.0');
-      idagon2 = 1;
-    }else{
-      $('.dagon2 > img').css('opacity', '0.5');
-      idagon2 = 0;
-    }
-    if(istaffOfWizardry > 0 && idagon2){
-      $('.dagon3 > img').css('opacity', '1.0');
-      idagon3 = 1;
-    }else{
-      $('.dagon3 > img').css('opacity', '0.5');
-      idagon3 = 0;
-    }
-    if(istaffOfWizardry > 0 && idagon3){
-      $('.dagon4 > img').css('opacity', '1.0');
-      idagon4 = 1;
-    }else{
-      $('.dagon4 > img').css('opacity', '0.5');
-      idagon4 = 0;
-    }
-    if(istaffOfWizardry > 0 && idagon4){
-      $('.dagon5 > img').css('opacity', '1.0');
-      idagon5 = 1;
-    }else{
-      $('.dagon5 > img').css('opacity', '0.5');
-      idagon5 = 0;
-    }
-    if(imorbidMask > 0 && iquarterstaff > 0){
-      $('.mom > img').css('opacity', '1.0');
-    } else{
-      $('.mom > img').css('opacity', '0.5');
-    }
-    if(iblightStone > 0 && imithrilHammer > 0){
-      $('.desolator > img').css('opacity', '1.0');
-    } else{
-      $('.desolator > img').css('opacity', '0.5');
-    }
-    if(ijavellin > 0 && imithrilHammer > 0){
-      $('.maelstrom > img').css('opacity', '1.0');
-      imaelstrom = 1;
-    } else{
-      $('.maelstrom > img').css('opacity', '0.5');
-      imaelstrom = 0;
-    }
-    if(imaelstrom > 0 && ihyperStone > 0){
-      $('.mjollnir > img').css('opacity', '1.0');
-    } else{
-      $('.mjollnir > img').css('opacity', '0.5');
-    }
-    if(ichainMail > 0 && iplateMail > 0 && ihyperStone > 0){
-      $('.assultCuirass > img').css('opacity', '1.0');
-    }else{
-      $('.assultCuirass > img').css('opacity', '0.5');
-    }
-    if(ihyperStone > 0){
-      $('.moonShard > img').css('opacity', '1.0');
-    }else{
-      $('.moonShard > img').css('opacity', '0.5');
-    }
-    if(ivoidStone > 0 && iRingofHealth > 0){
-      $('.perseverance > img').css('opacity', '1.0');
-      iperseverance = 1;
-    }else{
-      $('.perseverance > img').css('opacity', '0.5');
-      iperseverance = 0;
-    }
-    if(icloak > 0 && iRingofHealth > 0 && iRingofRegen > 0){
-      $('.hoodOfDefiance > img').css('opacity', '1.0');
-    }else{
-      $('.hoodOfDefiance > img').css('opacity', '0.5');
-    }
-    if(istoutSheild > 0 && iRingofHealth > 0 && ivitalityBooster > 0){
-      $('.vanguard > img').css('opacity', '1.0');
-    }else{
-      $('.vanguard > img').css('opacity', '0.5');
-    }
-    if(ireaver > 0 && iRingofHealth > 0 && ivitalityBooster > 0){
-      $('.heartOfTarrasque > img').css('opacity', '1.0');
-    }else{
-      $('.heartOfTarrasque > img').css('opacity', '0.5');
-    }
-    if(iperseverance > 0){
-      $('.refresherOrb > img').css('opacity', '1.0');
-    }else{
-      $('.refresherOrb > img').css('opacity', '0.5');
-    }
-    if(ivoidStone > 0 && iultimageOrb > 0 && imysticStaff > 0){
-      $('.scytheOfVyse > img').css('opacity', '1.0');
-    }else{
-      $('.scytheOfVyse > img').css('opacity', '0.5');
-    }
-  }
-
-  $(function(){
-    $('input#reset').click(function(){
-      $('.pieces > img').css('opacity', '0.3');
-      $('span.star').text('　');
-      squad_synergy();
-    });
-    $('input#tier').click(function(){
-      if($('.tier').css('display')!='none') {
-        $('.tier').css('display','none');
-      } else {
-        $('.tier').css('display','block');
-      }
-    });
-    $('input#star_button').click(function(){
-      if ( star_ == 0) {
-        star_ = 1;
-        $('#star_button').val('별 OFF');
-        $('span.star').text('　');
-      } else {
-        star_ = 0;
-        $('#star_button').val('별 ON');
-        $('.pieces > img').css('opacity', '0.3');
-        squad_synergy();
-      }
-    });
-    $('input#link').click(function(){
-      $('#link_popup').bPopup({
-          follow: [false, false], //x, y
-          position: ['auto', 'auto'], //x, y
-          onOpen: function() {$('body').css('overflow', 'hidden');},
-          onClose: function() {$('body').css('overflow', '');},
-        });
-    });
-    $('input#horse_num').click(function(){
-      $('#horse_num_popup').bPopup({
-          follow: [false, false], //x, y
-          position: ['auto', 'auto'], //x, y
-          onOpen: function() {$('body').css('overflow', 'hidden');},
-          onClose: function() {$('body').css('overflow', '');},
-        });
-    });
   });
+  $('input#tier').click(function(){
+    if($('.tier').css('display')!='none') {
+      $('.tier').css('display','none');
+    } else {
+      $('.tier').css('display','block');
+    }
+  });
+  $('input#star_button').click(function(){
+    if ( star_ == 0) {
+      star_ = 1;
+      $('#star_button').val('별 OFF');
+      $('span.star').text('　');
+    } else {
+      star_ = 0;
+      $('#star_button').val('별 ON');
+      $('.pieces > img').css('opacity', '0.3');
+      squad_synergy();
+    }
+  });
+  $('input#link').click(function(){
+    $('#link_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+  });
+  $('input#creepitem').click(function(){
+    $('#creepitem_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+  });
+  $('input#creepround').click(function(){
+    
+  });
+});
 </script>
 
 </head>
 <body>
-  체스말 수 : <label class="count_pieces">0</label>
-  <div class="squad" style="display:none"></div>
-  <div style="float: right;display: inline; text-align: right;">Dcinside 체크메이트 갤러리 26<span style="font-size:18px"><br><input type="button" id="horse_num" value="체스 말 등장 개수"><br><input type="button" id="link" value="공략글"> <input type="button" id="star_button" value="별 OFF"> <input type="button" id="tier" value="티어"> <input type="button" id="reset" value="리셋"></span></div>
+  <div style="float: right;display: block; text-align: right; overflow: auto;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://autochess.op.gg/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists?id=dota2autochess')";><br>
+    <input type="button" id="creepitem" value="크립 아이템 드랍 확률" >
+  </div>
   <br><b>
   </b><br>
   <table style="display:inline;">
@@ -715,6 +728,7 @@
       <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 voidStone"><img src=item\vs.png><div class="name"><span class="star">　</span><br>공허석</div></div></td>
     </tr>
   </table>
+
   <table style="display:inline;">
     <tr class="species">
       <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 broadSword"><img src=item\bsword.png><div class="name"><span class="star">　</span><br>장검</div></div></td>
@@ -844,6 +858,7 @@
       <td></td>
     </tr>
   </table>
+
   <table style="display: inline;">
     <tr class="speciesCombine">
       <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 perseverance"><img src=item\per.png></div></td>
@@ -944,26 +959,7 @@
       <td></td>
     </tr>
   </table>
-
-
   <!--기물 정보 -->
-  <div id="link_popup" class="info">
-    <a class="b-close">x</a>
-    <ul class="info_list">
-      <li>초보자가 참고하면 좋은 글들입니다.</li>
-      <li>　</li>
-      <li><a href="https://gall.dcinside.com/atcs/6173" target="_blank">체스말 티어리스트/유닛별해석</a></li>
-      <li><a href="https://gall.dcinside.com/atcs/635" target="_blank">시너지 조합 및 해석</a></li>
-      <li><a href="https://blog.naver.com/kiminnav/221472311556" target="_blank">아이템 획득 확률 및 정보</a></li>
-      <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">오토체스의 기초</a></li>
-      <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">초반에 어떤 유닛을 사 모아야 하는가</a></li>
-    </ul>
-  </div>
-  <div id="horse_num_popup" class="info2">
-    <a class="b-close">x</a>
-    <div class="info_explain">
-     <img src=pieces\autochess_horse_num.PNG />
-    </div>
   <div id="attackBlade_info" class="info">
     <a class="b-close">x</a>
     <ul class="info_list">
@@ -1226,9 +1222,9 @@
       <li>다곤 1(Dagon 1)</li>
       <br>
       <li>자동 시전 : 무작위 적 하나에게 400의 피해를 줌.</li>
-      <li>쿨다운 : 15초
+      <li>쿨다운 : 15초</li>
       <li>일반 공격 대상의 마법 저항력 -30%</li>
-      <li>공격 시 마나 획득량 +50%
+      <li>공격 시 마나 획득량 +50%</li>
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(왕관, 다곤 시리즈)</li>
     </ul>
@@ -1239,9 +1235,9 @@
       <li>다곤 2(Dagon 2)</li>
       <br>
       <li>자동 시전 : 무작위 적 하나에게 500의 피해를 줌.</li>
-      <li>쿨다운 : 12초
+      <li>쿨다운 : 12초</li>
       <li>일반 공격 대상의 마법 저항력 -60%</li>
-      <li>공격 시 마나 획득량 +50%
+      <li>공격 시 마나 획득량 +50%</li>
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(왕관, 다곤 시리즈)</li>
     </ul>
@@ -1252,9 +1248,9 @@
       <li>다곤 3(Dagon 3)</li>
       <br>
       <li>자동 시전 : 무작위 적 하나에게 600의 피해를 줌.</li>
-      <li>쿨다운 : 9초
+      <li>쿨다운 : 9초</li>
       <li>일반 공격 대상의 마법 저항력 -90%</li>
-      <li>공격 시 마나 획득량 +50%
+      <li>공격 시 마나 획득량 +50%</li>
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(왕관, 다곤 시리즈)</li>
     </ul>
@@ -1265,9 +1261,9 @@
       <li>다곤 4(Dagon 4)</li>
       <br>
       <li>자동 시전 : 무작위 적 하나에게 700의 피해를 줌</li>
-      <li>쿨다운 : 6초
+      <li>쿨다운 : 6초</li>
       <li>일반 공격 대상의 마법 저항력 -120%</li>
-      <li>공격 시 마나 획득량 +50%
+      <li>공격 시 마나 획득량 +50%</li>
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(왕관, 다곤 시리즈)</li>
     </ul>
@@ -1278,9 +1274,9 @@
       <li>다곤 5(Dagon 5)</li>
       <br>
       <li>자동 시전 : 무작위 적 하나에게 800의 피해를 줌.</li>
-      <li>쿨다운 : 3초
+      <li>쿨다운 : 3초</li>
       <li>일반 공격 대상의 마법 저항력 -150%</li>
-      <li>공격 시 마나 획득량 +50%
+      <li>공격 시 마나 획득량 +50%</li>
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(왕관, 다곤 시리즈)</li>
     </ul>
@@ -1418,6 +1414,16 @@
       <li>(동일 아이템 계열 중복 적용 불가)</li>
       <li>(튼튼한 방패, 선봉 방패)</li>
     </ul>
+  </div>
+  <div id="creepitem_popup" class="info2">
+    <a class="b-close">x</a>
+    <div class="info_explain" >
+      <p style="display: inline; float: left"><img src="img\creepround.PNG"/></p>
+      <p style="display: inline; float: left; position: relative;"><img src="img\creepitem.PNG"/></p>
+    </div>
+  </div>
+  <div id="creepround_popup" class="info2">
+    <a class="b-close">x</a>
   </div>
   <br>
   <br>
