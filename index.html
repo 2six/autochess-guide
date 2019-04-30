@@ -1459,7 +1459,7 @@
         $('.count_hunter').text("사냥꾼 x " + hunter);
       }
 
-      if(knight<3){
+      if(knight<2){
         $('.knight_synergy').text("(3)(6)");
       } else if(knight>=6) {
         $('.knight_synergy').html('<span style="color:white;">(3)(6)</span>');
@@ -1659,6 +1659,7 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 treant_protector"><div class="tier tier_a">A</div><img src=pieces\treant_protector.png><div class="name3"><span class="star">　</span><br><span data-tooltip-text="엘프 드루이드">나무정령<br>수호자</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 phantom_assassin"><div class="tier tier_a">A</div><img src=pieces\phantom_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 암살자">유령 자객</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 templar_assassin"><div class="tier tier_b">B</div><img src=pieces\templar_assassin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프 어쌔신">암살 기사</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 io"><div class="tier tier_b">?</div><img src=pieces\io.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프">이오</span></div></div></td>
           </tr>
           <tr class="species">
               <td id="human"><br><label trait-tooltip-text="모든 아군 인간은 공격할 때 20%(2), 40%(4), 58%(6)(곱연산 결과)의 확률로 공격한 적을 4초간 침묵"><span id="human">인간</span></label><br><label class="human_synergy" style="color:#505050">(2)(4)(6)</label></td>
@@ -1755,9 +1756,9 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 troll_warlord"><div class="tier tier_a">A</div><img src=pieces\troll_warlord.png><div class="name3"><span class="star">　</span><br><span data-tooltip-text="트롤 전사">트롤 전쟁군주</span></div></div></td>
           </tr>
       </table>
-      <table style="display:inline; margin-left: -6px;">
+      <table style="display:inline; margin-left: -86px;">
           <tr class="class">
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 io"><div class="tier tier_b">?</div><img src=pieces\io.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="엘프">이오</span></div></div></td>
+              <td></td>
               <td id="assassin"><br><label trait-tooltip-text="(3)15% 확률로 암살자가 3.5배의 피해를 입힙니다. (6)15% 확률로 암살자가 4.5배의 피해를 입힙니다."><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)</label></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 bounty_hunter"><div class="tier tier_s">S</div><img src=pieces\bounty_hunter.png><div class="name3"><span class="star">　</span><br><span data-tooltip-text="고블린 암살자">현상금 사냥꾼</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 morphling"><div class="tier tier_c">C</div><img src=pieces\morphling.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="정령 암살자">모플링</span></div></div></td>
@@ -2055,7 +2056,7 @@
               <a class="b-close">
                   x</a>
                   <ul class="info_list">
-                      <li style="font-weight: bold">이오(io) - 엘프 팟수</li>
+                      <li style="font-weight: bold">이오(io) - 엘프</li>
                       <br>
                       <li>체력 : ? / ? / ?</li>
                       <li>아머 : ?</li>
@@ -2068,8 +2069,7 @@
                       <li style="font-size: 19px;">1성 동일 2개 + 1성 이오로 2성을 만들수 있다.</li>
                       <li style="font-size: 19px;">2성 동일 2개 + 2성 이오로 3성을 만들수 있다.</li>
                       <li style="font-size: 19px;">3성 이오는 존재 x</li>
-                      <li>(4월 30일 기준 1라운드부터 등장)</li>
-                      <li>(드루이드 시너지 적용 가능)</li>
+                      <li>(드루이드 시너지와 확인 필요)</li>
                   </ul>
           </div>
           <div id="crystal_info" class="info">
