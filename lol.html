@@ -1,0 +1,3175 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="img/favicon.ico" type="img/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet"> 
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-137393427-1');
+  </script>
+
+  <title>롤토체스 시너지 가이드</title>
+  <meta charset="utf-8"/>
+  <style type="text/css">
+    body {
+      color: #ffffff;
+      background-color: #000000;
+      font-size: 18px;
+      height: 100%;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    html {
+        overflow: -moz-scrollbars-none;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    /* optional: show position indicator in red */
+    table {
+     -ms-user-select: none;
+     -moz-user-select: -moz-none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+    }
+    input.btnOpgg {
+        background: url( "img/opgg_logo.png" ) no-repeat;
+        border: none;
+        width: 115px;
+        height: 48px;
+        cursor: pointer;
+    }
+    input.btnGall {
+        background: url( "img/gall_logo.png" ) no-repeat;
+        border: none;
+        width: 115px;
+        height: 48px;
+        cursor: pointer;
+        margin-left: 12px;
+   }
+   input.btnItem {
+        background: url( "img/item_logo.png" ) no-repeat;
+        border: none;
+        width: 115px;
+        height: 48px;
+        cursor: pointer;
+        margin-left: 12px;
+   }
+   input.btnQihl {
+        background: url( "img/qihl_logo.png" ) no-repeat;
+        background-color: #272727;
+        border: none;
+        width: 115px;
+        height: 48px;
+        cursor: pointer;
+        margin-left: 12px;
+   }
+    .asd{
+      font-size: 14px;
+      position:absolute;
+      left:50%;
+      transform:translate(-50%, -50%)
+    }
+    .squad {
+      display:inline;
+      position:absolute;
+      left:50%;
+      top: 6%;
+      text-align: center;
+      font-size: 16px;
+      transform:translate(-50%, -50%)
+    }
+    .species td {
+      width: 86px;
+      height: 86px;
+      padding: 0px;
+    }
+    .class td {
+      width: 86px;
+      height: 86px;
+      padding: 0px;
+    }
+    .pieces{
+      max-width: 100%;
+      height: auto;
+      padding: 3px;
+      position: relative;
+      border: 3px;
+    }
+    .pieces img {
+      width: 100%;
+      opacity: 0.3;
+    }
+    .name {
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+      position: absolute;
+      bottom: 12px;
+      left: 6px;
+    }
+    .name2 {
+      color: white;
+      font-weight: 700;
+      font-size: 10px;
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+      position: absolute;
+      bottom: 12px;
+      left: 6px;
+    }
+    .name3 {
+      color: white;
+      font-weight: 700;
+      font-size: 12px;
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+      position: absolute;
+      bottom: 12px;
+      left: 6px;
+    }
+    .effect {
+      vertical-align: middle;
+      font-size: 14px;
+      padding: 0px;
+      display: none;
+    }
+    .trait {
+      vertical-align: top;
+      text-align: center;
+      font-size: 12px;
+      padding: 0px;
+      display: none;
+    }
+    .star {
+      color : yellow;
+    }
+    .tier {
+      position: absolute;
+      top: 0px;
+      right: 2px;
+      opacity: 0.7;
+      display: none;
+      color:red;
+    }
+    .tier_ss {
+      color: #ffbf7f;
+    }
+    .tier_s {
+      color: #ffbf7f;
+    }
+    .tier_aa {
+      color: #ffdf7f;
+    }
+    .tier_a {
+      color: #7f7fff;
+    }
+    .tier_b {
+      color: #7fbfff;
+    }
+    .tier_c {
+      color: #ffffff;
+    }
+    .tier_d {
+      color: #aaaaaa;
+    }
+    .tier_f {
+      color: #888888;
+    }
+    #demon {
+      width: 86px;
+      color: #2a6392;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #dragon {
+      width: 86px;
+      color: #b8bcbd;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #frost {
+      width: 86px;
+      color: #00be00;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #empire {
+      width: 86px;
+      color: #801c1b;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #voidness {
+      width: 86px;
+      color: #66178b;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #ninja {
+      width: 86px;
+      color: #3c3f41;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #pirate {
+      width: 86px;
+      color: #c12629;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #ghost {
+      width: 86px;
+      color: #4346c1;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #robot {
+      width: 86px;
+      color: #b7ba35;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #noble {
+      width: 86px;
+      color: #8f8d64;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #wildness {
+      width: 86px;
+      color: #e70a0f;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #yordle {
+      width: 86px;
+      color: #ab6043;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #purgee {
+      width: 86px;
+      color: #343181;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #guardian {
+      width: 86px;
+      color: #357788;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #assassin {
+      width: 86px;
+      color: #00a3d2;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+
+    #blademaster {
+      width: 86px;
+      color: #f3e46e;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #fighter {
+      width: 86px;
+      color: #9d9283;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #elementalist {
+      width: 86px;
+      color: #6da6b4;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #gunslinger {
+      width: 86px;
+      color: #797899;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #knight {
+      width: 86px;
+      color: #b98da1;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #scouter {
+      width: 86px;
+      color: #71c891;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #sorcerer {
+      width: 86px;
+      color: #816a2f;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+    #shapeshifter {
+      width: 86px;
+      color: #8e5428;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 900;
+      text-shadow: none;
+    }
+
+    .cost_1 img {
+      border: 3px solid #888888;
+    }
+    .cost_2 img {
+      border: 3px solid #82a6e0;
+    }
+    .cost_3 img {
+      border: 3px solid #463fe0;
+    }
+    .cost_4 img {
+      border: 3px solid #ec10f0;
+    }
+    .cost_5 img {
+      border: 3px solid #f38b19;
+    }
+
+    .info_explain {
+      max-width: 90%;
+      height: auto;
+      padding: 20px;
+      position: center;
+      text-align:center;
+      border: 3px;
+    }
+
+    .info_icon {
+      position: absolute;
+      width:20px;
+      opacity: 0.5;
+      border-left: 7px solid rgba(0, 0, 0, 0);
+      border-top: 7px solid rgba(0, 0, 0, 0);
+      z-index: 10;
+    }
+    .info {
+      background-color:#ffffff;
+      border-radius:15px;
+      color:#000;
+      display:none;
+      min-width:200px;
+      min-height: 180px;
+      max-width: 600px;
+    }
+    .info2 {
+      background-color:#ffffff;
+      border-radius:15px;
+      color:#000;
+      display:none;
+      min-width:200px;
+      min-height: 90px;
+      width: 210px;
+      height: 250px;
+    }
+    .info_list {
+      list-style:none;
+      position: relative;
+      left:-15px;
+    }
+    .b-close{
+      cursor:pointer;
+      position:absolute;
+      width: 20px;
+      height: 20px;
+      right:0px;
+      top:0px;
+      font-weight: 900;
+    }
+
+    [data-tooltip-text]:hover {
+      position: relative;
+    }
+
+    [data-tooltip-text]:after {
+      -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+      -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-weight:bold;
+      word-break: break-all;
+      color: #fffff;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      position: absolute;
+      width: auto;
+      min-width: 100px;
+      max-width: 3000px;
+      word-wrap: break-word;
+      text-align: left;
+      background-color: color:white;
+      z-index: 9999;
+      opacity: 100;
+      left: -9999px;
+      top: 90%;
+
+      content: attr(data-tooltip-text);
+    }
+
+    [data-tooltip-text]:hover:after {
+      top: 130%;
+      left: 0;
+      opacity: 1;
+    }
+
+    [trait-tooltip-text]:hover {
+      position: relative;
+    }
+
+    [trait-tooltip-text]:after {
+      -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+      -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      color:black;
+      text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-weight:bold;
+      word-break: break-all;
+      color: #fffff;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      position: absolute;
+      width: auto;
+      min-width: 256px;
+      max-width: 3000px;
+      word-wrap: break-word;
+      text-align: left;
+      background-color: color:white;
+      z-index: 9999;
+      opacity: 100;
+      left: -9999px;
+      top: 90%;
+
+      content: attr(trait-tooltip-text);
+    }
+
+    [trait-tooltip-text]:hover:after {
+      top: 130%;
+      left: 0;
+      opacity: 1;
+    }
+
+    [trait-tooltip-text2]:hover {
+      position: relative;
+    }
+
+    [trait-tooltip-text2]:after {
+      -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+      transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+      -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+      color:black;
+      text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-weight:bold;
+      word-break: break-all;
+      color: #fffff;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      position: absolute;
+      width: auto;
+      min-width: 700px;
+      max-width: 3000px;
+      word-wrap: break-word;
+      text-align: left;
+      background-color: color:white;
+      z-index: 9999;
+      opacity: 100;
+      left: -9999px;
+      top: 90%;
+
+      content: attr(trait-tooltip-text2);
+    }
+
+    [trait-tooltip-text2]:hover:after {
+      top: 130%;
+      left: 0;
+      opacity: 1;
+    }
+    @keyframes speed {
+      0% {transform: translate(0);}
+      to {transform: translate(600px);}
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    (function(b){b.fn.bPopup=function(z,F){function K(){a.contentContainer=b(a.contentContainer||c);switch(a.content){case "iframe":var h=b('<iframe class="b-iframe" '+a.iframeAttr+"></iframe>");h.appendTo(a.contentContainer);r=c.outerHeight(!0);s=c.outerWidth(!0);A();h.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":A();b("<img />").load(function(){k(a.loadCallback);G(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:A(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);G(b(this))}).hide().appendTo(a.contentContainer)}}function A(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+t}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);D();c.data("bPopup",a).data("id",e).css({left:"slideIn"==a.transition||"slideBack"==a.transition?"slideBack"==a.transition?g.scrollLeft()+u:-1*(v+s):l(!(!a.follow[0]&&m||f)),position:a.positionStyle||"absolute",top:"slideDown"==a.transition||"slideUp"==a.transition?"slideUp"==a.transition?g.scrollTop()+w:x+-1*r:n(!(!a.follow[1]&&p||f)),"z-index":a.zIndex+t+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});H(!0)}function q(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");g.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,q).data("bPopup",null);H();return!1}function G(h){var b=h.width(),e=h.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());r=c.outerHeight(!0);s=c.outerWidth(!0);D();a.contentContainer.css({height:"auto",width:"auto"});d.left=l(!(!a.follow[0]&&m||f));d.top=n(!(!a.follow[1]&&p||f));c.animate(d,250,function(){h.show();B=E()})}function L(){d.data("bPopup",t);c.delegate(".bClose, ."+a.closeClass,"click."+e,q);a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",q);M||!a.follow[0]&&!a.follow[1]||d.bind("scroll."+e,function(){B&&c.dequeue().animate({left:a.follow[0]?l(!f):"auto",top:a.follow[1]?n(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){w=y.innerHeight||d.height();u=y.innerWidth||d.width();if(B=E())clearTimeout(I),I=setTimeout(function(){D();c.dequeue().each(function(){f?b(this).css({left:v,top:x}):b(this).animate({left:a.follow[0]?l(!0):"auto",top:a.follow[1]?n(!0):"auto"},a.followSpeed,a.followEasing)})},50)});a.escClose&&g.bind("keydown."+e,function(a){27==a.which&&q()})}function H(b){function d(e){c.css({display:"block",opacity:1}).animate(e,a.speed,a.easing,function(){J(b)})}switch(b?a.transition:a.transitionClose||a.transition){case "slideIn":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()-(s||c.outerWidth(!0))-C});break;case "slideBack":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()+u+C});break;case "slideDown":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()-(r||c.outerHeight(!0))-C});break;case "slideUp":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()+w+C});break;default:c.stop().fadeTo(a.speed,b?1:0,function(){J(b)})}}function J(b){b?(L(),k(F),a.autoClose&&setTimeout(q,a.autoClose)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function l(a){return a?v+g.scrollLeft():v}function n(a){return a?x+g.scrollTop():x}function k(a){b.isFunction(a)&&a.call(c)}function D(){x=p?a.position[1]:Math.max(0,(w-c.outerHeight(!0))/2-a.amsl);v=m?a.position[0]:(u-c.outerWidth(!0))/2;B=E()}function E(){return w>c.outerHeight(!0)&&u>c.outerWidth(!0)}b.isFunction(z)&&(F=z,z=null);var a=b.extend({},b.fn.bPopup.defaults,z);a.scrollBar||b("html").css("overflow","hidden");var c=this,g=b(document),y=window,d=b(y),w=y.innerHeight||d.height(),u=y.innerWidth||d.width(),M=/OS 6(_\d)+/i.test(navigator.userAgent),C=200,t=0,e,B,p,m,f,x,v,r,s,I;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";q()};return c.each(function(){b(this).data("bPopup")||(k(a.onOpen),t=(d.data("bPopup")||0)+1,e="__b-popup"+t+"__",p="auto"!==a.position[1],m="auto"!==a.position[0],f="fixed"===a.positionStyle,r=c.outerHeight(!0),s=c.outerWidth(!0),a.loadUrl?K():A())})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",autoClose:!1,closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,iframeAttr:'scrolling="no" frameborder="0"',loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",transitionClose:!1,zIndex:9997}})(jQuery);
+  </script>
+  <script type="text/javascript">
+    var demon = 0, dragon = 0, frost = 0, empire = 0, noble = 0, ninja = 0, pirate = 0, ghost = 0, robot = 0, voidness = 0, wildness = 0, yordle = 0, purgee = 0;
+    var guardian = 0, assassin = 0, blademaster = 0, fighter = 0, elementalist = 0, gunslinger = 0, knight = 0, scouter = 0, shapeshifter = 0, sorcerer = 0;
+    var pieces_num = 0;
+
+    kassadin = ['kassadin', 'voidness', 'sorcerer'];
+    nidalee = ['nidalee', 'wildness', 'shapeshifter'];
+    vayne = ['vayne', 'noble', 'scouter'];
+    mordekaiser = ['mordekaiser' , 'ghost', 'knight'];
+    darius = ['darius', 'empire', 'knight'];
+    garen = ['garen', 'noble', 'knight'];
+    tristana = ['tristana', 'yordle', 'gunslinger'];
+    graves = ['graves', 'pirate', 'gunslinger'];
+    warwick = ['warwick', 'pirate', 'gunslinger'];
+    fiora = ['fiora', 'noble', 'blademaster'];
+    khazix = ['khazix', 'voidness', 'assassin'];
+
+    ahri = ['ahri', 'wildness', 'sorcerer'];
+    lulu = ['lulu', 'yordle', 'sorcerer'];
+    elise = ['elise', 'demon', 'shapeshifter'];
+    varus = ['varus', 'demon', 'scouter'];
+    lucian = ['lucian', 'noble', 'gunslinger'];
+    braum = ['braum', 'frost', 'guardian'];
+    lissandra = ['lissandra', 'frost', 'elementalist'];
+    blitzcrank = ['blitzcrank', 'robot', 'fighter'];
+    reksai = ['reksai', 'voidness', 'fighter'];
+    shen = ['shen', 'ninja', 'blademaster'];
+    pyke = ['pyke', 'pirate', 'assassin'];
+    zed = ['zed', 'ninja', 'assassin'];
+
+    veigar = ['veigar', 'yordle', 'sorcerer'];
+    morgana = ['morgana', 'demon', 'sorcerer'];
+    shyvana = ['shyvana', 'dragon', 'shapeshifter'];
+    ashe = ['ashe', 'frost', 'scouter'];
+    poppy = ['poppy', 'yordle', 'knight'];
+    kennen = ['kennen', 'ninja', 'yordle', 'elementalist'];
+    volibear = ['volibear', 'frost', 'fighter'];
+    gangplank = ['gangplank', 'pirate', 'blademaster', 'gunslinger'];
+    aatrox = ['aatrox', 'demon', 'blademaster'];
+    katarina = ['katarina', 'empire', 'assassin'];
+    evelynn = ['evelynn', 'demon', 'assassin'];
+    rengar = ['rengar', 'wildness', 'assassin'];
+
+    aurelionsol = ['aurelionsol', 'dragon', 'sorcerer'];
+    gnar = ['gnar', 'yordle', 'wildness', 'shapeshifter'];
+    kindred = ['kindred', 'ghost', 'scouter'];
+    sejuani = ['sejuani', 'frost', 'knight'];
+    leona = ['leona', 'noble', 'guardian'];
+    brand = ['brand', 'demon', 'elementalist'];
+    chogath = ['chogath', 'voidness', 'fighter'];
+    draven = ['draven', 'empire', 'blademaster'];
+    akali = ['akali', 'ninja', 'assassin'];
+    karthus = ['karthus', 'ghost', 'sorcerer'];
+    swain = ['swain', 'demon', 'empire', 'shapeshifter'];
+    kayle = ['kayle', 'noble', 'knight'];
+    missfortune = ['missfortune', 'pirate', 'gunslinger'];
+    anivia = ['anivia', 'frost', 'elementalist'];
+    yasuo = ['yasuo', 'purgee', 'blademaster'];
+
+    star_ = 1;
+
+    $(function(){
+      $('.kassadin').mousedown(function(e){
+        potrait_opacity(kassadin, e.which);
+      });
+      $('.nidalee').mousedown(function(e){
+        potrait_opacity(nidalee, e.which);
+      });
+      $('.vayne').mousedown(function(e){
+        potrait_opacity(vayne, e.which);
+      });
+      $('.mordekaiser').mousedown(function(e){
+        potrait_opacity(mordekaiser, e.which);
+      });
+      $('.darius').mousedown(function(e){
+        potrait_opacity(darius, e.which);
+      });
+      $('.garen').mousedown(function(e){
+        potrait_opacity(garen, e.which);
+      });
+      $('.tristana').mousedown(function(e){
+        potrait_opacity(tristana, e.which);
+      });
+      $('.graves').mousedown(function(e){
+        potrait_opacity(graves, e.which);
+      });
+      $('.warwick').mousedown(function(e){
+        potrait_opacity(warwick, e.which);
+      });
+      $('.fiora').mousedown(function(e){
+        potrait_opacity(fiora, e.which);
+      });
+
+      $('.khazix').mousedown(function(e){
+        potrait_opacity(khazix, e.which);
+      });
+      $('.ahri').mousedown(function(e){
+        potrait_opacity(ahri, e.which);
+      });
+      $('.lulu').mousedown(function(e){
+        potrait_opacity(lulu, e.which);
+      });
+      $('.elise').mousedown(function(e){
+        potrait_opacity(elise, e.which);
+      });
+      $('.varus').mousedown(function(e){
+        potrait_opacity(varus, e.which);
+      });
+      $('.lucian').mousedown(function(e){
+        potrait_opacity(lucian, e.which);
+      });
+      $('.braum').mousedown(function(e){
+        potrait_opacity(braum, e.which);
+      });
+
+      $('.lissandra').mousedown(function(e){
+        potrait_opacity(lissandra, e.which);
+      });
+      $('.blitzcrank').mousedown(function(e){
+        potrait_opacity(blitzcrank, e.which);
+      });
+      $('.reksai').mousedown(function(e){
+        potrait_opacity(reksai, e.which);
+      });
+      $('.shen').mousedown(function(e){
+        potrait_opacity(shen, e.which);
+      });
+      $('.pyke').mousedown(function(e){
+        potrait_opacity(pyke, e.which);
+      });
+
+      $('.zed').mousedown(function(e){
+        potrait_opacity(zed, e.which);
+      });
+      $('.veigar').mousedown(function(e){
+        potrait_opacity(veigar, e.which);
+      });
+      $('.morgana').mousedown(function(e){
+        potrait_opacity(morgana, e.which);
+      });
+      $('.shyvana').mousedown(function(e){
+        potrait_opacity(shyvana, e.which);
+      });
+      $('.ashe').mousedown(function(e){
+        potrait_opacity(ashe, e.which);
+      });
+      $('.poppy').mousedown(function(e){
+        potrait_opacity(poppy, e.which);
+      });
+
+      $('.kennen').mousedown(function(e){
+        potrait_opacity(kennen, e.which);
+      });
+      $('.volibear').mousedown(function(e){
+        potrait_opacity(volibear, e.which);
+      });
+      $('.gangplank').mousedown(function(e){
+        potrait_opacity(gangplank, e.which);
+      });
+      $('.aatrox').mousedown(function(e){
+        potrait_opacity(aatrox, e.which);
+      });
+      $('.katarina').mousedown(function(e){
+        potrait_opacity(katarina, e.which);
+      });
+      $('.evelynn').mousedown(function(e){
+        potrait_opacity(evelynn, e.which);
+      });
+
+      $('.rengar').mousedown(function(e){
+        potrait_opacity(rengar, e.which);
+      });
+      $('.aurelionsol').mousedown(function(e){
+        potrait_opacity(aurelionsol, e.which);
+      });
+      $('.gnar').mousedown(function(e){
+        potrait_opacity(gnar, e.which);
+      });
+      $('.kindred').mousedown(function(e){
+        potrait_opacity(kindred, e.which);
+      });
+      $('.sejuani').mousedown(function(e){
+        potrait_opacity(sejuani, e.which);
+      });
+
+      $('.leona').mousedown(function(e){
+        potrait_opacity(leona, e.which);
+      });
+      $('.brand').mousedown(function(e){
+        potrait_opacity(brand, e.which);
+      });
+      $('.chogath').mousedown(function(e){
+        potrait_opacity(chogath, e.which);
+      });
+      $('.draven').mousedown(function(e){
+        potrait_opacity(draven, e.which);
+      });
+
+      $('.akali').mousedown(function(e){
+        potrait_opacity(akali, e.which);
+      });
+      $('.karthus').mousedown(function(e){
+        potrait_opacity(karthus, e.which);
+      });
+      $('.swain').mousedown(function(e){
+        potrait_opacity(swain, e.which);
+      });
+      $('.kayle').mousedown(function(e){
+        potrait_opacity(kayle, e.which);
+      });
+
+      $('.missfortune').mousedown(function(e){
+        potrait_opacity(missfortune, e.which);
+      });
+      $('.anivia').mousedown(function(e){
+        potrait_opacity(anivia, e.which);
+      });
+      $('.yasuo').mousedown(function(e){
+        potrait_opacity(yasuo, e.which);
+      });
+      
+
+
+      $('.info_icon').mouseover(function(){
+        $(this).css('opacity', '1');
+      });
+      $('.info_icon').mouseout(function(){
+        $(this).css('opacity', '0.5');
+      });
+      $('.info_icon').click(function(){
+        $('#' + $(this).next('div').attr('class').substr(14) + '_info').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+    });
+
+    function potrait_opacity(unit_name, input) {
+      if ( star_ == 0) {
+        if (input == 1){
+          if($('.' + unit_name[0] + ' span.star:first').text() == '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '1');
+            $('.' + unit_name[0] + ' span.star').text('★1');
+            pieces_num++;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='demon') {
+                demon++;
+              } else if (unit_name[i]=='dragon'){
+                dragon++;
+              } else if (unit_name[i]=='frost'){
+                frost++;
+              } else if (unit_name[i]=='empire'){
+                empire++;
+              } else if (unit_name[i]=='noble'){
+                noble++;
+              } else if (unit_name[i]=='ninja'){
+                ninja++;
+              } else if (unit_name[i]=='pirate'){
+                pirate++;
+              } else if (unit_name[i]=='ghost'){
+                ghost++;
+              } else if (unit_name[i]=='robot'){
+                robot++;
+              } else if (unit_name[i]=='voidness'){
+                voidness++;
+              } else if (unit_name[i]=='wildness'){
+                wildness++;
+              } else if (unit_name[i]=='yordle'){
+                yordle++;
+              } else if (unit_name[i]=='purgee'){
+                purgee++;
+              } 
+
+              else if (unit_name[i]=='guardian'){
+                guardian++;
+              } else if (unit_name[i]=='assassin'){
+                assassin++;
+              } else if (unit_name[i]=='blademaster'){
+                blademaster++;
+              } else if (unit_name[i]=='fighter'){
+                fighter++;
+              } else if (unit_name[i]=='elementalist'){
+                elementalist++;
+              } else if (unit_name[i]=='gunslinger'){
+                gunslinger++;
+              } else if (unit_name[i]=='knight'){
+                knight++;
+              } else if (unit_name[i]=='scouter'){
+                scouter++;
+              } else if (unit_name[i]=='shapeshifter'){
+                shapeshifter++;
+              } else if (unit_name[i]=='sorcerer'){
+                sorcerer++;
+              } 
+            }
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★1') {
+            $('.' + unit_name[0] + ' span.star').text('★2');
+          } else if ($('.' + unit_name[0] + ' span.star:first').text() == '★2') {
+            $('.' + unit_name[0] + ' span.star').text('★3');
+          }  else {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            pieces_num--;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='demon') {
+                demon--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='frost'){
+                frost--;
+              } else if (unit_name[i]=='empire'){
+                empire--;
+              } else if (unit_name[i]=='noble'){
+                noble--;
+              } else if (unit_name[i]=='ninja'){
+                ninja--;
+              } else if (unit_name[i]=='pirate'){
+                pirate--;
+              } else if (unit_name[i]=='ghost'){
+                ghost--;
+              } else if (unit_name[i]=='robot'){
+                robot--;
+              } else if (unit_name[i]=='voidness'){
+                voidness--;
+              } else if (unit_name[i]=='wildness'){
+                wildness--;
+              } else if (unit_name[i]=='yordle'){
+                yordle--;
+              } else if (unit_name[i]=='purgee'){
+                purgee--;
+              } 
+
+              else if (unit_name[i]=='guardian'){
+                guardian--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='blademaster'){
+                blademaster--;
+              } else if (unit_name[i]=='fighter'){
+                fighter--;
+              } else if (unit_name[i]=='elementalist'){
+                elementalist--;
+              } else if (unit_name[i]=='gunslinger'){
+                gunslinger--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='scouter'){
+                scouter--;
+              } else if (unit_name[i]=='shapeshifter'){
+                shapeshifter--;
+              } else if (unit_name[i]=='sorcerer'){
+                sorcerer--;
+              } 
+            }
+          }
+        } else if (input == 3) {
+          if($('.' + unit_name[0] + ' span.star:first').text() != '　') {
+            $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
+            $('.' + unit_name[0] + ' span.star').text('　');
+            pieces_num--;
+            for(i=0;unit_name[i]!=null;i++) {
+              if(unit_name[i]=='demon') {
+                demon--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='frost'){
+                frost--;
+              } else if (unit_name[i]=='empire'){
+                empire--;
+              } else if (unit_name[i]=='noble'){
+                noble--;
+              } else if (unit_name[i]=='ninja'){
+                ninja--;
+              } else if (unit_name[i]=='pirate'){
+                pirate--;
+              } else if (unit_name[i]=='ghost'){
+                ghost--;
+              } else if (unit_name[i]=='robot'){
+                robot--;
+              } else if (unit_name[i]=='voidness'){
+                voidness--;
+              } else if (unit_name[i]=='wildness'){
+                wildness--;
+              } else if (unit_name[i]=='yordle'){
+                yordle--;
+              } else if (unit_name[i]=='purgee'){
+                purgee--;
+              } 
+
+              else if (unit_name[i]=='guardian'){
+                guardian--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='blademaster'){
+                blademaster--;
+              } else if (unit_name[i]=='fighter'){
+                fighter--;
+              } else if (unit_name[i]=='elementalist'){
+                elementalist--;
+              } else if (unit_name[i]=='gunslinger'){
+                gunslinger--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='scouter'){
+                scouter--;
+              } else if (unit_name[i]=='shapeshifter'){
+                shapeshifter--;
+              } else if (unit_name[i]=='sorcerer'){
+                sorcerer--;
+              } 
+
+            }
+          }
+        }
+      } else {
+        if($('.' + unit_name[0] + ' > img').css('opacity') != '1') {
+          $('.' + unit_name[0] + ' > img').css('opacity', '1');
+          pieces_num++;
+          for(i=0;unit_name[i]!=null;i++) {
+            if(unit_name[i]=='demon') {
+                demon++;
+              } else if (unit_name[i]=='dragon'){
+                dragon++;
+              } else if (unit_name[i]=='frost'){
+                frost++;
+              } else if (unit_name[i]=='empire'){
+                empire++;
+              } else if (unit_name[i]=='noble'){
+                noble++;
+              } else if (unit_name[i]=='ninja'){
+                ninja++;
+              } else if (unit_name[i]=='pirate'){
+                pirate++;
+              } else if (unit_name[i]=='ghost'){
+                ghost++;
+              } else if (unit_name[i]=='robot'){
+                robot++;
+              } else if (unit_name[i]=='voidness'){
+                voidness++;
+              } else if (unit_name[i]=='wildness'){
+                wildness++;
+              } else if (unit_name[i]=='yordle'){
+                yordle++;
+              } else if (unit_name[i]=='purgee'){
+                purgee++;
+              } 
+
+              else if (unit_name[i]=='guardian'){
+                guardian++;
+              } else if (unit_name[i]=='assassin'){
+                assassin++;
+              } else if (unit_name[i]=='blademaster'){
+                blademaster++;
+              } else if (unit_name[i]=='fighter'){
+                fighter++;
+              } else if (unit_name[i]=='elementalist'){
+                elementalist++;
+              } else if (unit_name[i]=='gunslinger'){
+                gunslinger++;
+              } else if (unit_name[i]=='knight'){
+                knight++;
+              } else if (unit_name[i]=='scouter'){
+                scouter++;
+              } else if (unit_name[i]=='shapeshifter'){
+                shapeshifter++;
+              } else if (unit_name[i]=='sorcerer'){
+                sorcerer++;
+              } 
+          }
+        } else {
+          $('.' + unit_name[0] + ' > img').css('opacity', '0.3');
+          pieces_num--;
+          for(i=0;unit_name[i]!=null;i++) {
+            if(unit_name[i]=='demon') {
+                demon--;
+              } else if (unit_name[i]=='dragon'){
+                dragon--;
+              } else if (unit_name[i]=='frost'){
+                frost--;
+              } else if (unit_name[i]=='empire'){
+                empire--;
+              } else if (unit_name[i]=='noble'){
+                noble--;
+              } else if (unit_name[i]=='ninja'){
+                ninja--;
+              } else if (unit_name[i]=='pirate'){
+                pirate--;
+              } else if (unit_name[i]=='ghost'){
+                ghost--;
+              } else if (unit_name[i]=='robot'){
+                robot--;
+              } else if (unit_name[i]=='voidness'){
+                voidness--;
+              } else if (unit_name[i]=='wildness'){
+                wildness--;
+              } else if (unit_name[i]=='yordle'){
+                yordle--;
+              } else if (unit_name[i]=='purgee'){
+                purgee--;
+              } 
+
+              else if (unit_name[i]=='guardian'){
+                guardian--;
+              } else if (unit_name[i]=='assassin'){
+                assassin--;
+              } else if (unit_name[i]=='blademaster'){
+                blademaster--;
+              } else if (unit_name[i]=='fighter'){
+                fighter--;
+              } else if (unit_name[i]=='elementalist'){
+                elementalist--;
+              } else if (unit_name[i]=='gunslinger'){
+                gunslinger--;
+              } else if (unit_name[i]=='knight'){
+                knight--;
+              } else if (unit_name[i]=='scouter'){
+                scouter--;
+              } else if (unit_name[i]=='shapeshifter'){
+                shapeshifter--;
+              } else if (unit_name[i]=='sorcerer'){
+                sorcerer--;
+              } 
+
+          }
+        }
+      }
+      squad_synergy();
+    }
+
+    function squad_synergy() {
+      $('.count_pieces').text(pieces_num);
+
+      if(demon<2){
+        $('.demon_synergy').text('(2)(4)(6)');
+      } else if(demon>=6) {
+        $('.demon_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(demon>=4) {
+        $('.demon_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+      } else if(demon>=2) {
+        $('.demon_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+      }
+      if(demon==0){
+        $('.count_demon').css('display','none');
+      } else {
+        $('.count_demon').css('display','inline');
+        $('.count_demon').text("악마 x " + demon);
+      }
+
+      if(dragon<2){
+        $('.dragon_synergy').text("(2)");
+      } else if(dragon>=2) {
+        $('.dragon_synergy').html('<span style="color:white;">(2)');
+      }
+      if(dragon==0){
+        $('.count_dragon').css('display','none');
+      } else {
+        $('.count_dragon').text("용 x " + naga);
+        $('.count_dragon').css('display','inline');
+      }
+
+      if(frost<2){
+        $('.frost_synergy').text("(2)(4)(6)");
+      } else if(frost>=6) {
+        $('.frost_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(frost>=4) {
+        $('.frost_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+      } else if(frost>=2) {
+        $('.frost_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+      }
+      if(frost==0){
+        $('.count_frost').css('display','none');
+      } else {
+        $('.count_frost').css('display','inline');
+        $('.count_frost').text("빙하 x " + frost);
+      }
+
+      if(empire<2){
+        $('.empire_synergy').text("(2)(4)");
+      } else if(empire>=4) {
+        $('.empire_synergy').html('<span style="color:white;">(2)(4)');
+      } else if(empire>=2) {
+        $('.empire_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(empire==0){
+        $('.count_empire').css('display','none');
+      } else {
+        $('.count_empire').css('display','inline');
+        $('.count_empire').text("제국 x " + empire);
+      }
+
+
+      if(noble<3){
+        $('.noble_synergy').text("(3)(6)");
+      } else if(noble>=6) {
+        $('.noble_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(noble>=3) {
+        $('.noble_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(noble==0){
+        $('.count_noble').css('display','none');
+      } else {
+        $('.count_noble').css('display','inline');
+        $('.count_noble').text("귀족 x " + noble);
+      }
+
+      if(ninja<1){
+        $('.ninja_synergy').text("(1)(4)");
+      } else if(ninja==4) {
+        $('.ninja_synergy').html('<span style="color:white;">(1)(4)</span>');
+      } else if(ninja>=1) {
+        if(ninja > 1){
+          $('.ninja_synergy').html('<span style="color:red;">(1)</span>(4)');
+        }else {
+          $('.ninja_synergy').html('<span style="color:white;">(1)</span>(4)');
+        }
+      }
+      if(ninja==0){
+        $('.count_ninja').css('display','none');
+      } else {
+        $('.count_ninja').css('display','inline');
+        $('.count_ninja').text("닌자 x " + ninja);
+      }
+
+      if(pirate<3){
+        $('.pirate_synergy').text("(3)");
+      } else if(pirate>=2) {
+        $('.pirate_synergy').html('<span style="color:white;">(3)');
+      }
+      if(pirate==0){
+        $('.count_pirate').css('display','none');
+      } else {
+        $('.count_pirate').css('display','inline');
+        $('.count_pirate').text("해적 x " + pirate);
+      }
+
+      if(ghost<2){
+        $('.ghost_synergy').text("(2)");
+      } else if(ghost>=2) {
+        $('.ghost_synergy').html('<span style="color:white;">(2)');
+      }
+      if(ghost==0){
+        $('.count_ghost').css('display','none');
+      } else {
+        $('.count_ghost').css('display','inline');
+        $('.count_ghost').text("유령 x " + ghost);
+      }
+
+
+      if(robot<1){
+        $('.robot_synergy').text("(1)");
+      } else if(robot==1) {
+        $('.robot_synergy').html('<span style="color:white;">(1)</span>');
+      }
+      if(robot==0){
+        $('.count_robot').css('display','none');
+      } else {
+        $('.count_robot').css('display','inline');
+        $('.count_robot').text("로봇 x " + robot);
+      }
+
+
+      if(voidness<3){
+        $('.voidness_synergy').text("(3)");
+      } else if(voidness>=3) {
+        $('.voidness_synergy').html('<span style="color:white;">(3)</span>');
+      }
+      if(voidness==0){
+        $('.count_voidness').css('display','none');
+      } else {
+        $('.count_voidness').css('display','inline');
+        $('.count_voidness').text("공허 x " + voidness);
+      }
+
+      if(wildness<2){
+        $('.wildness_synergy').text("(2)(4)");
+      } else if(wildness>=4) {
+        $('.wildness_synergy').html('<span style="color:white;">(2)(4)');
+      } else if(wildness>=2) {
+        $('.wildness_synergy').html('<span style="color:white;">(2)</span>(4)');
+      } 
+      if(wildness==0){
+        $('.count_wildness').css('display','none');
+      } else {
+        $('.count_wildness').css('display','inline');
+        $('.count_wildness').text("야생 x " + wildness);
+      }
+      
+      if(yordle<3){
+        $('.yordle_synergy').text("(3)(6)");
+      } else if(yordle>=6) {
+        $('.yordle_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(yordle>=3) {
+        $('.yordle_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(yordle==0){
+        $('.count_yordle').css('display','none');
+      } else {
+        $('.count_yordle').css('display','inline');
+        $('.count_yordle').text("요들 x " + yordle);
+      }
+      if(purgee < 1){
+        $('.purgee_synergy').text("(1)");
+      } else if(purgee >= 1){
+        $('.purgee_synergy').html('<span style="color:white;">(1)');
+      }
+      if(purgee == 0){
+        $('.count_purgee').css('display','none');
+      } else{
+        $('.count_purgee').css('display','inline');
+        $('.count_purgee').text("추방자 x " + purgee);
+      }
+
+      if(guardian<2){
+        $('.guardian_synergy').text("(2)");
+      } else if(guardian>=2) {
+        $('.guardian_synergy').html('<span style="color:white;">(2)');
+      } 
+      if(guardian==0){
+        $('.count_guardian').css('display','none');
+      } else {
+        $('.count_guardian').css('display','inline');
+        $('.count_guardian').text("수호자 x " + guardian);
+      }
+
+      if(sorcerer<3){
+        $('.sorcerer_synergy').text("(3)(6)");
+      } else if(sorcerer>=6) {
+        $('.sorcerer_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(sorcerer>=3) {
+        $('.sorcerer_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(sorcerer==0){
+        $('.count_sorcerer').css('display','none');
+      } else {
+        $('.count_sorcerer').css('display','inline');
+        $('.count_sorcerer').text("마법사 x " + sorcerer);
+      }
+
+      if(assassin<3){
+        $('.assassin_synergy').text("(3)(6)");
+      } else if(assassin>=6) {
+        $('.assassin_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(assassin>=3) {
+        $('.assassin_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(assassin==0){
+        $('.count_assassin').css('display','none');
+      } else {
+        $('.count_assassin').css('display','inline');
+        $('.count_assassin').text("어쌔신 x " + assassin);
+      }
+
+      if(blademaster<3){
+        $('.blademaster_synergy').text("(3)(6)");
+      } else if(blademaster>=6) {
+        $('.blademaster_synergy').html('<span style="color:white;">(3)(6)</span>');
+      } else if(blademaster>=3) {
+        $('.blademaster_synergy').html('<span style="color:white;">(3)</span>(6)');
+      }
+      if(blademaster==0){
+        $('.count_blademaster').css('display','none');
+      } else {
+        $('.count_blademaster').css('display','inline');
+        $('.count_blademaster').text("검사 x " + blademaster);
+      }
+
+      if(knight<2){
+        $('.knight_synergy').text("(3)(6)");
+      } else if(knight>=6) {
+        $('.knight_synergy').html('<span style="color:white;">(2)(4)(6)</span>');
+      } else if(knight>=4) {
+        $('.knight_synergy').html('<span style="color:white;">(2)(4)</span>(6)');
+      } else if(knight>=2) {
+        $('.knight_synergy').html('<span style="color:white;">(2)</span>(4)(6)');
+      } 
+      if(knight==0){
+        $('.count_knight').css('display','none');
+      } else {
+        $('.count_knight').css('display','inline');
+        $('.count_knight').text("기사 x " + knight);
+      }
+
+      if(fighter<2){
+        $('.fighter_synergy').text("(2)(4)");
+      } else if(fighter>=4) {
+        $('.fighter_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(fighter>=2) {
+        $('.fighter_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(fighter==0){
+        $('.count_fighter').css('display','none');
+      } else {
+        $('.count_fighter').css('display','inline');
+        $('.count_fighter').text("싸움꾼 x " + fighter);
+      }
+
+      if(elementalist>=3){
+        $('.elementalist_synergy').html('<span style="color:white;">(3)</span>');
+      } else {
+        $('.elementalist_synergy').text("(3)");
+      }
+      if(elementalist==0){
+        $('.count_elementalist').css('display','none');
+      } else {
+        $('.count_elementalist').css('display','inline');
+        $('.count_elementalist').text("원소술사 x " + elementalist);
+      }
+
+      if(gunslinger<2){
+        $('.gunslinger_synergy').text("(2)(4)");
+      } else if(gunslinger>=4) {
+        $('.gunslinger_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(gunslinger>=2) {
+        $('.gunslinger_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(gunslinger==0){
+        $('.count_gunslinger').css('display','none');
+      } else {
+        $('.count_gunslinger').css('display','inline');
+        $('.count_gunslinger').text("총잡이 x " + gunslinger);
+      }
+
+      if(shapeshifter<3){
+        $('.shapeshifter_synergy').text("(3)");
+      } else if(shapeshifter==3) {
+        $('.shapeshifter_synergy').html('<span style="color:white;">(3)</span>');
+      }
+      if(shapeshifter==0){
+        $('.count_shapeshifter').css('display','none');
+      } else {
+        $('.count_shapeshifter').css('display','inline');
+        $('.count_shapeshifter').text("형상변환자 x " + shapeshifter);
+      }
+
+      if(scouter<2){
+        $('.scouter_synergy').text("(2)(4)");
+      } else if(scouter>=4) {
+        $('.scouter_synergy').html('<span style="color:white;">(2)(4)</span>');
+      } else if(scouter>=2) {
+        $('.scouter_synergy').html('<span style="color:white;">(2)</span>(4)');
+      }
+      if(scouter==0){
+        $('.count_scouter').css('display','none');
+      } else {
+        $('.count_scouter').css('display','inline');
+        $('.count_scouter').text("총잡이 x " + scouter);
+      }
+
+
+    }
+
+    $(function(){
+      $('input#reset').click(function(){
+        elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, robot = 0, voidness = 0, wildness = 0, god = 0,
+        assassin = 0, guardian = 0, mage = 0, assassin = 0, blademaster = 0, knight = 0, fighter = 0, gunslinger = 0, demonblademaster = 0, shapeshifter = 0, elementalist = 0;
+        pieces_num = 0;
+        $('.pieces > img').css('opacity', '0.3');
+        $('span.star').text('　');
+        squad_synergy();
+      });
+      $('input#tier').click(function(){
+        if($('.tier').css('display')!='none') {
+          $('.tier').css('display','none');
+        } else {
+          $('.tier').css('display','block');
+        }
+      });
+      $('input#star_button').click(function(){
+        if ( star_ == 0) {
+          star_ = 1;
+          $('#star_button').val('별 OFF');
+          $('span.star').text('　');
+        } else {
+          star_ = 0;
+          $('#star_button').val('별 ON');
+          elf = 0, human = 0, beast = 0, goblin = 0, demon = 0, undead = 0, orc = 0, naga = 0, elementals = 0, troll = 0, dragon = 0, robot = 0, voidness = 0, wildness = 0, god = 0,
+          assassin = 0, guardian = 0, mage = 0, assassin = 0, blademaster = 0, knight = 0, fighter = 0, gunslinger = 0, demonblademaster = 0, shapeshifter = 0;
+          pieces_num = 0;
+          $('.pieces > img').css('opacity', '0.3');
+          squad_synergy();
+        }
+      });
+      $('input#link').click(function(){
+        $('#link_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+      $('input#horse_num').click(function(){
+        $('#horse_num_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+      $('input#patchNote').click(function(){
+        $('#patchNote_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+      $('input#drink').click(function(){
+        $('#drink_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+    });
+  </script>
+
+  </head>
+  <body>
+      체스말 수 : <label class="count_pieces">0</label>
+      <div class="squad" style="display:none">
+          <img src="https://w.namu.la/s/b1c3e5b6c6e1aa20632685bd3a18d292c266c6ca1b00dd4ccefd541f6609ef368a67bcf73db83b19be0f5cd1f4628278aaf1e630f455eb54e137d8d8bf230914a6ee374232709e6a9f4bdb426977361320f71622da9a4a88abc1c4c5a6758378">
+          <img src="https://w.namu.la/s/723d9daa2b3f205b4c1ced3940c00c8382ab308c52ff54af90391b59280c11859d85c88480de24037e927750ee3b9351b4b80bddd845ed33f541a8789321ddf509fe6ee807fcbb99379f54eeb5050b659f3b48280f2f5b721a8640b3dc289311">
+          <img src="https://w.namu.la/s/6ecb6f13b8e5619dfd6f10abe7848219479328987a0a4021e53d43bc2ff48ebb8b861ab06721f94792856ce0a967df7fbea41958c8382e8a1032e1037036af27d2e4db5dcf8f04aa17e5fcb12116f6647655dd09bb2d2f4f36261bf739a76dc7">
+          <img src="https://w.namu.la/s/92ad06eb5ae2a238b26eaeb4b851436081617e94c99d61ffc8359785eab1917b7436523725c25f6e99c52e8350ef2bb7170fed866c094726e5be958b15beca22937cc50b59a886d0e81cc809242ac393f7632ca76ceb4870d7deee652cb652b8">
+          <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
+          현재조합
+      </div>
+      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://autochess.op.gg/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists?id=dota2autochess')";><input type="button" class="btnQihl" id="qihl" onclick="window.open('https://qihl.gg/')";><input type="button" class="btnItem" id="gall" onclick="window.open('https://wnddpd01.github.io/item.html')";><br><input type="button" id="horse_num" value="체스 말 등장 개수"> <input type="button" id="patchNote" value="6월 1일 패치노트"> <input type="button" id="tier" value="티어(5월5일 qihl)"> <input type="button" id="star_button" value="별 OFF"> <input type="button" id="reset" value="리셋" > </div><br>
+          <label class="count_demon" style="display: none;color: #2a6392;">악마 x 0</label>
+          <label class="count_dragon" style="display: none;color: #b8bcbd;">용 x 0</label>
+          <label class="count_frost" style="display: none;color: #00be00;">빙하 x 0</label>
+          <label class="count_empire" style="display: none;color: #801c1b;">제국 x 0</label>
+          <label class="count_noble" style="display: none;color: #66178b;">귀족 x 0</label>
+          <label class="count_ninja" style="display: none;color: #3c3f41;">닌자 x 0</label>
+          <label class="count_pirate" style="display: none;color: #c12629;">해적 x 0</label>
+          <label class="count_ghost" style="display: none;color: #4346c1;">유령 x 0</label>
+          <label class="count_robot" style="display: none;color: #b7ba35;">로봇 x 0</label>
+          <label class="count_voidness" style="display: none;color: #00a3d2;">공허 x 0</label>
+          <label class="count_wildness" style="display: none;color: #8f8d64;">야생 x 0</label>
+          <label class="count_yordle" style="display: none;color: #e70a0f;">요들 x 0</label>
+          <label class="count_purgee" style="display: none;color: #ab6043;">추방자 x 0</label>
+          <br>
+          <label class="count_guardian" style="display: none;color: #f3e46e;">수호자 x 0</label>
+          <label class="count_assassin" style="display: none;color: #9d9283;">암살자 x 0</label>
+          <label class="count_blademaster" style="display: none;color: #6da6b4;">검사 x 0</label>
+          <label class="count_fighter" style="display: none;color: #797899;">싸움꾼 x 0</label>
+          <label class="count_elementalist" style="display: none;color: #71c891;">원소술사 x 0</label>
+          <label class="count_gunslinger" style="display: none;color: #b98da1;">총잡이 x 0</label>
+          <label class="count_knight" style="display: none;color: #816a2f;">기사 x 0</label>
+          <label class="count_scouter" style="display: none;color: #8e5428;">정찰대 x 0</label>
+          <label class="count_shapeshifter" style="display: none;color: #442a5c;">형상변환사 x 0</label>
+          <label class="count_sorcerer" style="display: none;color: #1b3fa6;">마법사 x 0</label>
+      </b><br>
+      <div style="line-height: 50%;"><br></div>
+      <table style="display:inline;">
+          <tr class="species">
+              <td id="demon"><br><label trait-tooltip-text="공격 시 일정 확률로 적의 마나를 전부 불태워 없애고 그만큼 고정피해 (2) 30% (4) 50% (6) 70%"><span id="demon">악마</span></label><br><label class="demon_synergy" style="color:#505050">(2)(4)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 elise"><div class="tier tier_b">B</div><img src=lol_pieces\Elise.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 형상변환자">엘리스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 varus"><div class="tier tier_c">C</div><img src=lol_pieces\Varus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 정찰대">바루스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 evelynn"><div class="tier tier_d">D</div><img src=lol_pieces\Evelynn.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">이블린</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 aatrox"><div class="tier tier_d">D</div><img src=lol_pieces\Aatrox.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 검사">아트록스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 morgana"><div class="tier tier_c">C</div><img src=lol_pieces\Morgana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 마법사">모르가나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 brand"><div class="tier tier_b">B</div><img src=lol_pieces\brand.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 원소술사">브랜드</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 swain"><div class="tier tier_b">B</div><img src=lol_pieces\Swain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 제국 형상변환자">스웨인</span></div></div></td>
+              
+          </tr>
+          <tr class="species">
+              <td id="noble"><br><label trait-tooltip-text="아군의 방어력이 100 증가하고 공격할 때마다 35의 체력을 회복합니다. (3) 무작위 아군 하나 (6) 모든 아군"><span id="noble">귀족</span></label><br><label class="noble_synergy" style="color:#505050">(3)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 fiora"><div class="tier tier_d">D</div><img src=lol_pieces\fiora.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 검사">피오라</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 vayne"><div class="tier tier_b">B</div><img src=lol_pieces\vayne.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 정찰대">베인</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 garen"><div class="tier tier_c">C</div><img src=lol_pieces\Garen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 기사">가렌</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lucian"><div class="tier tier_c">C</div><img src=lol_pieces\Lucian.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 총잡이">루시안</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 leona"><div class="tier tier_c">C</div><img src=lol_pieces\Leona.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 수호자">레오나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 kayle"><div class="tier tier_c">C</div><img src=lol_pieces\Kayle.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 기사">케일</span></div></div></td>
+              <td></td>
+              <td id="robot"><br><label trait-tooltip-text="(1) 로봇은 마나가 가득 찬 상태로 전투를 시작합니다"><span id="robot">로봇</span></label><br><label class="robot_synergy" style="color:#505050">(1)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blitzcrank"><div class="tier tier_c">C</div><img src=lol_pieces\Blitzcrank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="로봇 싸움꾼">블리츠크랭크</span></div></div></td>
+          </tr>
+          <tr class="species">
+              <td id="yordle"><br><label trait-tooltip-text="요들 챔피언들이 회피율을 얻습니다. (3) 20% (6) 50%"><span id="yordle">요들</span></label><br><label class="yordle_synergy" style="color:#505050">(3)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tristana"><div class="tier tier_a">A</div><img src=lol_pieces\Tristana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 총잡이">트리스타나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lulu"><div class="tier tier_b">B</div><img src=lol_pieces\Lulu.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">룰루</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 veigar"><div class="tier tier_a">A</div><img src=lol_pieces\Veigar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">베이가</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 poppy"><div class="tier tier_c">C</div><img src=lol_pieces\poppy.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 기사1">뽀삐</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 kennen"><div class="tier tier_b">B</div><img src=lol_pieces\Kennen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 요들 원소술사">케넨</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 gnar"><div class="tier tier_b">B</div><img src=lol_pieces\Gnar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 야생 형상변환자">나르</span></div></div></td>
+              <td></td>
+              <td id="purgee"><br><label trait-tooltip-text="(1) 전투가 시작할 때 인접한 챔피언이 없을 시 추방자 챔피언은 최대 체력과 동일한 양의 방어막을 얻습니다"><span id="purgee">추방자</span></label><br><label class="purgee_synergy" style="color:#505050">(1)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 yasuo"><div class="tier tier_b">B</div><img src=lol_pieces\yasuo.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="추방자 검사">야스오</span></div></div></td>
+          </tr>
+          <tr class="species">
+            <td id="frost"><br><label trait-tooltip-text="공격 시 적을 일정 확률로 2초 동안 기절시킵니다. (2) 25% (4) 35% (6) 45%"><span id="frost">빙하</span></label><br><label class="frost_synergy" style="color:#505050">(2)(4)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 braum"><div class="tier tier_c">C</div><img src=lol_pieces\Braum.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 수호자">브라움</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lissandra"><div class="tier tier_c">C</div><img src=lol_pieces\lissandra.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 원소술사">리산드라</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 ashe"><div class="tier tier_c">C</div><img src=lol_pieces\Ashe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 정찰대">애쉬</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 volibear"><div class="tier tier_a">A</div><img src=lol_pieces\Volibear.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 싸움꾼">볼리베어</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 sejuani"><div class="tier tier_a">A</div><img src=lol_pieces\Sejuani.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 기사">세주아니</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 anivia"><div class="tier tier_a">A</div><img src=lol_pieces\Anivia.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 원소술사">애니비아</span></div></div></td>
+              <td id="dragon"><br><label trait-tooltip-text="(2) 용은 마법 피해에 면역입니다."><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(2)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shyvana"><div class="tier tier_c">C</div><img src=lol_pieces\shyvana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 형상변환자">쉬바나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 aurelionsol"><div class="tier tier_s">S</div><img src=lol_pieces\AurelionSol.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 마법사">아우 솔</span></div></div></td>
+          </tr>
+          <tr class="species">
+              <td id="wildness"><br><label trait-tooltip-text="공격할 때마다 분노 중첩이 쌓입니다. 최대 5번까지 중첩되며 중첩된 분노당 공격 속도가 8% 증가합니다. (2) 야생 아군만 해당 (4) 모든 아군"><span id="wildness">야생</span></label><br><label class="wildness_synergy" style="color:#505050">(2)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 nidalee"><div class="tier tier_b">B</div><img src=lol_pieces\Nidalee.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 형상변환자">니달리</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 warwick"><div class="tier tier_b">B</div><img src=lol_pieces\Warwick.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 싸움꾼">워윅</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 ahri"><div class="tier tier_c">C</div><img src=lol_pieces\ahri.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 마법사">아리</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 rengar"><div class="tier tier_a">A</div><img src=lol_pieces\Rengar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 암살자">렝가</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 gnar"><div class="tier tier_c">C</div><img src=lol_pieces\Gnar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 야생 형상변환자">나르</span></div></div></td>
+              <td id="ghost"><br><label trait-tooltip-text="전투 시작 시 무작위 적군 하나에게 저주를 걸어 체력을 100으로 감소시킵니다.(2)"><span id="ghost">유령</span></label><br><label class="ghost_synergy" style="color:#505050">(2)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 mordekaiser"><div class="tier tier_d">D</div><img src=lol_pieces\Mordekaiser.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 기사">모데카이저</span></div></div></td></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 kindred"><div class="tier tier_d">D</div><img src=lol_pieces\Kindred.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 정찰대">킨드레드</span></div></div></td></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 karthus"><div class="tier tier_d">D</div><img src=lol_pieces\Karthus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 마법사">카서스</span></div></div></td></td>
+          </tr>
+          <tr class="species">
+              <td id="empire"><br><label trait-tooltip-text="제국 챔피언이 가하는 피해량이 2배로 증가합니다.(2) 무작위 제국 챔피언 하나에게 적용 (4) 모든 제국 챔피언에게 적용"><span id="empire">제국</span></label><br><label class="empire_synergy" style="color:#505050">(2)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 darius"><div class="tier tier_b">B</div><img src=lol_pieces\Darius.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 기사">다리우스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 katarina"><div class="tier tier_c">C</div><img src=lol_pieces\Katarina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 암살자">카타리나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 draven"><div class="tier tier_c">C</div><img src=lol_pieces\Draven.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 검사">드레이븐</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 swain"><div class="tier tier_b">B</div><img src=lol_pieces\Swain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 제국 형상변환자">스웨인</span></div></div></td>
+              <td id="ninja"><br><label trait-tooltip-text="닌자 특성은 닌자가 정확히 하나 또는 넷일 때 활성화됩니다. (1) 닌자 유닛 공격력 +40% (4) 닌자 유닛 공격력 +80%"><span id="ninja">닌자</span></label><br><label class="ninja_synergy" style="color:#505050">(1)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 zed"><div class="tier tier_b">B</div><img src=lol_pieces\zed.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 암살자">제드</span></div></div></td>
+              <td>
+                  <img class="info_icon" src="img\info.png"><div class="pieces cost_2 shen"><div class="tier tier_b">B</div><img src=lol_pieces\Shen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 검사">닌자</span></div></div>
+              </td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 kennen"><div class="tier tier_f">F</div><img src=lol_pieces\Kennen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 요들 원소술사">케넨</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 akali"><div class="tier tier_b">B</div><img src=lol_pieces\Akali.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 암살자">아칼리</span></div></div></td>
+          </tr>
+          <tr class="species">
+              <td id="voidness"><br><label trait-tooltip-text="모든 기본 공격이 적 방어력의 50%를 무시합니다.(3)"><span id="voidness">공허</span></label><br><label class="voidness_synergy" style="color:#505050">(3)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 khazix"><div class="tier tier_d">D</div><img src=lol_pieces\Khazix.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 암살자">카직스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 kassadin"><div class="tier tier_b">B</div><img src=lol_pieces\Kassadin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 마법사">카사딘</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 reksai"><div class="tier tier_c">C</div><img src=lol_pieces\Reksai.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">렉사이</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 chogath"><div class="tier tier_f">F</div><img src=lol_pieces\Chogath.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">초가스</span></div></div></td>
+
+              <td id="pirate"><br><label trait-tooltip-text="모든 기본 공격이 적 방어력의 50%를 무시합니다.(3)"><span id="pirate">해적</span></label><br><label class="pirate_synergy" style="color:#505050">(3)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 graves"><div class="tier tier_d">D</div><img src=lol_pieces\Graves.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">그레이브즈</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 pyke"><div class="tier tier_b">B</div><img src=lol_pieces\Pyke.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 암살자">파이크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 gangplank"><div class="tier tier_c">C</div><img src=lol_pieces\Gangplank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 검사 총잡이">갱플랭크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 missfortune"><div class="tier tier_f">F</div><img src=lol_pieces\Missfortune.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">미스포츈</span></div></div></td>
+          </tr>
+      </table>
+      <table style="display:inline;">
+          <tr class="class">
+              <td id="assassin"><br><label trait-tooltip-text="전투 시작 시 가장 멀리 있는 적에게 도약합니다. (3) 치명타 피해량 +150% (6) 치명타 피해량 +350%"><span id="assassin">암살자</span></label><br><label class="assassin_synergy" style="color:#505050">(3)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 khazix"><div class="tier tier_a">A</div><img src=lol_pieces\Khazix.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 암살자">카직스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 pyke"><div class="tier tier_c">C</div><img src=lol_pieces\Pyke.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 암살자">파이크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 zed"><div class="tier tier_c">C</div><img src=lol_pieces\zed.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 암살자">제드</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 rengar"><div class="tier tier_b">B</div><img src=lol_pieces\rengar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 암살자">렝가</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 evelynn"><div class="tier tier_d">D</div><img src=lol_pieces\Evelynn.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 암살자">이블린</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 katarina"><div class="tier tier_b">B</div><img src=lol_pieces\Katarina.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 암살자">카타리나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 akali"><div class="tier tier_a">A</div><img src=lol_pieces\Akali.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 암살자">아칼리</span></div></div></td>
+          </tr>
+          <tr class="class">
+              <td id="sorcerer"><br><label trait-tooltip-text="공격 시 2배의 마나를 획득합니다. (3) 스킬 피해량 +35% (6) 스킬 피해량 +100%"><span id="sorcerer">마법사</span></label><br><label class="sorcerer_synergy" style="color:#505050">(3)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 kassadin"><div class="tier tier_d">D</div><img src=lol_pieces\Kassadin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 마법사">카사딘</span></div></div></td></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lulu"><div class="tier tier_b">B</div><img src=lol_pieces\Lulu.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">룰루</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 ahri"><div class="tier tier_b">B</div><img src=lol_pieces\Ahri.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 법사">아리</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 morgana"><div class="tier tier_d">D</div><img src=lol_pieces\Morgana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 마법사">모르가나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 veigar"><div class="tier tier_a">A</div><img src=lol_pieces\Veigar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">베이가</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 aurelionsol"><div class="tier tier_c">C</div><img src=lol_pieces\Aurelionsol.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 법사">아우 솔</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 karthus"><div class="tier tier_b">B</div><img src=lol_pieces\Karthus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 마법사">카서스</span></div></div></td>
+          </tr>
+          <tr class="class" >
+              <td id="blademaster" ><br><label trait-tooltip-text="35% 확률로 추가 공격을 가합니다. (3) 추가 공격 1회 (6) 추가 공격 2회"><span id="blademaster">검사</span></label><br><label class="blademaster_synergy" style="color:#505050">(3)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 fiora"><div class="tier tier_d">D</div><img src=lol_pieces\fiora.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 검사">피오라</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 shen"><div class="tier tier_b">B</div><img src=lol_pieces\Shen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 검사">쉔</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 aatrox"><div class="tier tier_s">S</div><img src=lol_pieces\Aatrox.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 검사">아트록스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 gangplank"><div class="tier tier_c">C</div><img src=lol_pieces\Gangplank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 검사 총잡이">갱플랭크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 draven"><div class="tier tier_c">C</div><img src=lol_pieces\Draven.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 검사">드레이븐</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 yasuo"><div class="tier tier_c">C</div><img src=lol_pieces\Yasuo.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="추방자 검사">야스오</span></div></div></td>
+          </tr>
+          <tr class="class" >
+              <td id="knight" ><br><label trait-tooltip-text="기본 공격으로부터 피해를 입지 않습니다. (2) 방어한 피해량 20 (4) 방어한 피해량 40 (6) 방어한 피해량 60"><span id="knight">기사</span></label><br><label class="knight_synergy" style="color:#505050">(2)(4)(6)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 garen"><div class="tier tier_d">D</div><img src=lol_pieces\Garen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 기사">가렌</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 darius"><div class="tier tier_b">B</div><img src=lol_pieces\Darius.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="제국 기사">다리우스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 mordekaiser"><div class="tier tier_s">S</div><img src=lol_pieces\Mordekaiser.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 기사">모데카이저</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 poppy"><div class="tier tier_c">C</div><img src=lol_pieces\Poppy.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 기사">뽀삐</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 sejuani"><div class="tier tier_c">C</div><img src=lol_pieces\Sejuani.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 기사">세주아니</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 kayle"><div class="tier tier_c">C</div><img src=lol_pieces\Kayle.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 기사">케일</span></div></div></td>
+          </tr>
+          <tr class="class">
+              <td id="gunslinger"><br><label trait-tooltip-text="공격 후 50% 확률로 추가 공격을 가합니다. (2) 무작위 적 하나를 추가로 공격 (4) 사거리 내의 모든 적을 추가로 공격"><span id="gunslinger">총잡이</span></label><br><label class="gunslinger_synergy" style="color:#505050">(2)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 tristana"><div class="tier tier_c">C</div><img src=lol_pieces\Tristana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 총잡이">트리스타나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 graves"><div class="tier tier_c">C</div><img src=lol_pieces\Graves.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">그레이브즈</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lucian"><div class="tier tier_a">A</div><img src=lol_pieces\Lucian.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 총잡이">루시안</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 gangplank"><div class="tier tier_a">A</div><img src=lol_pieces\Gangplank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 검사 총잡이">갱플랭크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 missfortune"><div class="tier tier_b">B</div><img src=lol_pieces\Missfortune.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">미스 포츈</span></div></div></td>
+              <td id="elementalist"><br><label trait-tooltip-text="공격 시 2배의 마나를 획득합니다. (3) 전투 시작 시 골렘 하나를 소환"><span id="elementalist">원소술사</span></label><br><label class="elementalist_synergy" style="color:#505050">(3)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lissandra"><div class="tier tier_b">B</div><img src=lol_pieces\lissandra.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 원소술사">리산드라</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 kennen"><div class="tier tier_b">B</div><img src=lol_pieces\kennen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 요들 원소술사">케넨</span></div></div></td>
+          </tr>
+          <tr class="class">
+              <td id="shapeshifter"><br><label trait-tooltip-text="변신 시 추가 최대 체력을 얻습니다. (3) 추가 최대 체력 100%"><span id="shapeshifter">형상변환자</span></label><br><label class="shapeshifter_synergy" style="color:#505050">(3)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 nidalee"><div class="tier tier_c">C</div><img src=lol_pieces\Nidalee.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 형상변환자">니달리</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 elise"><div class="tier tier_c">C</div><img src=lol_pieces\Elise.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 형상변환자">엘리스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shyvana"><div class="tier tier_a">A</div><img src=lol_pieces\Shyvana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 형상변환자">쉬바나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 gnar"><div class="tier tier_a">A</div><img src=lol_pieces\Gnar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 야생 형상변환자">나르</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 swain"><div class="tier tier_b">B</div><img src=lol_pieces\Swain.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 제국 형상변환자">스웨인</span></div></div></td>
+              <td></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 brand"><div class="tier tier_c">C</div><img src=lol_pieces\brand.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 원소술사">브랜드</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 anivia"><div class="tier tier_b">B</div><img src=lol_pieces\Anivia.png><div class="name"><span class="star"></span><br><span data-tooltip-text="빙하 원소술사">애니비아</span></div></div></td>
+          </tr>
+          <tr class="class">
+              <td id="fighter"><br><label trait-tooltip-text="아군 싸움꾼들이 추가 체력을 얻습니다. (2) 추가 체력 300 (4) 추가 체력 700"><span id="fighter">싸움꾼</span></label><br><label class="fighter_synergy" style="color:#505050">(2)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 warwick"><div class="tier tier_c">C</div><img src=lol_pieces\Warwick.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 싸움꾼">워윅</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blitzcrank"><div class="tier tier_c">C</div><img src=lol_pieces\Blitzcrank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="로봇 싸움꾼">블리츠크랭크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 reksai"><div class="tier tier_a">A</div><img src=lol_pieces\Reksai.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">렉사이</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 volibear"><div class="tier tier_a">A</div><img src=lol_pieces\Volibear.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 싸움꾼">볼리베어</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 chogath"><div class="tier tier_b">B</div><img src=lol_pieces\Chogath.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">초가스</span></div></div></td>
+              
+              
+          </tr>
+          <tr class="class">
+              <td id="scouter"><br><label trait-tooltip-text2="3초마다 일정 확률로 다음 3초 동안 공격 속도가 두 배로 증가합니다. (2) 25% (4) 65%"><span id="scouter">정찰대</span></label><br><label class="scouter_synergy" style="color:#505050">(2)(4)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 vayne"><div class="tier tier_b">B</div><img src=lol_pieces\Vayne.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 정찰대">베인</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 varus"><div class="tier tier_b">B</div><img src=lol_pieces\Varus.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 정찰대">바루스</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 ashe"><div class="tier tier_c">C</div><img src=lol_pieces\Ashe.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 정찰대">애쉬</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 kindred"><div class="tier tier_b">B</div><img src=lol_pieces\Kindred.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 정찰대">킨드레드</span></div></div></td>
+              <td></td>
+              <td id="guardian"><br><label trait-tooltip-text="전투 시작 시 수호자들과 수호자에게 인접한 챔피언들이 방어력 30을 얻습니다 (2)"><span id="guardian">수호자</span></label><br><label class="guardian_synergy" style="color:#505050">(2)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 braum"><div class="tier tier_c">C</div><img src=lol_pieces\Braum.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 수호자">브라움</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 leona"><div class="tier tier_c">C</div><img src=lol_pieces\Leona.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 수호자">레오나</span></div></div></td>
+          </tr>
+
+      </table>
+      <!--기물 정보 -->
+      <div>
+          <div id="anti_mage_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">안티 메이지(Anti Mage) - 엘프 데몬헌터</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 10 / 20 / 30</li>
+                      <li>공격력 : 45-55 / 90-110 / 180-220</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 마나분해 (패시브)</li>
+                      <li>매 공격시 상대의 마나를 불태웁니다. 태운 마나의 50%만큼 대상에게 피해를 줍니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>공격당 태우는 마나 : 30 / 60 / 90</li>
+                  </ul>
+          </div>
+          <div id="treant_protector_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">나무정령 수호자(Treant Protector) - 엘프 드루이드</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 2900</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 80-90 / 160-180 / 320-360</li>
+                      <li>공격속도 : 2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 :  씨뿌리기</li>
+                      <li>적 유닛에게 생명을 흡수하는 씨앗을 심어 체력을 흡수하고 움직임을 둔화합니다. 씨앗은 주위 아군 유닛을 치유합니다. 흡수는 7번까지 발동합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>발동당 흡수 피해 : 30 / 45 / 60</li>
+                      <li>둔화 : 50%</li>
+                      <li>반경 : 400</li>
+                      <li>지속시간 : 5</li>
+                      <li>쿨다운 : 7</li>
+                  </ul>
+          </div>
+          <div id="luna_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">루나(luna) - 엘프 기사</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 반월도 (패시브)</li>
+                      <li>반월도가 힘을 받아 적 유닛에게 튕기며 피해를 줍니다. 추가 타격마다 주는 피해가 감소합니다.</li>
+                      <li>튕김 반경 : 500</li>
+                      <li>튕김 횟수 : 3 / 5 / 7</li>
+                      <li>튕김당 피해 감소 : 30%</li>
+                  </ul>
+          </div>
+          <div id="furion_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">퓨리온(Furion) - 엘프 드루이드</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 1900</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-50 / 90-100 / 180-200</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 자연의 부름</li>
+                      <li>체스보드 주위의 나무를 나무정령으로 변환시킵니다.</li>
+                      <li>쿨다운 : 7</li>
+                      <br>
+                      <li>나무 정령 생명력 : 300 / 500 / 700</li>
+                      <li>나무 정령 방어력 : 5</li>
+                      <li>나무 정령 마저 : 0</li>
+                      <li>나무 정령 공격력 : 30-50 / 50-70 / 70-90</li>
+                      <li>나무 정령 공격속도 : 1.5</li>
+                      <li>나무 정령 사정거리 : 205</li>
+                  </ul>
+          </div>
+          <div id="puck_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">퍽(Puck) - 엘프 용 법사</li>
+                      <br>
+                      <li>체력 : 450 / 900 / 1800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-50 / 80-100 / 160-200</li>
+                      <li>공격속도 : 1.7</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 신비로운 구슬</li>
+                      <li>퍽이 전방을 향해 날아가며 닿는 적 유닛에게 피해를 주는 마법의 구슬을 발사합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>최대 거리 : 800</li>
+                      <li>피해량 : 150 / 200 / 250</li>
+                      <li>쿨다운 : 5 / 4 / 3</li>
+                  </ul>
+          </div>
+          <div id="windranger_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">윈드레인저(Windranger) - 엘프 사냥꾼</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 60-65 / 120-130 / 240-260</li>
+                      <li>공격속도 : 0.9</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 :  강화사격</li>
+                      <li>윈드레인저가 1초 동안 힘을 집중하여 강력한 일격을 날립니다. 강화사격으로 쓰러뜨린 적 하나당 피해가 20% 감소합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>피해량 : 400 / 600 / 800</li>
+                      <li>범위 : 1200</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="phantom_assassin_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">팬텀 어쌔신(Phantom Assassin) - 엘프 암살자</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 70-100 / 140-200 / 280-400</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 최후의 일격 (패시브)</li>
+                      <li>팬텀 어쌔신이 전투기술을 갈고 닦아 적 유닛에게 필사의 치명타를 날릴 기회를 찾아냅니다.</li>
+                      <li>치명타 확률 : 10%</li>
+                      <li>치명타 피해 : 300% / 450% / 600%</li>
+                  </ul>
+          </div>
+          <div id="mirana_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">미라나(Mirana) - 엘프 사냥꾼</li>
+                      <br>
+                      <li>체력 : 600 / 1200 / 2400</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-70 / 100-140 / 200-280</li>
+                      <li>공격속도 : 1.0</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 :  신성한 화살</li>
+                      <li>미라나가 상대방 체스판으로 장거리 화살을 발사하여 가장 먼저 맞는 적에게 큰 피해를 주고 기절시킵니다. 기절 지속시간과 데미지는 화살의 이동 거리에 따라 증가합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>최소 피해량 : 50 / 75 / 100</li>
+                      <li>최고 피해량 : 500 / 750 / 1000</li>
+                      <li>최소 기절시간 : 1 / 1.5 / 2</li>
+                      <li>최고 기절시간 : 5 / 7.5 / 10</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="templar_assassin_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">템플러 어쌔신(Templar Assassin) - 엘프 암살자</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 3000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 90-110 / 180-220 / 360-440</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 굴절보호막</li>
+                      <li>템플러 어쌔신이 발견하기 아주 어려운 상태가 되어 적의 공격을 막고 추가 공격력을 얻습니다. 두가지 효과는 각각 일정 횟수만큼 적용됩니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>적용 횟수 : 4 / 6 / 8</li>
+                      <li>추가 피해 : 40 / 60 / 80</li>
+                      <li>지속 시간 : 6</li>
+                      <li>쿨다운 : 6</li>
+                  </ul>
+          </div>
+          <div id="io_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">이오(io) - 엘프 팟수</li>
+                      <br>
+                      <li>체력 : ? / ? / ?</li>
+                      <li>아머 : ?</li>
+                      <li>마저 : ?</li>
+                      <li>공격력 : ? / ? / ?</li>
+                      <li>공격속도 : ?</li>
+                      <li>사거리 : ?</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : ?</li>
+                      <li style="font-size: 19px;">1성 동일 2개 + 1성 이오로 2성을 만들수 있다.</li>
+                      <li style="font-size: 19px;">2성 동일 2개 + 2성 이오로 3성을 만들수 있다.</li>
+                      <li style="font-size: 19px;">3성 이오는 존재 x</li>
+                      <li>(드루이드 시너지 적용 가능)</li>
+                  </ul>
+          </div>
+          <div id="crystal_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">크리스탈 메이든(Crystal Maiden) - 인간 법사</li>
+                      <br>
+                      <li>체력 : 450 / 900 / 1800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-45 / 80-90 / 160-180</li>
+                      <li>공격속도 : 1.7</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 신비한 오라 (패시브)</li>
+                      <li>모든 아군 유닛에게 추가 마나 재생 효과를 제공합니다.</li>
+                      <li>마나 재생 : 8 / 14 / 20</li>
+                      <li>마나 재생 주기 : 2초</li>
+                      <li>반경 : 800</li>
+                  </ul>
+          </div>
+          <div id="omniknight_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">옴니 나이트(Omniknight) - 인간 기사</li>
+                      <br>
+                      <li>체력 : 700 / 1400 / 2800</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 정화</li>
+                      <li>즉시 아군 유닛을 치료하고 인근의 모든 적 유닛에게 피해를 줍니다.</li>
+                      <li>피해 유형 : 순수</li>
+                      <li>치유&피해 : 200 / 300 / 400</li>
+                      <li>피해 반경 : 260</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="lina_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">리나(Lina) - 인간 법사</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-55 / 100-110 / 200-220</li>
+                      <li>공격속도 : 1.6</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 라구나 블레이드</li>
+                      <li>&ensp;단일 적을 대상으로 번갯불을 발사해 커다란 </li>
+                      <li>피해를 줍니다.</li>
+                      <li>&ensp;리나 자신은 스킬을 시전할 때마다 불타는 영혼 </li>
+                      <li>효과로 인하여 공격 속도가 빨라집니다. (중첩 가능)</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>피해량 : 500 / 750 / 1000</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                      <li>불타는 영혼 지속시간 : 30초</li>
+                      <li>공격 속도 보너스 : 40 / 60 / 80</li>
+                  </ul>
+          </div>
+          <div id="lycan_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">라이칸(Lycan) - 인간 야수 전사</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 3000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 변신</li>
+                      <li>라이칸이 늑대 모습을 드러냅니다. 체력이 증가하고 늑대 2마리를 소환합니다.</li>
+                      <li>최대 체력 증가 : 20% / 30% / 40%</li>
+                      <li>쿨다운 : 60</li>
+                      <br>
+                      <li>늑대 생명력 : 300 / 500 / 700</li>
+                      <li>늑대 방어력 : 5</li>
+                      <li>늑대 마저 : 0</li>
+                      <li>늑대 공격력 : 50-100 / 100-150 / 150-200</li>
+                      <li>늑대 사정거리 : 205</li>
+                      <li>참고 사항 : 늑대는 암살자 판정이라 적 뒤로 이동(암살자 시너지 x)</li>
+                  </ul>
+          </div>
+          <div id="kunkka_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">컨카(Kunkka) - 인간 전사</li>
+                      <br>
+                      <li>체력 : 950 / 1900 / 3800</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 75-90 / 150-180 / 300-360</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 유령선</li>
+                      <li>전장을 가르 나아가는 유령선을 소환합니다. 유령선이 충돌하는 곳 근처에 있는 적 유닛 모두에게 피해를 입히고 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>충돌 지연시간 : 3.1</li>
+                      <li>범위 : 2000</li>
+                      <li>피해 반경 : 425</li>
+                      <li>피해량 : 200 / 300 / 400</li>
+                      <li>기절 시간 : 1.4 / 1.7 / 2</li>
+                      <li>쿨다운 : 15 / 12 / 9</li>
+                  </ul>
+          </div>
+          <div id="light_keeper_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">라이트 키퍼(Keeper of the Light) - 인간 법사</li>
+                      <br>
+                      <li>체력 : 650 / 1300 / 2600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-45 / 80-90 / 160-180</li>
+                      <li>공격속도 : 1.7</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 :  천상의 빛</li>
+                      <li>집중된 빛의 에너지를 내뿜습니다. 집중 시간이 길수록 더 강력한 힘을 모을 수 있습니다. 방출된 빛은 경로상 적에게 피해를 줍니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>집중 초당 피해 : 100 / 150 / 200</li>
+                      <li>최대 집중 시간 : 3</li>
+                      <li>최대 피해 : 300 / 450 / 600</li>
+                      <li>범위 : 1000</li>
+                      <li>너비 : 300</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="dragon_knight_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">드래곤 나이트(Dragon Knight) - 인간 용 기사</li>
+                      <br>
+                      <li>체력 : 800 / 1600 / 3200</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: bold">궁극기 : 고룡 형상</li>
+                      <li>용기사가 강력한 3가지 종류의 고룡으로 변합니다.</li>
+                      <li style="color: #249e32; font-weight: bold;">1레벨 녹룡 - 부식의 숨결</li>
+                      <li>&emsp;부식의 숨결 공격시 5초동안 30의 독 피해</li>
+                      <li style="color: #a52115; font-weight: bold;">2레벨 적룡 - 범위 공격</li>
+                      <li>&emsp;주 대상의 300반경 내에 있는 적 유닛을</li>
+                      <li>&emsp;모두 공격하여 50%의 물리 피해.</li>
+                      <li style="color: #2560c6; font-weight: bold;">3레벨 청룡 - 냉기숨결</li>
+                      <li>&emsp;주 대상의 300반경 내에 유닛에게</li>
+                      <li>&emsp;3초동안 공격속도 30 감소 및 이동 속도 30 감소</li>
+                      <li>추가 공격력 : 100 / 150 / 200</li>
+                      <li>추가 사정거리 : 350</li>
+                      <li>추가 이동 속도 : 30</li>
+                  </ul>
+          </div>
+          <div id="enchantress_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">인챈트리스(Enchantress) - 야수 드루이드</li>
+                      <br>
+                      <li>체력 : 400 / 800 / 1500</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 자연의 조력자</li>
+                      <li>위습 무리가 인챈트리스와 아군 유닛을 치료합니다. 11초동안 지속됩니다.</li>
+                      <li>초당 체력 회복 : 25</li>
+                      <li>반경 : 500</li>
+                      <li>위습 수 : 3 / 5 / 7</li>
+                      <li>쿨다운 : 15</li>
+                  </ul>
+          </div> 
+          <div id="tusk_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">터스크(Tusk) - 야수 전사</li>
+                      <br>
+                      <li>체력 : 650 / 1300 / 2600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-55 / 100-110 / 200-220</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 바다코끼리 펀치!</li>
+                      <li>터스크가 강력한 바다코끼리 펀치와 연결되어 아주 강력한 치명타를 날려 대상을 공중으로 날려보냅니다. 희생된 적은 땅에 떨어질때 둔화됩니다.</li>
+                      <li>치명타 피해 : 300% / 350% / 400%</li>
+                      <li>떠있는 시간 : 1</li>
+                      <li>둔화 시간 : 2</li>
+                      <li>둔화 : 40%</li>
+                      <li>쿨다운 : 7</li>
+                  </ul>
+          </div>
+          <div id="venomancer_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">베노맨서(Venomancer) - 야수 흑마</li>
+                      <br>
+                      <li>체력 : 600 / 1100 / 2100</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 20</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 :  역병 와드</li>
+                      <li>역병 와드를 소환해 적 유닛을 공격합니다. </li>
+                      <li>역병 와드의 공격은 적의 공격속도를 5초간 30감소시킵니다.</li>
+                      <li>쿨다운 : 5 / 4 / 3</li>
+                      <br>
+                      <li>역병 와드 생명력 : 250 / 400/ 550</li>
+                      <li>역병 와드 방어력 : 0</li>
+                      <li>역병 와드 마저 : 100</li>
+                      <li>역병 와드 공격 속도 : 1.4</li>
+                      <li>역병 와드 사정거리 : 900</li>
+                      <li>참고 사항 : 역병 와드는 마법에 면역입니다.</li>
+                  </ul>
+          </div>
+          <div id="sand_king_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">샌드 킹(Sand King) - 야수 암살자</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-60</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 지하 습격</li>
+                      <li>샌드 킹이 땅속으로 파고들어 앞으로 돌진합니다. 지상으로 올려오면서 피해를 주고 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>기절 시간 : 2</li>
+                      <li>범위 : 9900</li>
+                      <li>피해량 : 150 / 250 / 350</li>
+                      <li>쿨다운 : 12 / 10 / 8</li>
+                  </ul>
+          </div>
+          <div id="lone_gunslinger_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">론 드루이드(Lone Druid) - 야수 드루이드</li>
+                      <br>
+                      <li>체력 : 800 / 1600 / 3200</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 20</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 영혼 곰 소환</li>
+                      <li>강력한 힘을 지닌 영혼 곰을 동료로 소환합니다. </li>
+                      <br>
+                      <li>곰 생명력 : 1200 / 1600 / 2000</li>
+                      <li>곰 방어력 : 5</li>
+                      <li>곰 마저 : 10</li>
+                      <li>곰 공격력 : 150-200 / 250-300 / 350-400</li>
+                      <li>곰 공격속도 : 1.6 / 1.4 / 1.2</li>
+                      <li>곰 사정거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 550">곰 궁극기 : 휘감는 발톱</li>
+                      <li>적 공격 시 일정 확률로 땅에서 뿌리가 솟아나와 적을 움직이지 못하게 고정시킵니다.</li>
+                      <li>발동 확률 : 25%</li>
+                      <li>지속 시간 : 3초</li>
+                      <li>참고 사항 : 고독한 드루이드가 스킬을 2번 시전 시</li>
+                      <li>&emsp;&emsp;&emsp;&emsp;&emsp;곰 2마리가 소환됩니다.</li>
+                  </ul>
+          </div>
+          <div id="tinker_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">팅커 (Tinker) - 고블린 기계</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-50 / 80-100 / 160-200</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 열추적 미사일</li>
+                      <li>범위 내의 무작위 적 유닛을 추적하는 미사일을 3개 발사합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>미사일 당 피해 : 200 / 300 / 400</li>
+                      <li>쿨다운 : 8 / 6 / 4</li>
+                  </ul>
+          </div>
+          <div id="clockwerk_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">클락워크(Clockwerk) - 고블린 기계</li>
+                      <br>
+                      <li>체력 : 700 / 1400 / 2800</li>
+                      <li>아머 : 5 / 7 / 9</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-55 / 90-110 / 180-220</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 동력원 폭발</li>
+                      <li>강력한 파편을 주위 무작위 적에게 발사하여 피해를 주고 잠깐 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 275</li>
+                      <li>지속시간 : 5</li>
+                      <li>발사 간격 : 0.7</li>
+                      <li>피해량 : 50 / 75 / 100</li>
+                      <li>쿨다운 : 12 / 10 / 8</li>
+                  </ul>
+          </div>
+          <div id="bounty_blademaster_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">바운티 헌터(Bounty Hunter) - 고블린 암살자</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-70 / 100-140 / 200-280</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 수리검 투척</li>
+                      <li>적 유닛에게 치명적인 수리검을 던져 피해를 주고 대상을 잠깐 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>피해량 : 300 / 500 / 700</li>
+                      <li>쿨다운 : 5</li>
+                  </ul>
+          </div>
+          <div id="timbersaw_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">팀버쏘우(Timbersaw) - 고블린 기계</li>
+                      <br>
+                      <li>체력 : 800 / 1600 / 3200</li>
+                      <li>아머 : 6 / 8 / 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 55-60 / 110-120 / 220-240</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 죽음의 회전날</li>
+                      <li>극도로 날카로운 톱날을 회전시켜 주위 적에게 피해를 주고 나무를 쓰러뜨립니다.</li>
+                      <li>피해 유형 : 순수</li>
+                      <li>반경 : 300</li>
+                      <li>피해량 : 150 / 200 / 250</li>
+                      <li>쿨다운 : 6 / 5 / 4</li>
+                  </ul>
+          </div>
+          <div id="alchemist_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">알케미스트(Alchemist) - 고블린 흑마</li>
+                      <br>
+                      <li>체력 : 1000 / 2000 / 4000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-80 / 100-160 / 200-320</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 화학적 분노</li>
+                      <li>알케미스트가 오거를 약물로 유도하여 격노하게 합니다.</li>
+                      <li>공격속도가 증가하고 이동속도와 재생력이 증가합니다.</li>
+                      <li>변신 시 주변에 산성 물질을 흩뿌려 적의 방어력을 감소시킵니다.</li>
+                      <li>지속시간 : 15</li>
+                      <li>공격속도 : 0.7 / 0.55 / 0.4</li>
+                      <li>추가 체력 재생 : 40 / 60 / 80</li>
+                      <li>산성 물질 반경 : 400</li>
+                      <li>방어력 감소량 : 4 / 7 / 10</li>
+                      <li>쿨다운 : 25 / 20 / 15</li>
+                  </ul>
+          </div>
+          <div id="techies_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">테키(Techies) - 고블린 기계</li>
+                      <br>
+                      <li>체력 : 1000 / 2000 / 4000</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-55 / 50-110 / 180-220</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 원격 지뢰</li>
+                      <li>조작하여 폭발시키는 지뢰를 설치합니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>피해량 : 700 / 1100 / 1500</li>
+                      <li>범위 : 600</li>
+                      <li>폭탄 크기 : 1.2 / 1.5 / 1.8</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="queen_of_pain_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">퀸 오브 페인(Queen of Pain) - 악마 암살자</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 55-60 / 110-120 / 220-240</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 고통의 울부짖음</li>
+                      <li>퀸 오브 페인이 날카로운 비명을 질러 인근의 적에게 피해를 줍니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 425</li>
+                      <li>피해량 : 200 / 300 / 400</li>
+                      <li>쿨다운 : 6</li>
+                  </ul>
+          </div>
+          <div id="chaos_knight_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">카오스 나이트(Chaos Knight) - 악마 기사</li>
+                      <br>
+                      <li>체력 : 700 / 1450 / 2950</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-110 / 80-220 / 160-440</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 혼돈의 화살</li>
+                      <li>한 줄기 불가사의한 기운을 날려 보냅니다. 대상은 피해를 받고 기절합니다. 피해와 기절시간은 무작위로 결정됩니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>최소 기절시간 : 1</li>
+                      <li>최대 기절시간 : 2 / 3 / 4</li>
+                      <li>최소 피해 : 50 / 100 / 150</li>
+                      <li>최대 피해 : 200 / 300 / 450</li>
+                      <li>쿨다운 : 5</li>
+                  </ul>
+          </div>
+          <div id="terrorblade_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">테러블레이드(Terrorblade) - 악마 데몬헌터</li>
+                      <br>
+                      <li>체력 : 700 / 1350 / 2650</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 10 / 20 / 30</li>
+                      <li>공격력 : 45-65 / 90-130 / 180-260</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 탈바꿈</li>
+                      <li>테러블레이드가 원거리 공격 능력을 갖춘 강력한 악마로 변신합니다. 변신시 피해, 사거리, 공격속도가 증가합니다.</li>
+                      <li>추가 피해 : 50 / 100 / 200</li>
+                      <li>추가 사거리 : 600</li>
+                      <li>추가 공격속도 : 50 / 75 / 100</li>
+                  </ul>
+          </div>
+          <div id="shadow_fiend_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">쉐도우 핀드(Shadow Fiend) - </li>
+                      <br>
+                      <li>체력 : 450 / 900 / 1800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 70-80 / 140-160 / 280-320</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 영혼의 진혼곡</li>
+                      <li>구속된 영혼을 방사형으로 방출합니다. 쉐도우 핀드 까까이에 있는 적은 다수의 공격파에 피해를 받을 수 있습니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>시전 지연시간 : 1.67</li>
+                      <li>피해량 : 100 / 150 / 200</li>
+                      <li>쿨다운 : 20</li>
+                  </ul>
+          </div>
+          <div id="doom_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">둠(Doom) - 악마 전사</li>
+                      <br>
+                      <li>체력 : 1050 / 2100 / 4200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 110-120 / 220-240 / 440-480</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 파멸</li>
+                      <li>적 영웅에게 저주를 걸어 지속 피해를 주는 동시에 주문과 아이템을 사용하지 못하게 합니다.</li>
+                      <li>피해 유형 : 순수</li>
+                      <li>지속 시간 : 10 / 15 / 20</li>
+                      <li>초당 피해 : 60 / 90 / 120</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="drow_ranger_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">드로우 레인저(Drow Ranger) - 언데드 사냥꾼</li>
+                      <br>
+                      <li>체력 : 400 / 800 / 1600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-50 / 90-100 / 180-200</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 사격술 (패시브)</li>
+                      <li>드로우 레인저의 공격력과 공격속도가 증가합니다.</li>
+                      <li>공격력과 공격속도 증가 : 20% / 30% / 40%</li>
+                      <li></li>
+                  </ul>
+          </div>
+          <div id="abaddon_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">아바돈(Abaddon) - 언데드 기사</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 3000</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-55 / 90-110 / 180-220</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 어둠의 보호막</li>
+                      <li>아바돈이 아군 유닛 주위에 일정량의 피해를 흡수하는 어둠 에너지 보호막을 생성합니다. 보호막이 깨지면 흡수한 피해만큼 주위에 피해를 줍니다. 시전시 약하 효과와 기절 효과를 제거합니다.</li>
+                      <li>지속시간 : 10</li>
+                      <li>최대 피해 흡수 : 100 / 150 / 200</li>
+                      <li>폭발 반경 : 400</li>
+                      <li>쿨다운 : 12</li>
+                  </ul>
+          </div>
+          <div id="necrophos_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">네꼬로미(Necrophos) - 언데드 흑마</li>
+                      <br>
+                      <li>체력 : 850 / 1700 / 3400</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 죽음의 파동</li>
+                      <li>네크로포스가 명계의 파동을 뿜어내어 적에게 피해를 주고 아군을 치료합니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 475</li>
+                      <li>피해량 : 125 / 175 / 200</li>
+                      <li>치유 : 100 / 175 / 250</li>
+                      <li>쿨다운 : 5</li>
+                  </ul>
+          </div>
+          <div id="lich_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">리치(lich) - 언데드 법사</li>
+                      <br>
+                      <li>체력 : 850 / 1700 / 3400</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 20</li>
+                      <li>공격력 : 40-45 / 80-90 / 160-180</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 연쇄 빙결</li>
+                      <li>얼음의 구체를 내보내어 적 유닛들에게 피해를 주고 둔화에 빠뜨립니다. 얼음의 구체는 일정 횟수 튕기며 추가 피해를 입힙니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>튕김 당 피해 : 200 / 300 / 400</li>
+                      <li>튕김 횟수 : 6 / 9 / 12 : </li>
+                      <li>튕김 범위 : 600</li>
+                      <li>이동 둔화 : 65</li>
+                      <li>공격 둔화 : 65</li>
+                      <li>둔화 시간 : 2.5</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="death_prophet_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">데스 프로펫(Death Prophet) - 언데드 흑마</li>
+                      <br>
+                      <li>체력 : 1000 / 2000 / 4000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 30%</li>
+                      <li>공격력 : 40-50</li>
+                      <li>공격속도 : 121(1.4s)</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 퇴마술</li>
+                      <li>사악한 혼령을 해방하여 주위 적 유닛의 체력을 흡수합니다. 주문의 지속시간이 끝나면 데스프로펫은 적에게 준 피해에 비례하여 자신의 체력을 회복합니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>반경 : 700</li>
+                      <li>혼령 수 : 10 / 15 / 20</li>
+                      <li>혼령 피해 : 100</li>
+                      <li>체력 흡수 : 25%</li>
+                      <li>쿨다운 : 20 / 15 / 10</li>
+                      <li>지속 시간 : 10</li>
+                  </ul>
+          </div>
+          <div id="axe_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">엑스(Axe) - 오크 전사</li>
+                      <br>
+                      <li>체력 : 700 / 1400 / 2800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-57 / 100-114 / 200-228</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 광전사의 외침</li>
+                      <li>엑스가 주위 적을 도발하여 자신을 공겨갛게 합니다. 효과가 지속되는 동안 추가 방어력을 얻습니다.</li>
+                      <li>반경 : 192</li>
+                      <li>추가 방어력 : 5 / 10 / 15</li>
+                      <li>지속시간 : 2 / 3 / 4</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="beastmaster_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">비스트마스터(Beastmaster) - 오크 사냥꾼</li>
+                      <br>
+                      <li>체력 : 600 / 1200 / 2400</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 60-70 / 120-140 / 240-280</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 도끼 던지기</li>
+                      <li>비스트마스터가 부메랑처럼 도끼를 날려보내 그 사이에 있는 적 유닛 및 나루를 베어냅니다. 도끼마다 적 유닛 하나를 한번 공격하며, 적 유닛에 적중할때마다 피해량이 증폭됩니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>범위 : 1500</li>
+                      <li>도끼 피해 : 60 / 100 / 140</li>
+                      <li>피해 증폭 : 10 / 20 / 30</li>
+                      <li>쿨다운 : 7</li>
+                  </ul>
+          </div>
+          <div id="juggernaut_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">저거넛(juggernaut) - 오크 전사</li>
+                      <br>
+                      <li>체력 : 600 / 1200 / 2400</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 65-70 / 130-140 / 260-280</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 분노의 칼날</li>
+                      <li>저거넛이 무기를 휘둘러 거센 칼날 폭풍을 일으킵니다. 이 동안에는 마법에 면역이 되고 인접한 적에게 피해를 줍니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 250</li>
+                      <li>피해량 : 50 / 100 / 150</li>
+                      <li>지속시간 : 5</li>
+                      <li>쿨다운 : 12</li>
+                  </ul>
+          </div>
+          <div id="disruptor_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">디스럽터(Disruptor) - 오크 주술사</li>
+                      <br>
+                      <li>체력 : 700 / 1400 / 2800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-50 / 90-100 / 180-200</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 전자기 폭풍</li>
+                      <li>전자기 폭풍을 일으켜 지속시간 동안 대상 범위 내에 있는 모든 적 유닛에게 피해를 주고 침묵에 빠뜨립니다. 시간이 지날수록 더 큰 피해를 줍니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 400 / 500 / 600</li>
+                      <li>진동횟수 : 8 / 12 / 16</li>
+                      <li>초당 최대 피해 : 100 / 150 / 200</li>
+                      <li>지속시간 : 2 / 3 / 4</li>
+                      <li>쿨다운 : 15 / 12 / 9</li>
+                  </ul>
+          </div>
+          <div id="slardar_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">슬라다(Slardar) - 나가 전사</li>
+                      <br>
+                      <li>체력 : 650 / 1300 / 2600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 70-100 / 140-200 / 280-400</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 피해 증폭</li>
+                      <li>적의 방어력을 감소시켜 물리피해를 증가시키고, 투명 유닛을 볼 수 있게 합니다.</li>
+                      <li>방어력 감소 : 15 / 30 / 45</li>
+                      <li>지속시간 : 20</li>
+                      <li>쿨다운 : 3</li>
+                  </ul>
+          </div>
+          <div id="slark_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li>슬라크(Slark) - 나가 암살자</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 뛰어들기</li>
+                      <li>슬라크가 가장 가까운 적에게 뛰어들어 피해를 입히고 무장해제 시킵니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>피해량 : 200 / 300 / 400</li>
+                      <li>무장해제 시간 : 3 / 5 / 7</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="medusa_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">메두사(Medusa) - 나가 사냥꾼</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 3000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 10</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 석화의 시선</li>
+                      <li>메두사를 바라보는 적 유닛이 이동 및 공격속도 둔화에 걸립니다. 지속시간동안 메두사를 2초 이상 바라본 적 유닛은 돌로 변합니다. 돌이된 적은 기절하고 추가 물리피해를 입습니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 600 / 800 / 1000</li>
+                      <li>지속시간 : 4 / 5 / 6</li>
+                      <li>둔화 : 30%</li>
+                      <li>석화 지속시간 : 2 / 3 / 4</li>
+                      <li>추가 물리피해 : 30%</li>
+                      <li>쿨다운 : 20</li>
+                  </ul>
+          </div>
+          <div id="tideblademaster_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">타이드헌터(Tideblademaster) - 나가 사냥꾼</li>
+                      <br>
+                      <li>체력 : 950 / 1900 / 3800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-55 / 90-110 / 180-220</li>
+                      <li>공격속도 : 2</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 재해</li>
+                      <li>타이드헌터가 바닥을 내리쳐 사방으로 뻗어나가는 촉수를 불러냅니다. 주위 적 유닛에게 피해를 주고 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 500 / 650 / 800</li>
+                      <li>지속시간 : 2 / 2.5 / 3</li>
+                      <li>피해량 : 150 / 250 / 350</li>
+                      <li>쿨다운 : 30</li>
+                  </ul>
+          </div>
+          <div id="tiny_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">타이니(Tiny) - 정령 전사</li>
+                      <br>
+                      <li>체력 : 650 / 1300 / 2600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 60-100 / 120-200 / 240-400</li>
+                      <li>공격속도 : 1.9</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 던지기</li>
+                      <li>타이니가 범위내에서 가장 가까운 적 유닛을 체스판 가장자리로 던져서 피해를 주고 기절시킵니다.</li>
+                      <li>피해 유형 : 물리</li>
+                      <li>피해량 : 100 / 200 / 300</li>
+                      <li>기절 시간 : 1.5 / 2.0 / 2.5</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="morphling_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">모플링(Morphling) - 정령 암살자</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-60 / 90-120 / 180-240</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 파도 형상</li>
+                      <li>모플링이 물결 형태로 모습을 바꾸고 전방으로 쇄도하여 경로상의 적에게 피해를 줍니다. 모플링은 파도 형태일 동안에는 무적 상태가 됩니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>피해량 : 150 / 250 / 350</li>
+                      <li>쿨다운 : 10 / 8 / 6</li>
+                  </ul>
+          </div>
+          <div id="razor_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">레이저(Razor) - 정령 법사</li>
+                      <br>
+                      <li>체력 : 750 / 1500 / 3000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 플라즈마 장막</li>
+                      <li>커질수록 위력이 강해지는 플라즈마 파동을 내뿜어 장막에 닿는 적들에게 피해를 주고 둔화시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>반경 : 400 / 450 / 500</li>
+                      <li>최소 피해 : 10</li>
+                      <li>최대 피해 : 100 / 175 / 250</li>
+                      <li>최소 둔화 : 5%</li>
+                      <li>최대 둔화 : 25% / 30% / 40%</li>
+                      <li>둔화 시간 : 1.5</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="enigma_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">에니그마(Enigma) - 정령 흑마</li>
+                      <br>
+                      <li>체력 : 1000 / 2000 / 4000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 40</li>
+                      <li>공격력 : 45-55 / 90-110 / 180-220</li>
+                      <li>공격속도 : 1.5</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 밤의 파동</li>
+                      <li>지정 범위를 어둠의 공명에 빠뜨려 적 유닛의 최대 체력에 비례하는 피해룰 줍니다.</li>
+                      <li>피해 유형 : 순수</li>
+                      <li>반경 : 450</li>
+                      <li>초당 피해 : 6% / 9% / 12%</li>
+                      <li>지속시간 : 10</li>
+                      <li>쿨다운 : 20</li>
+                  </ul>
+          </div>
+          <div id="bat_rider_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">뱃 라이더(Bat Rider) - 트롤 기사</li>
+                      <br>
+                      <li>체력 : 500 / 1000 / 2000</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-55 / 80-110 / 160-220</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 끈적이는 네이팜</li>
+                      <li>끈적이는 기름으로 대상 주위를 적셔 적들의 이동속도와 방향전환을 둔화시킵니다. 기름을 뒤집어 쓴 적들은 뱃 라이더에게 추가 피해를 받습니다.</li>
+                      <li>추가 피해 : 50 / 75 / 100</li>
+                      <li>반경 : 375</li>
+                      <li>지속시간 : 20</li>
+                      <li>이동 둔화 : 3% / 5% / 7%</li>
+                      <li>방향전환 둔화 : 70%</li>
+                      <li>쿨다운 : 3</li>
+                  </ul>
+          </div>
+          <div id="shadow_shapeshifter_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">쉐도우 샤먼(Shadow Shaman) - 트롤 주술사</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-50 / 80-100 / 160-200</li>
+                      <li>공격속도 : 1.6</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 적 유닛을 치킨으로 바꿔 놓습니다. 변이된 중에는 공격하거나 능력을 사용하지 못합니다.</li>
+                      <li>지속 시간 : 4 / 6 / 8</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="witch_doctor_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">위치 닥터(Witch Doctor) - 트롤 흑마</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-50 / 80-100 / 160-200</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 마비 약통</li>
+                      <li>몸을 마비시키는 가루가 담긴 약통을 던집니다. 약통은 적 사이를 튕겨 다니며 부딫힌 상대를 기절시키고 피해를 입힙니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>기절 시간 : 1</li>
+                      <li>피해량 : 50 / 75 / 100</li>
+                      <li>튕김 횟수 : 2 / 4 / 6</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="dazzle_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">대즐(Dazzle) - 트롤 사제</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-75 / 100-150 / 200-300</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 얕은 무덤</li>
+                      <li>얕은 무덤의 축복을 받은 아군은 효과가 유지되는 동안 결코 죽지 않습니다.</li>
+                      <li>지속 시간 : 4</li>
+                      <li>적용 대상 : 1 / 2 / 3</li>
+                      <li>쿨다운 : 15</li>
+                  </ul>
+          </div>
+          <div id="troll_warlord_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">트롤 워로드(Troll Warlord) - 트롤 전사</li>
+                      <br>
+                      <li>체력 : 900 / 1800 / 3600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 90-100 / 180-200 / 360-400</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 열정 (패시브)</li>
+                      <li>같은 대상을 반복하여 공격할 때마다 공격속도가 증가합니다. 공격 대상을 변경하면 효과가 초기화됩니다.</li>
+                      <li>중첩 당 공격속도 : 15 / 20 / 25</li>
+                      <li>최대 중첩수 : 6 / 9 / 12</li>
+                  </ul>
+          </div>
+          <div id="viper_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">바이퍼(Viper) - 용 암살자</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 20</li>
+                      <li>공격력 : 50-60 / 100-120 / 200-240</li>
+                      <li>공격속도 : 1</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 바이퍼의 공습</li>
+                      <li>바이퍼가 대상 적 유닛의 공격 및 이동속도를 감소시키고 지속적인 독 피해를 줍니다. 둔화 효과는 지속시간동안 점차 약해집니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>지속시간 : 5</li>
+                      <li>초당 피해 : 150 / 250 / 350</li>
+                      <li>이동 둔화 : 40% / 60% / 80%</li>
+                      <li>공격 둔화 : 40 / 60 / 80</li>
+                      <li>쿨다운 : 10 / 7 / 4</li>
+                  </ul>
+          </div>
+          <div id="sniper_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">스나이퍼(Sniper) - 드워프 사냥꾼</li>
+                      <br>
+                      <li>체력 : 450 / 900 / 1800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 65-85 / 130-170 / 260-340</li>
+                      <li>공격속도 : 1.2</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 암살</li>
+                      <li>스나이퍼가 적 유닛을 목표로 지정하고 2초 후 먼 거리에서 강력한 피해를 주는 탄환을 발사합니다. 추가로 대상을 잠깐 기절시킵니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>범위 : 2000 / 2500 / 3000</li>
+                      <li>조준시간 : 1</li>
+                      <li>피해량 : 400 / 600 / 800</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="gyrocopter_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">무이로콥터(Mooyrocopter) - 드워프 기계</li>
+                      <br>
+                      <li>체력 : 900 / 1800 / 3600</li>
+                      <li>아머 : 15</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 75-80 / 150-160 / 300-320</li>
+                      <li>공격속도 : 0.9</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 폭격 요청</li>
+                      <li>지정 범위 내에 있는 적 유닛을 대상으로 공중 폭격을 요청합니다. 2개의 미사일이 차례로 발사됩니다. 첫번째 미사일은 강한 피해와 2초간 약한 둔화효과를 주고, 두번쨰 미사일은 약한 피해와 4초간 강한 둔화효과를 줍니다.</li>
+                      <li>피해 유형 : 마법</li>
+                      <li>첫번째 미사일 피해 : 200 / 300 / 400</li>
+                      <li>두번째 미사일 피해 : 200 / 300 / 400</li>
+                      <li>첫번째 미사일 둔화 : 30%</li>
+                      <li>첫번째 미사일 둔화 : 60%</li>
+                      <li>반경 : 600</li>
+                      <li>쿨다운 : 10</li>
+                  </ul>
+          </div>
+          <div id="riki_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">리키(Riki) - 사티로스 암살자</li>
+                      <br>
+                      <li>체력 : 500 / ? / ?</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 45-55 / ? / ?</li>
+                      <li>공격속도 : 1.1</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 연막</li>
+                      <li>연막탄을 던져 범위 내의 적을 침묵에 빠뜨리고 적의 공격이 대부분 빗나가게 합니다.</li>
+                      <li>반경 : 325</li>
+                      <li>공격 실패율 : 30% / 40% / 50%</li>
+                      <li>지속시간 : 3 / 4 / 5</li>
+                      <li>쿨다운 : 15</li>
+                  </ul>
+          </div>
+          <div id="wildness_magi_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">오거 마기(Ogre Magi) - 오거 법사</li>
+                      <br>
+                      <li>체력 : 700 / 1400 / 2800</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 55-65 / 110-130 / 220-260</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 피의 욕망</li>
+                      <li>아군 유닛을 광란에 빠뜨려 이동 속도와 공격 속도를 증가시킵니다.</li>
+                      <li>추가 이동속도 : 8% / 10% / 12% / 14%</li>
+                      <li>추가 공격속도 : 30 / 40 /50 / 60</li>
+                      <li>자신 공격속도 증가 : 30 / 50 / 70 / 90</li>
+                      <li>지속시간 : 30</li>
+                      <li>쿨다운 : 5</li>
+                  </ul>
+          </div>
+          <div id="zeus_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">제우스(Zeus) - 신 법사</li>
+                      <br>
+                      <li>체력 : 950 / 1900 / 3800</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 50-70 / 100-140 / 200-280</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 400</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 번개신의 분노</li>
+                      <li>제우스가 모든 적 유닛을 번개로 강타합니다. 번개는 각각 50% 확률로 적들에게 피해를 입힙니다. 고정된 데미지와 적들의 현재 체력에 비례한 피해를 입힙니다. 최소 1명의 적은 적중합니다.</li>
+                      <li>스킬 데미지 : 300 / 400 / 500</li>
+                      <li>쿨다운 : 15 / 12 / 9</li>
+                      <li>데미지 퍼센트 : 20% / 30% / 40%</li>
+                      <li>캐스팅 시간 : 0.35</li>
+                      <br>
+                      <li>원정 경기에서 살아남은 번개의 신은 적 플레이어에게 현재 체력에 비례한 피해를 입힙니다.</li>
+                      <li>플레이어에게 입히는 데미지 : 10% / 15% / 20%</li>
+                      <li>(현재체력 비례)</li>
+                  </ul>
+          </div>
+          <div id="mars_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">마르스(mars) - 신 전사</li>
+                      <br>
+                      <li>체력 : 650 / 1300 / 2600</li>
+                      <li>아머 : 5</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 0</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 250</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 방벽</li>
+                      <li>마르스는 평타 공격을 하지 못합니다.</li>
+                      <li>전방과 측면에서 받는 물리피해를 마르스는 일정 비율을 막아냅니다.</li>
+                      <li>전방 감소% : 30 / 50 / 70</li>
+                      <li>전방 각도 : 90</li>
+                      <li>측면 감소% : 15 / 25 / 35</li>
+                      <li>측면 각도 : 180</li>
+                      <li>마르스는 일정 시간 마다 전방 3칸 안에 있는 적을 방패로 강타하여 물리피해를 입힙니다.</li>
+                      <li>방패 강타 범위 : 200</li>
+                      <li>방패 강타 데미지 : 150 / 300/ 450</li>
+                      <li>재사용 대기 시간 : 8</li>
+                  </ul>
+          </div>
+          <div id="winter_wyvern_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">겨울 비룡(Winter Wyvern) - 용 법사</li>
+                      <br>
+                      <li>체력 : 550 / 1100 / 2200</li>
+                      <li>아머 : 0</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 40-55 / 80-110 / 160-220</li>
+                      <li>공격속도 : 1.4</li>
+                      <li>사거리 : 600</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 냉기의 은총</li>
+                      <li>아군을 차가운 얼음에 가두고 단단히 얼려 일정 체력을 회복시키고 추가로 매초 최대 체력의 일정 비율을 회복시킵니다.</li>
+                      <li>얼음에 갇힌 대상은 모든 물리 피해에 면역이 됩니다.</li>
+                      <li>시전 대상 : 아군 유닛</li>
+                      <li>지속 시간 : 2 / 3 / 4초</li>
+                      <li>기본 체력 재생 : 10 / 15 / 20</li>
+                      <li>최대 체력 재생 : 10 / 15 / 20%</li>
+                      <li>재사용 대기 시간 : 15 / 12 / 9 초</li>
+                  </ul>
+          </div>
+          <div id="sven_info" class="info">
+              <a class="b-close">
+                  x</a>
+                  <ul class="info_list">
+                      <li style="font-weight: bold">스벤(sven) - 악마 전사</li>
+                      <br>
+                      <li>체력 : 1200 / 2400 / 4800</li>
+                      <li>아머 : 10</li>
+                      <li>마저 : 0</li>
+                      <li>공격력 : 100-150 / 200-300 / 400-600</li>
+                      <li>공격속도 : 1.3</li>
+                      <li>사거리 : 205</li>
+                      <br>
+                      <li style="font-weight: 700">궁극기 : 신의 힘</li>
+                      <li>모든 아군 악마들은 60초 동안 추가 공격력을 획득합니다.</li>
+                      <li>시전 대상 : 아군 악마</li>
+                      <li>지속 시간 : 60초</li>
+                      <li>추가 공격력 : 100% / 150% / 200%</li>
+                      <li>재사용 대기 시간 : 30 초</li>
+                      <br>
+                      <li style="font-weight: 700">패시브 : 강력한 가르기</li>
+                      <li>스벤의 기본 공격은 타격 대상 주변 2칸 범위 내에 있는 적들에게 50%의 범위 피해를 입힙니다.</li>
+                  </ul>
+          </div>
+      </div>
+      <div id="link_popup" class="info">
+          <a class="b-close">
+              x</a>
+              <ul class="info_list">
+                  <li>초보자가 참고하면 좋은 글들입니다.</li>
+                  <li>　</li>
+                  <li><a href="https://gall.dcinside.com/atcs/6173" target="_blank">체스말 티어리스트/유닛별해석</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/635" target="_blank">시너지 조합 및 해석</a></li>
+                  <li><a href="https://blog.naver.com/kiminnav/221472311556" target="_blank">아이템 획득 확률 및 정보</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">오토체스의 기초</a></li>
+                  <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">초반에 어떤 유닛을 사 모아야 하는가</a></li>
+              </ul>
+      </div>
+      <div id="horse_num_popup" class="info2">
+          <a class="b-close">x</a>
+            <div class="info_explain">
+              <img src=pieces\autochess_horse_num.PNG />
+            </div>
+      </div>
+      <div id="patchNote_popup" class="info" style="max-width: 960px;">
+          <a class="b-close">x</a>
+            <div class="info_explain">
+              <img src=img\patch_note.PNG />
+              <li style="font-size: 16px;">출처 : 오토체스판 최고관리자님</li>
+            </div>
+      </div>
+      <div id="drink_popup" class="info" >
+        <a class="b-close">x</a>
+        <ul class="info_list" >
+          <li>술 한잔 마셨습니다... 사이트가 잘 안되도 좋습니다.</li>
+          <li>하지만 무이로콥터 하나만 기억해주세요. 진심을 다해 전합니다.</li>
+          <li>사이트가 별로 일수 있습니다. 밤낮으로 고민하고 코딩했습니다 ...</li>
+          <li>최선을 다했고 열심히 했습니다. 저의 진심이 느껴지길 바랍니다.</li>
+          <li>고맙습니다...</li>
+        </ul>
+          <img style="animation-name: speed; animation-iteration-count: infinite; animation-duration: 3s; animation-delay: : 6s;" src=pieces\gyrocopter.png />
+      </div>
+      </div>
+      <div style="text-align: right;line-height: 80%"><br><span style="font-size: 10px;">원작자 : DC 체크메이트 갤러리 26, 수정자 : UJ, 메일 주소 : wnddpd01@naver.com</span><input type="button" style="font-size: 11px; height: 18px;" id="drink" value="술"></div>
+      
+
+  </body>
+</html>
