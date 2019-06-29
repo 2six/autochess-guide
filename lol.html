@@ -46,7 +46,15 @@
         cursor: pointer;
     }
     input.btnGall {
-        background: url( "img/gall_logo.png" ) no-repeat;
+        background: url( "img/tft_gall_logo.png" ) no-repeat;
+        border: none;
+        width: 115px;
+        height: 48px;
+        cursor: pointer;
+        margin-left: 12px;
+   }
+   input.btnLolc {
+        background: url( "img/lolchess_logo.png" ) no-repeat;
         border: none;
         width: 115px;
         height: 48px;
@@ -622,6 +630,7 @@
     leona = ['leona', 'noble', 'guardian'];
     brand = ['brand', 'demon', 'elementalist'];
     chogath = ['chogath', 'voidness', 'fighter'];
+
     draven = ['draven', 'empire', 'blademaster'];
     akali = ['akali', 'ninja', 'assassin'];
     karthus = ['karthus', 'ghost', 'sorcerer'];
@@ -1130,7 +1139,7 @@
       if(dragon==0){
         $('.count_dragon').css('display','none');
       } else {
-        $('.count_dragon').text("용 x " + naga);
+        $('.count_dragon').text("용 x " + dragon);
         $('.count_dragon').css('display','inline');
       }
 
@@ -1419,7 +1428,7 @@
         $('.count_scouter').css('display','none');
       } else {
         $('.count_scouter').css('display','inline');
-        $('.count_scouter').text("총잡이 x " + scouter);
+        $('.count_scouter').text("정찰대 x " + scouter);
       }
 
 
@@ -1464,8 +1473,8 @@
           onClose: function() {$('body').css('overflow', '');},
         });
       });
-      $('input#horse_num').click(function(){
-        $('#horse_num_popup').bPopup({
+      $('input#item').click(function(){
+        $('#item_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
@@ -1502,7 +1511,7 @@
           <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
           현재조합
       </div>
-      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";></div><br>
+      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="item" value="아이템 조합표"></div>
           <label class="count_demon" style="display: none;color: #2a6392;">악마 x 0</label>
           <label class="count_dragon" style="display: none;color: #b8bcbd;">용 x 0</label>
           <label class="count_frost" style="display: none;color: #00be00;">빙하 x 0</label>
@@ -3143,17 +3152,10 @@
                   <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">초반에 어떤 유닛을 사 모아야 하는가</a></li>
               </ul>
       </div>
-      <div id="horse_num_popup" class="info2">
+      <div id="item_popup" class="info">
           <a class="b-close">x</a>
             <div class="info_explain">
-              <img src=pieces\autochess_horse_num.PNG />
-            </div>
-      </div>
-      <div id="patchNote_popup" class="info" style="max-width: 960px;">
-          <a class="b-close">x</a>
-            <div class="info_explain">
-              <img src=img\patch_note.PNG />
-              <li style="font-size: 16px;">출처 : 오토체스판 최고관리자님</li>
+              <img src=img\tft_item.PNG />
             </div>
       </div>
       <div id="drink_popup" class="info" >
