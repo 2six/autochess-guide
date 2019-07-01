@@ -54,7 +54,7 @@
         margin-left: 12px;
    }
    input.btnLolc {
-        background: url( "img/lolchess_logo.png" ) no-repeat;
+        background: url( "img/lolchess_logo2.png" ) no-repeat;
         border: none;
         width: 115px;
         height: 48px;
@@ -1481,7 +1481,7 @@
           onClose: function() {$('body').css('overflow', '');},
         });
       });
-      $('input#patchNote').click(function(){
+      $('input#reloll').click(function(){
         $('#patchNote_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
@@ -1489,8 +1489,8 @@
           onClose: function() {$('body').css('overflow', '');},
         });
       });
-      $('input#drink').click(function(){
-        $('#drink_popup').bPopup({
+      $('input#reroll').click(function(){
+        $('#reroll_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
@@ -1511,7 +1511,7 @@
           <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
           현재조합
       </div>
-      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="item" value="아이템 조합표"></div><br>
+      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="reroll" value="리롤 확률"><input type="button" id="item" value="아이템 조합표"></div><br>
           <label class="count_demon" style="display: none;color: #2a6392;">악마 x 0</label>
           <label class="count_dragon" style="display: none;color: #b8bcbd;">용 x 0</label>
           <label class="count_frost" style="display: none;color: #00be00;">빙하 x 0</label>
@@ -3156,6 +3156,12 @@
           <a class="b-close">x</a>
             <div class="info_explain">
               <img src=img\tft_item.PNG />
+            </div>
+      </div>
+      <div id="reroll_popup" class="info">
+          <a class="b-close">x</a>
+            <div class="info_explain">
+              <img src=img\tft_reroll.PNG />
             </div>
       </div>
       <div id="drink_popup" class="info" >
