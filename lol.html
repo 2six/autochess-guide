@@ -1481,8 +1481,8 @@
           onClose: function() {$('body').css('overflow', '');},
         });
       });
-      $('input#reloll').click(function(){
-        $('#patchNote_popup').bPopup({
+      $('input#drink').click(function(){
+        $('#drink_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
@@ -1491,6 +1491,14 @@
       });
       $('input#reroll').click(function(){
         $('#reroll_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+      });
+      $('input#patchNote').click(function(){
+        $('#patchNote_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
@@ -1511,7 +1519,7 @@
           <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
           현재조합
       </div>
-      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="reroll" value="리롤 확률"><input type="button" id="item" value="아이템 조합표"></div><br>
+      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="patchNote" value="0702 패치노트"><input type="button" id="reroll" value="리롤 확률"><input type="button" id="item" value="아이템 조합표"></div><br>
           <label class="count_demon" style="display: none;color: #2a6392;">악마 x 0</label>
           <label class="count_dragon" style="display: none;color: #b8bcbd;">용 x 0</label>
           <label class="count_frost" style="display: none;color: #00be00;">빙하 x 0</label>
@@ -3152,6 +3160,13 @@
                   <li><a href="https://gall.dcinside.com/atcs/4879" target="_blank">초반에 어떤 유닛을 사 모아야 하는가</a></li>
               </ul>
       </div>
+      <div id="patchNote_popup" class="info" style="max-width: 960px;">
+          <a class="b-close">x</a>
+            <div class="info_explain">
+              <img src=img\tft_0702_patch_note.PNG />
+              <li style="font-size: 16px;">출처 : 롤토체스갤 ㅇㅇ님</li>
+            </div>
+      </div>
       <div id="item_popup" class="info">
           <a class="b-close">x</a>
             <div class="info_explain">
@@ -3161,23 +3176,22 @@
       <div id="reroll_popup" class="info">
           <a class="b-close">x</a>
             <div class="info_explain">
-              <img src=img\tft_reroll.PNG />
-              <li>출처 : lolchess.gg</li>
+              <img src=img\tft_0702_reroll.PNG />
             </div>
       </div>
       <div id="drink_popup" class="info" >
         <a class="b-close">x</a>
         <ul class="info_list" >
-          <li>술 한잔 마셨습니다... 사이트가 잘 안되도 좋습니다.</li>
-          <li>하지만 무이로콥터 하나만 기억해주세요. 진심을 다해 전합니다.</li>
-          <li>사이트가 별로 일수 있습니다. 밤낮으로 고민하고 코딩했습니다 ...</li>
-          <li>최선을 다했고 열심히 했습니다. 저의 진심이 느껴지길 바랍니다.</li>
-          <li>고맙습니다...</li>
+          <li>사이트를 이용해주시는 여러분 감사합니다.</li>
+          <li>광고를 달까 생각도 했는데 아무래도 이용자 여러분들이 싫어하실 수 있을 것 같아</li>
+          <li>투네이션 링크를 만들었습니다. 후원해주시면 감사하겠지만</li>
+          <li>여러분이 이용만 해주셔도 정말 기쁩니다. 감사합니다</li>
+          <li>https://toon.at/donate/636976330132739355</li>
         </ul>
           <img style="animation-name: speed; animation-iteration-count: infinite; animation-duration: 3s; animation-delay: : 6s;" src=pieces\gyrocopter.png />
       </div>
       </div>
-      <div style="text-align: right;line-height: 80%"><br><span style="font-size: 10px;">원작자 : DC 체크메이트 갤러리 26, 수정자 : UJ, 메일 주소 : wnddpd01@naver.com</span></div>
+      <div style="text-align: right;line-height: 80%"><br><span style="font-size: 10px;">원작자 : DC 체크메이트 갤러리 26, 수정자 : UJ, 메일 주소 : wnddpd01@naver.com</span><input type="button" style="font-size: 11px; height: 18px;" id="drink" value="후원하기"></div>
       
 
   </body>
