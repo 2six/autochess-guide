@@ -610,6 +610,7 @@
     reksai = ['reksai', 'voidness', 'fighter'];
     shen = ['shen', 'ninja', 'blademaster'];
     pyke = ['pyke', 'pirate', 'assassin'];
+    twistedFate = ['twistedFate', 'pirate', 'sorcerer'];
     zed = ['zed', 'ninja', 'assassin'];
 
     veigar = ['veigar', 'yordle', 'sorcerer'];
@@ -713,7 +714,9 @@
       $('.pyke').mousedown(function(e){
         potrait_opacity(pyke, e.which);
       });
-
+      $('.twistedFate').mousedown(function(e){
+        potrait_opacity(twistedFate, e.which);
+      });
       $('.zed').mousedown(function(e){
         potrait_opacity(zed, e.which);
       });
@@ -1500,12 +1503,15 @@
         });
       });
       $('input#patchNote').click(function(){
+        window.open('https://lolchess.gg/board/tft/view/25873/9-14-%EC%A0%84%EB%9E%B5%EC%A0%81-%ED%8C%80-%EC%A0%84%ED%88%AC-%ED%8C%A8%EC%B9%98-%EB%85%B8%ED%8A%B8-');
+        /*
         $('#patchNote_popup').bPopup({
           follow: [false, false], //x, y
           position: ['auto', 'auto'], //x, y
           onOpen: function() {$('body').css('overflow', 'hidden');},
           onClose: function() {$('body').css('overflow', '');},
         });
+        */
       });
     });
   </script>
@@ -1521,7 +1527,7 @@
           <img src="https://w.namu.la/s/65eba0256c6cd03fa46cde4f4d0b757f3d8ee8d0bebcbe1a4e56f43c6f55b447a2f1afb189dc0bf11ed42667a87c339b499813e8bd272904452912c085c1cb4f6f1f858252c95019245c114a8075b5a805ae066364300a7d5696fe9c01a06a03"><br>
           현재조합
       </div>
-      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="patchNote" value="0702 패치노트"><input type="button" id="reroll" value="리롤 확률"><input type="button" id="item" value="아이템 조합표"></div><br>
+      <div style="float: right;display: inline; text-align: right;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://tft.lol/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists/?id=tft')";><input type="button" class="btnLolc" id="lolc" onclick="window.open('https://lolchess.gg/')";><br><input type="button" id="patchNote" value="0717 패치노트(장문)"><input type="button" id="reroll" value="리롤 확률"><input type="button" id="item" value="아이템 조합표"></div><br>
           <label class="count_demon" style="display: none;color: #2a6392;">악마 x 0</label>
           <label class="count_dragon" style="display: none;color: #b8bcbd;">용 x 0</label>
           <label class="count_frost" style="display: none;color: #00be00;">빙하 x 0</label>
@@ -1568,9 +1574,7 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lucian"><div class="tier tier_c">C</div><img src=lol_pieces\Lucian.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 총잡이">루시안</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 leona"><div class="tier tier_c">C</div><img src=lol_pieces\Leona.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 수호자">레오나</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 kayle"><div class="tier tier_c">C</div><img src=lol_pieces\Kayle.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="귀족 기사">케일</span></div></div></td>
-              <td></td>
-              <td id="robot"><br><label trait-tooltip-text="(1) 로봇은 마나가 가득 찬 상태로 전투를 시작합니다"><span id="robot">로봇</span></label><br><label class="robot_synergy" style="color:#505050">(1)</label></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blitzcrank"><div class="tier tier_c">C</div><img src=lol_pieces\Blitzcrank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="로봇 싸움꾼">블리츠크랭크</span></div></div></td>
+              
           </tr>
           <tr class="species">
               <td id="yordle"><br><label trait-tooltip-text="요들 챔피언들이 회피율을 얻습니다. (3) 20% (6) 50%"><span id="yordle">요들</span></label><br><label class="yordle_synergy" style="color:#505050">(3)(6)</label></td>
@@ -1581,8 +1585,8 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 kennen"><div class="tier tier_b">B</div><img src=lol_pieces\Kennen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 요들 원소술사">케넨</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 gnar"><div class="tier tier_b">B</div><img src=lol_pieces\Gnar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 야생 형상변환자">나르</span></div></div></td>
               <td></td>
-              <td id="purgee"><br><label trait-tooltip-text="(1) 전투가 시작할 때 인접한 챔피언이 없을 시 추방자 챔피언은 최대 체력과 동일한 양의 방어막을 얻습니다"><span id="purgee">추방자</span></label><br><label class="purgee_synergy" style="color:#505050">(1)</label></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 yasuo"><div class="tier tier_b">B</div><img src=lol_pieces\Yasuo.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="추방자 검사">야스오</span></div></div></td>
+              <td id="robot"><br><label trait-tooltip-text="(1) 로봇은 마나가 가득 찬 상태로 전투를 시작합니다"><span id="robot">로봇</span></label><br><label class="robot_synergy" style="color:#505050">(1)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blitzcrank"><div class="tier tier_c">C</div><img src=lol_pieces\Blitzcrank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="로봇 싸움꾼">블리츠크랭크</span></div></div></td>
           </tr>
           <tr class="species">
             <td id="frost"><br><label trait-tooltip-text="공격 시 적을 일정 확률로 2초 동안 기절시킵니다. (2) 25% (4) 35% (6) 45%"><span id="frost">빙하</span></label><br><label class="frost_synergy" style="color:#505050">(2)(4)(6)</label></td>
@@ -1592,9 +1596,9 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 volibear"><div class="tier tier_a">A</div><img src=lol_pieces\Volibear.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 싸움꾼">볼리베어</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 sejuani"><div class="tier tier_a">A</div><img src=lol_pieces\Sejuani.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 기사">세주아니</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 anivia"><div class="tier tier_a">A</div><img src=lol_pieces\Anivia.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="빙하 원소술사">애니비아</span></div></div></td>
-              <td id="dragon"><br><label trait-tooltip-text="(2) 용은 마법 피해에 면역입니다."><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(2)</label></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shyvana"><div class="tier tier_c">C</div><img src=lol_pieces\Shyvana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 형상변환자">쉬바나</span></div></div></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 aurelionsol"><div class="tier tier_s">S</div><img src=lol_pieces\AurelionSol.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 마법사">아우 솔</span></div></div></td>
+              <td></td>
+              <td id="purgee"><br><label trait-tooltip-text="(1) 전투가 시작할 때 인접한 챔피언이 없을 시 추방자 챔피언은 최대 체력과 동일한 양의 방어막을 얻습니다"><span id="purgee">추방자</span></label><br><label class="purgee_synergy" style="color:#505050">(1)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 yasuo"><div class="tier tier_b">B</div><img src=lol_pieces\Yasuo.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="추방자 검사">야스오</span></div></div></td>
           </tr>
           <tr class="species">
               <td id="wildness"><br><label trait-tooltip-text="공격할 때마다 분노 중첩이 쌓입니다. 최대 5번까지 중첩되며 중첩된 분노당 공격 속도가 8% 증가합니다. (2) 야생 아군만 해당 (4) 모든 아군"><span id="wildness">야생</span></label><br><label class="wildness_synergy" style="color:#505050">(2)(4)</label></td>
@@ -1603,6 +1607,19 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 ahri"><div class="tier tier_c">C</div><img src=lol_pieces\Ahri.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 마법사">아리</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 rengar"><div class="tier tier_a">A</div><img src=lol_pieces\Rengar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 암살자">렝가</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 gnar"><div class="tier tier_c">C</div><img src=lol_pieces\Gnar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 야생 형상변환자">나르</span></div></div></td>
+              <td></td>
+              <td id="dragon"><br><label trait-tooltip-text="(2) 용은 마법 피해에 면역입니다."><span id="dragon">용</span></label><br><label class="dragon_synergy" style="color:#505050">(2)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 shyvana"><div class="tier tier_c">C</div><img src=lol_pieces\Shyvana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 형상변환자">쉬바나</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 aurelionsol"><div class="tier tier_s">S</div><img src=lol_pieces\AurelionSol.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 마법사">아우 솔</span></div></div></td>
+          </tr>
+          <tr class="species">
+              
+              <td id="pirate"><br><label trait-tooltip-text="다른 플레이어와 전투 후에 0~4의 추가 골드를 얻습니다.(3)"><span id="pirate">해적</span></label><br><label class="pirate_synergy" style="color:#505050">(3)</label></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 graves"><div class="tier tier_d">D</div><img src=lol_pieces\Graves.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">그레이브즈</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 twistedFate"><div class="tier tier_d">D</div><img src=lol_pieces\TwistedFate.png><div class="name2"><span class="star">　</span><br><span data-tooltip-text="해적 마법사">트위스티드 페이트</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 pyke"><div class="tier tier_b">B</div><img src=lol_pieces\Pyke.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 암살자">파이크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 gangplank"><div class="tier tier_c">C</div><img src=lol_pieces\Gangplank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 검사 총잡이">갱플랭크</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 missfortune"><div class="tier tier_f">F</div><img src=lol_pieces\MissFortune.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">미스포츈</span></div></div></td>
               <td id="ghost"><br><label trait-tooltip-text="전투 시작 시 무작위 적군 하나에게 저주를 걸어 체력을 100으로 감소시킵니다.(2)"><span id="ghost">유령</span></label><br><label class="ghost_synergy" style="color:#505050">(2)</label></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 mordekaiser"><div class="tier tier_d">D</div><img src=lol_pieces\Mordekaiser.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 기사">모데카이저</span></div></div></td></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 kindred"><div class="tier tier_d">D</div><img src=lol_pieces\Kindred.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="유령 정찰대">킨드레드</span></div></div></td></td>
@@ -1622,19 +1639,15 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 kennen"><div class="tier tier_f">F</div><img src=lol_pieces\Kennen.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 요들 원소술사">케넨</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 akali"><div class="tier tier_b">B</div><img src=lol_pieces\Akali.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="닌자 암살자">아칼리</span></div></div></td>
           </tr>
+          
           <tr class="species">
-              <td id="voidness"><br><label trait-tooltip-text="모든 기본 공격이 적 방어력의 50%를 무시합니다.(3)"><span id="voidness">공허</span></label><br><label class="voidness_synergy" style="color:#505050">(3)</label></td>
+            <td id="voidness"><br><label trait-tooltip-text="모든 기본 공격이 적 방어력의 50%를 무시합니다.(3)"><span id="voidness">공허</span></label><br><label class="voidness_synergy" style="color:#505050">(3)</label></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 khazix"><div class="tier tier_d">D</div><img src=lol_pieces\Khazix.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 암살자">카직스</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 kassadin"><div class="tier tier_b">B</div><img src=lol_pieces\Kassadin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 마법사">카사딘</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 reksai"><div class="tier tier_c">C</div><img src=lol_pieces\RekSai.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">렉사이</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 chogath"><div class="tier tier_f">F</div><img src=lol_pieces\Chogath.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 싸움꾼">초가스</span></div></div></td>
 
-              <td id="pirate"><br><label trait-tooltip-text="다른 플레이어와 전투 후에 0~4의 추가 골드를 얻습니다.(3)"><span id="pirate">해적</span></label><br><label class="pirate_synergy" style="color:#505050">(3)</label></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 graves"><div class="tier tier_d">D</div><img src=lol_pieces\Graves.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">그레이브즈</span></div></div></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 pyke"><div class="tier tier_b">B</div><img src=lol_pieces\Pyke.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 암살자">파이크</span></div></div></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 gangplank"><div class="tier tier_c">C</div><img src=lol_pieces\Gangplank.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 검사 총잡이">갱플랭크</span></div></div></td>
-              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_5 missfortune"><div class="tier tier_f">F</div><img src=lol_pieces\MissFortune.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="해적 총잡이">미스포츈</span></div></div></td>
-</tr>
+          </tr>
       </table>
       <table style="display:inline;">
           <tr class="class">
@@ -1652,6 +1665,7 @@
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 kassadin"><div class="tier tier_d">D</div><img src=lol_pieces\Kassadin.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="공허 마법사">카사딘</span></div></div></td></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 lulu"><div class="tier tier_b">B</div><img src=lol_pieces\Lulu.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">룰루</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 ahri"><div class="tier tier_b">B</div><img src=lol_pieces\Ahri.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="야생 법사">아리</span></div></div></td>
+              <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 twistedFate"><div class="tier tier_d">D</div><img src=lol_pieces\TwistedFate.png><div class="name2"><span class="star">　</span><br><span data-tooltip-text="해적 마법사">트위스티드 페이트</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 morgana"><div class="tier tier_d">D</div><img src=lol_pieces\Morgana.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="악마 마법사">모르가나</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 veigar"><div class="tier tier_a">A</div><img src=lol_pieces\Veigar.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="요들 마법사">베이가</span></div></div></td>
               <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 aurelionsol"><div class="tier tier_c">C</div><img src=lol_pieces\AurelionSol.png><div class="name"><span class="star">　</span><br><span data-tooltip-text="용 법사">아우 솔</span></div></div></td>
@@ -3124,28 +3138,29 @@
                       <li>재사용 대기 시간 : 15 / 12 / 9 초</li>
                   </ul>
           </div>
-          <div id="sven_info" class="info">
+          <div id="twistedFate_info" class="info">
               <a class="b-close">
                   x</a>
                   <ul class="info_list">
-                      <li style="font-weight: bold">스벤(sven) - 악마 전사</li>
+                      <li style="font-weight: bold">트페 - 해적 마법사</li>
                       <br>
-                      <li>체력 : 1200 / 2400 / 4800</li>
-                      <li>아머 : 10</li>
-                      <li>마저 : 0</li>
-                      <li>공격력 : 100-150 / 200-300 / 400-600</li>
-                      <li>공격속도 : 1.3</li>
-                      <li>사거리 : 205</li>
+                      <li>체력 : 450 / 810 / 1620</li>
+                      <li>마나 / 초기 마나 : 50 / 0</li>
+                      <li>방어력 : 20</li>
+                      <li>공격력 : 40 / 72 / 144</li>
+                      <li>공격 속도 : 0.75</li>
+                      <li>사거리 : 2</li>
                       <br>
-                      <li style="font-weight: 700">궁극기 : 신의 힘</li>
-                      <li>모든 아군 악마들은 60초 동안 추가 공격력을 획득합니다.</li>
-                      <li>시전 대상 : 아군 악마</li>
-                      <li>지속 시간 : 60초</li>
-                      <li>추가 공격력 : 100% / 150% / 200%</li>
-                      <li>재사용 대기 시간 : 30 초</li>
+                      <li style="font-weight: 700">궁극기 : 카드 뽑기(무작위)</li>
+                      <li style="color: #2560c6; font-weight: bold;">푸른색 카드</li>
+                      <li>20 / 35 / 50만큼 자신과 주변 아군의 마나를 회복합니다.</li>
                       <br>
-                      <li style="font-weight: 700">패시브 : 강력한 가르기</li>
-                      <li>스벤의 기본 공격은 타격 대상 주변 2칸 범위 내에 있는 적들에게 50%의 범위 피해를 입힙니다.</li>
+                      <li style="color: #a52115; font-weight: bold;">빨간색 카드</li>
+                      <li>대상과 그 주변 적들에게 200 / 300 / 400의 피해를 줍니다. </li>
+                      <br>
+                      <li style="color: #FFD700; font-weight: bold;">황금색 카드</li>
+                      <li>대상을 2 / 3 / 4초동안 기절시킵니다.</li>
+
                   </ul>
           </div>
       </div>
