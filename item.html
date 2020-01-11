@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="img/favicon2.ico" type="img/x-icon">
+<link rel="icon" href="img/favicon2.ico" type="image/x-icon">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8018035275987079",
+    enable_page_level_ads: true
+  });
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137393427-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137393427-1');
+  </script>
+
+<title>도타2 오토체스 아이템 가이드</title>
+<meta charset="utf-8"/>
+<style type="text/css">
+  body {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 20px;
+    height: 100%;
+  }
+  /* optional: show position indicator in red */
+  table {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  input.btnOpgg {
+    background: url( "img/opgg_logo.png" ) no-repeat;
+    border: none;
+    width: 115px;
+    height: 48px;
+    cursor: pointer;
+  }
+  input.btnGall {
+    background: url( "img/gall_logo.png" ) no-repeat;
+    border: none;
+    width: 115px;
+    height: 48px;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+  .asd{
+    font-size: 14px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, -50%)
+  }
+  .squad {
+    display:inline;
+    position:absolute;
+    left:50%;
+    top: 6%;
+    text-align: center;
+    font-size: 16px;
+    transform:translate(-50%, -50%)
+  }
+  .species td {
+    width: 96px;
+    height: auto;
+    padding: 0px;
+  }
+  .speciesCombine td {
+    width: 65px;
+    height: auto;
+    padding: 0px;
+    position: relative;
+  }
+  .class td {
+    width: 86px;
+    height: 86px;
+    padding: 0px;
+  }
+  .pieces{
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+    position: relative;
+    border: 3px;
+  }
+  .pieces img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .pieces2 img {
+    width: 80%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .combin img {
+    width: 161%;
+    height: auto;
+    opacity: 0.5;
+  }
+  .name {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
+  }
+  .name2 {
+    color: white;
+    width: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    position: absolute;
+    bottom: 12px;
+    left: 6px;
+  }
+
+  .effect {
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 0px;
+    display: none;
+  }
+  .trait {
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px;
+    display: none;
+  }
+  .star {
+    color : yellow;
+  }
+  .star2 {
+    left: -40px;
+    position: relative;
+    color : yellow;
+  }
+  .tier {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    opacity: 0.7;
+    display: none;
+    color:red;
+  }
+  .tier_ss {
+    color: #ffbf7f;
+  }
+  .tier_s {
+    color: #ffbf7f;
+  }
+  .tier_aa {
+    color: #ffdf7f;
+  }
+  .tier_a {
+    color: #7f7fff;
+  }
+  .tier_b {
+    color: #7fbfff;
+  }
+  .tier_c {
+    color: #ffffff;
+  }
+  .tier_d {
+    color: #aaaaaa;
+  }
+  .tier_f {
+    color: #888888;
+  }
+  .cost_1 img {
+    border: 3px solid #ffffff;
+  }
+  .cost_2 img {
+    border: 3px solid #888888;
+  }
+  .cost_3 img {
+    border: 3px solid #463fe0;
+  }
+  .cost_4 img {
+    border: 3px solid #ec10f0;
+  }
+  .cost_5 img {
+    border: 3px solid #f38b19;
+  }
+
+  .trait_tooltip {
+    color:black;
+    text-shadow: -3px 0 5px #ffffff, 0 3px 5px #ffffff, 3px 0 5px #ffffff, 0 -3px 5px #ffffff;
+  }
+  .info_explain {
+    max-width: 90%;
+    height: auto;
+    padding: 20px;
+    position: center;
+    text-align:center;
+    border: 3px;
+  }
+
+  .info_icon {
+    position: absolute;
+    width:20px;
+    opacity: 0.5;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    z-index: 10;
+  }
+  .info_icon2 {
+    position: relative;
+    width:20px;
+    opacity: 0.5;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-top: 7px solid rgba(0, 0, 0, 0);
+    z-index: -10;
+  }
+  .info {
+    background-color:#ffffff;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    min-width:400px;
+    min-height: 180px;
+    width: 500px;
+  }
+  .info2 {
+    background-color:#ffffff;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    min-width: 810px;
+    width: auto;
+    height: auto;
+  }
+  .info_list {
+    list-style:none;
+    position: relative;
+    left:-15px;
+  }
+  .b-close{
+    cursor:pointer;
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    right:0px;
+    top:0px;
+    font-weight: 900;
+  }
+
+  [data-tooltip-text]:hover {
+    position: relative;
+  }
+
+  [data-tooltip-text]:after {
+    -webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+    transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight:900;
+
+    color: #fffff;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    position: absolute;
+    width: auto;
+    min-width: 300px;
+    max-width: 3000px;
+    word-wrap: break-word;
+    text-align: left;
+
+    z-index: 9999;
+
+    opacity: 0;
+    left: -9999px;
+    top: 90%;
+
+    content: attr(data-tooltip-text);
+  }
+
+  [data-tooltip-text]:hover:after {
+    top: 130%;
+    left: 0;
+    opacity: 1;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  (function(b){b.fn.bPopup=function(z,F){function K(){a.contentContainer=b(a.contentContainer||c);switch(a.content){case "iframe":var h=b('<iframe class="b-iframe" '+a.iframeAttr+"></iframe>");h.appendTo(a.contentContainer);r=c.outerHeight(!0);s=c.outerWidth(!0);A();h.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":A();b("<img />").load(function(){k(a.loadCallback);G(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:A(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);G(b(this))}).hide().appendTo(a.contentContainer)}}function A(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+t}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);D();c.data("bPopup",a).data("id",e).css({left:"slideIn"==a.transition||"slideBack"==a.transition?"slideBack"==a.transition?g.scrollLeft()+u:-1*(v+s):l(!(!a.follow[0]&&m||f)),position:a.positionStyle||"absolute",top:"slideDown"==a.transition||"slideUp"==a.transition?"slideUp"==a.transition?g.scrollTop()+w:x+-1*r:n(!(!a.follow[1]&&p||f)),"z-index":a.zIndex+t+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});H(!0)}function q(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");g.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,q).data("bPopup",null);H();return!1}function G(h){var b=h.width(),e=h.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());r=c.outerHeight(!0);s=c.outerWidth(!0);D();a.contentContainer.css({height:"auto",width:"auto"});d.left=l(!(!a.follow[0]&&m||f));d.top=n(!(!a.follow[1]&&p||f));c.animate(d,250,function(){h.show();B=E()})}function L(){d.data("bPopup",t);c.delegate(".bClose, ."+a.closeClass,"click."+e,q);a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",q);M||!a.follow[0]&&!a.follow[1]||d.bind("scroll."+e,function(){B&&c.dequeue().animate({left:a.follow[0]?l(!f):"auto",top:a.follow[1]?n(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){w=y.innerHeight||d.height();u=y.innerWidth||d.width();if(B=E())clearTimeout(I),I=setTimeout(function(){D();c.dequeue().each(function(){f?b(this).css({left:v,top:x}):b(this).animate({left:a.follow[0]?l(!0):"auto",top:a.follow[1]?n(!0):"auto"},a.followSpeed,a.followEasing)})},50)});a.escClose&&g.bind("keydown."+e,function(a){27==a.which&&q()})}function H(b){function d(e){c.css({display:"block",opacity:1}).animate(e,a.speed,a.easing,function(){J(b)})}switch(b?a.transition:a.transitionClose||a.transition){case "slideIn":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()-(s||c.outerWidth(!0))-C});break;case "slideBack":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()+u+C});break;case "slideDown":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()-(r||c.outerHeight(!0))-C});break;case "slideUp":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()+w+C});break;default:c.stop().fadeTo(a.speed,b?1:0,function(){J(b)})}}function J(b){b?(L(),k(F),a.autoClose&&setTimeout(q,a.autoClose)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function l(a){return a?v+g.scrollLeft():v}function n(a){return a?x+g.scrollTop():x}function k(a){b.isFunction(a)&&a.call(c)}function D(){x=p?a.position[1]:Math.max(0,(w-c.outerHeight(!0))/2-a.amsl);v=m?a.position[0]:(u-c.outerWidth(!0))/2;B=E()}function E(){return w>c.outerHeight(!0)&&u>c.outerWidth(!0)}b.isFunction(z)&&(F=z,z=null);var a=b.extend({},b.fn.bPopup.defaults,z);a.scrollBar||b("html").css("overflow","hidden");var c=this,g=b(document),y=window,d=b(y),w=y.innerHeight||d.height(),u=y.innerWidth||d.width(),M=/OS 6(_\d)+/i.test(navigator.userAgent),C=200,t=0,e,B,p,m,f,x,v,r,s,I;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";q()};return c.each(function(){b(this).data("bPopup")||(k(a.onOpen),t=(d.data("bPopup")||0)+1,e="__b-popup"+t+"__",p="auto"!==a.position[1],m="auto"!==a.position[0],f="fixed"===a.positionStyle,r=c.outerHeight(!0),s=c.outerWidth(!0),a.loadUrl?K():A())})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",autoClose:!1,closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,iframeAttr:'scrolling="no" frameborder="0"',loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",transitionClose:!1,zIndex:9997}})(jQuery);
+</script>
+<script type="text/javascript">
+  var iiattackBlade = 0, iblightStone = 0, ichainMail = 0, icloak = 0, icrown = 0, imorbidMask = 0, iquarterstaff = 0, iRingofRegen = 0, iRingofHealth = 0, irobeoftheMagi = 0, istoutSheild = 0, ivoidStone = 0;
+  var iblinkDagger = 0, ibroadSword = 0, ijavellin = 0, imithrilHammer = 0, iplateMail = 0, istaffOfWizardry = 0, ivitalityBooster = 0;
+  var idemonEdge = 0, ihyperStone = 0, iultimageOrb = 0;
+  var imysticStaff = 0, ireaver = 0, isacredRelic = 0;
+  var iassultCuirass = 0, ibattleFury = 0, ibladeMail = 0, icrystalys = 0, idaedalus = 0, idagon1 = 0, idagon2 = 0, idagon3 = 0, idagon4 = 0, idagon5 = 0, idesolator = 0, idivineRapier = 0, iheartOfTarrasque = 0, ihoodOfDefiance = 0, ikaya = 0, imom = 0, imaelstrom = 0, imjollnir = 0, imonkeykingBar = 0, imoonShard = 0, iperseverance = 0, irefresherOrb = 0, iscytheOfVyse = 0, ivanguard = 0;
+  attackBlade = ['attackBlade'];blightStone = ['blightStone'];chainMail = ['chainMail'];cloak=['cloak'];crown=['crown'];morbidMask=['morbidMask'];quarterstaff=['quarterstaff'];RingofHealth=['RingofHealth'];RingofRegen=['RingofRegen'];robeoftheMagi=['robeoftheMagi'];stoutSheild=['stoutSheild'];voidStone=['voidStone'];
+  blinkDagger=['blinkDagger'];broadSword=['broadSword'];javellin=['javellin'];mithrilHammer=['mithrilHammer'];plateMail=['plateMail'];staffOfWizardry=['staffOfWizardry'];vitalityBooster=['vitalityBooster'];demonEdge=['demonEdge'];hyperStone=['hyperStone'];ultimageOrb=['ultimageOrb'];mysticStaff=['mysticStaff'];reaver=['reaver'];sacredRelic=['sacredRelic'];
+  assultCuirass=['assultCuirass'];battleFury=['battleFury'];bladeMail=['bladeMail'];crystalys=['crystalys'];daedalus=['daedalus'];dagon1=['dagon1'];dagon2=['dagon2'];dagon3=['dagon3'];dagon4=['dagon4'];dagon5=['dagon5'];desolator=['desolator'];divineRapier=['divineRapier'];heartOfTarrasque=['heartOfTarrasque'];hoodOfDefiance=['hoodOfDefiance'];kaya=['kaya'];mom=['mom'];maelstrom=['maelstrom'];mjollnir=['mjollnir'];monkeykingBar=['monkeykingBar'];moonShard=['moonShard'];perseverance=['perseverance'];refresherOrb=['refresherOrb'];scytheOfVyse=['scytheOfVyse'];vanguard=['vanguard'];
+  star_ = 0;
+
+  $(function(){
+    $('.attackBlade').mousedown(function(e){
+      potrait_opacity(attackBlade, e.which);
+    });
+    $('.blightStone').mousedown(function(e){
+      potrait_opacity(blightStone, e.which);
+    });
+    $('.chainMail').mousedown(function(e){
+      potrait_opacity(chainMail, e.which);
+    });
+    $('.cloak').mousedown(function(e){
+      potrait_opacity(cloak, e.which);
+    });
+    $('.crown').mousedown(function(e){
+      potrait_opacity(crown, e.which);
+    });
+    $('.morbidMask').mousedown(function(e){
+      potrait_opacity(morbidMask, e.which);
+    });
+    $('.quarterstaff').mousedown(function(e){
+      potrait_opacity(quarterstaff, e.which);
+    });
+    $('.RingofRegen').mousedown(function(e){
+      potrait_opacity(RingofRegen, e.which);
+    });
+    $('.RingofHealth').mousedown(function(e){
+      potrait_opacity(RingofHealth, e.which);
+    });
+    $('.robeoftheMagi').mousedown(function(e){
+      potrait_opacity(robeoftheMagi, e.which);
+    });
+    $('.stoutSheild').mousedown(function(e){
+      potrait_opacity(stoutSheild, e.which);
+    });
+    $('.voidStone').mousedown(function(e){
+      potrait_opacity(voidStone, e.which);
+    });
+    $('.blinkDagger').mousedown(function(e){
+      potrait_opacity(blinkDagger, e.which);
+    });
+    $('.broadSword').mousedown(function(e){
+      potrait_opacity(broadSword, e.which);
+    });
+    $('.javellin').mousedown(function(e){
+      potrait_opacity(javellin, e.which);
+    });
+    $('.mithrilHammer').mousedown(function(e){
+      potrait_opacity(mithrilHammer, e.which);
+    });
+    $('.plateMail').mousedown(function(e){
+      potrait_opacity(plateMail, e.which);
+    });
+    $('.staffOfWizardry').mousedown(function(e){
+      potrait_opacity(staffOfWizardry, e.which);
+    });
+    $('.vitalityBooster').mousedown(function(e){
+      potrait_opacity(vitalityBooster, e.which);
+    });
+    $('.demonEdge').mousedown(function(e){
+      potrait_opacity(demonEdge, e.which);
+    });
+    $('.hyperStone').mousedown(function(e){
+      potrait_opacity(hyperStone, e.which);
+    });
+    $('.ultimageOrb').mousedown(function(e){
+      potrait_opacity(ultimageOrb, e.which);
+    });
+    $('.mysticStaff').mousedown(function(e){
+      potrait_opacity(mysticStaff, e.which);
+    });
+    $('.reaver').mousedown(function(e){
+      potrait_opacity(reaver, e.which);
+    });
+    $('.sacredRelic').mousedown(function(e){
+      potrait_opacity(sacredRelic, e.which);
+    });
+
+
+    $('.info_icon').mouseover(function(){
+      $(this).css('opacity', '1');
+    });
+    $('.info_icon').mouseout(function(){
+      $(this).css('opacity', '0.5');
+    });
+    $('.info_icon').click(function(){
+      $('#' + $(this).next('div').attr('class').substr(14) + '_info').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+    });
+  });
+
+
+ function potrait_opacity(unit_name, input) {
+  if($('.' + unit_name[0] + ' > img').css('opacity') != '1') {
+    $('.' + unit_name[0] + ' > img').css('opacity', '1');
+    for(i=0;unit_name[i]!=null;i++) {
+      if(unit_name[i]=='attackBlade') {
+        iattackBlade=1;
+      } else if (unit_name[i]=='blightStone'){
+        iblightStone=1;
+      } else if (unit_name[i]=='chainMail'){
+        ichainMail=1;
+      } else if (unit_name[i]=='cloak'){
+        icloak=1;
+      } else if (unit_name[i]=='crown'){
+        icrown=1;
+      } else if(unit_name[i]=='stoutSheild') {
+        istoutSheild=1;
+      } else if (unit_name[i]=='broadSword'){
+        ibroadSword=1;
+      } else if (unit_name[i]=='javellin'){
+        ijavellin=1;
+      } else if (unit_name[i]=='mithrilHammer'){
+        imithrilHammer=1;
+      } else if (unit_name[i]=='morbidMask'){
+        imorbidMask=1;
+      } else if(unit_name[i]=='quarterstaff') {
+        iquarterstaff=1;
+      } else if (unit_name[i]=='RingofRegen'){
+        iRingofRegen=1;
+      } else if (unit_name[i]=='RingofHealth'){
+        iRingofHealth=1;
+      } else if (unit_name[i]=='robeoftheMagi'){
+        irobeoftheMagi=1;
+      } else if (unit_name[i]=='voidStone'){
+        ivoidStone=1;
+      } else if(unit_name[i]=='staffOfWizardry') {
+        istaffOfWizardry=1;
+      } else if (unit_name[i]=='plateMail'){
+        iplateMail=1;
+      } else if (unit_name[i]=='vitalityBooster'){
+        ivitalityBooster=1;
+      } else if (unit_name[i]=='demonEdge'){
+        idemonEdge=1;
+      } else if (unit_name[i]=='hyperStone'){
+        ihyperStone=1;
+      } else if(unit_name[i]=='ultimageOrb') {
+        iultimageOrb=1;
+      } else if (unit_name[i]=='blinkDagger'){
+        iblinkDagger=1;
+      } else if (unit_name[i]=='mysticStaff'){
+        imysticStaff=1;
+      } else if (unit_name[i]=='reaver'){
+        ireaver=1;
+      } else if (unit_name[i]=='sacredRelic'){
+        isacredRelic=1;
+      }
+    }
+  } else {
+    $('.' + unit_name[0] + ' > img').css('opacity', '0.5');
+    for(i=0;unit_name[i]!=null;i++) {
+      if(unit_name[i]=='attackBlade') {
+        iattackBlade0;
+      } else if (unit_name[i]=='blightStone'){
+        iblightStone=0;
+      } else if (unit_name[i]=='chainMail'){
+        ichainMail=0;
+      } else if (unit_name[i]=='cloak'){
+        icloak=0;
+      } else if (unit_name[i]=='crown'){
+        icrown=0;
+      } else if(unit_name[i]=='stoutSheild') {
+        istoutSheild=0;
+      } else if (unit_name[i]=='broadSword'){
+        ibroadSword=0;
+      } else if (unit_name[i]=='javellin'){
+        ijavellin=0;
+      } else if (unit_name[i]=='mithrilHammer'){
+        imithrilHammer=0;
+      } else if (unit_name[i]=='morbidMask'){
+        imorbidMask=0;
+      } else if(unit_name[i]=='quarterstaff') {
+        iquarterstaff=0;
+      } else if (unit_name[i]=='RingofRegen'){
+        iRingofRegen=0;
+      } else if (unit_name[i]=='RingofHealth'){
+        iRingofHealth=0;
+      } else if (unit_name[i]=='robeoftheMagi'){
+        irobeoftheMagi=0;
+      } else if (unit_name[i]=='voidStone'){
+        ivoidStone=0;
+      } else if(unit_name[i]=='staffOfWizardry') {
+        istaffOfWizardry=0;
+      } else if (unit_name[i]=='plateMail'){
+        iplateMail=0;
+      } else if (unit_name[i]=='vitalityBooster'){
+        ivitalityBooster=0;
+      } else if (unit_name[i]=='demonEdge'){
+        idemonEdge=0;
+      } else if (unit_name[i]=='hyperStone'){
+        ihyperStone=0;
+      } else if(unit_name[i]=='ultimageOrb') {
+        iultimageOrb=0;
+      } else if (unit_name[i]=='blinkDagger'){
+        iblinkDagger=0;
+      } else if (unit_name[i]=='mysticStaff'){
+        imysticStaff=0;
+      } else if (unit_name[i]=='reaver'){
+        ireaver=0;
+      } else if (unit_name[i]=='sacredRelic'){
+        isacredRelic=0;
+      }
+    }
+  }
+  squad_synergy();
+}
+
+function squad_synergy() {
+  if(ibroadSword > 0 && ichainMail > 0){
+    $('.bladeMail > img').css('opacity', '1.0');
+  }else{
+    $('.bladeMail > img').css('opacity', '0.5');
+  }
+  if(ibroadSword > 0 && iattackBlade > 0){
+    $('.crystalys > img').css('opacity', '1.0');
+    icrystalys = 1;
+  }else{
+    $('.crystalys > img').css('opacity', '0.5');
+    icrystalys = 0;
+  }
+  if(iperseverance > 0 && idemonEdge > 0){
+    $('.battleFury > img').css('opacity', '1.0');
+  }else{
+    $('.battleFury > img').css('opacity', '0.5');
+  }
+  if(icrystalys > 0 && idemonEdge > 0){
+    $('.daedalus > img').css('opacity', '1.0');
+  }else{
+    $('.daedalus > img').css('opacity', '0.5');
+  }
+  if(isacredRelic > 0 && idemonEdge > 0){
+    $('.divineRapier > img').css('opacity', '1.0');
+  }else{
+    $('.divineRapier > img').css('opacity', '0.5');
+  }
+  if(iquarterstaff > 0 && ijavellin > 0 && idemonEdge > 0){
+    $('.monkeykingBar > img').css('opacity', '1.0');
+  }else{
+    $('.monkeykingBar > img').css('opacity', '0.5');
+  }
+  if(istaffOfWizardry > 0 && irobeoftheMagi){
+    $('.kaya > img').css('opacity', '1.0');
+  }else{
+    $('.kaya > img').css('opacity', '0.5');
+  }
+  if(istaffOfWizardry > 0 && icrown){
+    $('.dagon1 > img').css('opacity', '1.0');
+    idagon1 = 1;
+  }else{
+    $('.dagon1 > img').css('opacity', '0.5');
+    idagon1 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon1){
+    $('.dagon2 > img').css('opacity', '1.0');
+    idagon2 = 1;
+  }else{
+    $('.dagon2 > img').css('opacity', '0.5');
+    idagon2 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon2){
+    $('.dagon3 > img').css('opacity', '1.0');
+    idagon3 = 1;
+  }else{
+    $('.dagon3 > img').css('opacity', '0.5');
+    idagon3 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon3){
+    $('.dagon4 > img').css('opacity', '1.0');
+    idagon4 = 1;
+  }else{
+    $('.dagon4 > img').css('opacity', '0.5');
+    idagon4 = 0;
+  }
+  if(istaffOfWizardry > 0 && idagon4){
+    $('.dagon5 > img').css('opacity', '1.0');
+    idagon5 = 1;
+  }else{
+    $('.dagon5 > img').css('opacity', '0.5');
+    idagon5 = 0;
+  }
+  if(imorbidMask > 0 && iquarterstaff > 0){
+    $('.mom > img').css('opacity', '1.0');
+  } else{
+    $('.mom > img').css('opacity', '0.5');
+  }
+  if(iblightStone > 0 && imithrilHammer > 0){
+    $('.desolator > img').css('opacity', '1.0');
+  } else{
+    $('.desolator > img').css('opacity', '0.5');
+  }
+  if(ijavellin > 0 && imithrilHammer > 0){
+    $('.maelstrom > img').css('opacity', '1.0');
+    imaelstrom = 1;
+  } else{
+    $('.maelstrom > img').css('opacity', '0.5');
+    imaelstrom = 0;
+  }
+  if(imaelstrom > 0 && ihyperStone > 0){
+    $('.mjollnir > img').css('opacity', '1.0');
+  } else{
+    $('.mjollnir > img').css('opacity', '0.5');
+  }
+  if(ichainMail > 0 && iplateMail > 0 && ihyperStone > 0){
+    $('.assultCuirass > img').css('opacity', '1.0');
+  }else{
+    $('.assultCuirass > img').css('opacity', '0.5');
+  }
+  if(ihyperStone > 0){
+    $('.moonShard > img').css('opacity', '1.0');
+  }else{
+    $('.moonShard > img').css('opacity', '0.5');
+  }
+  if(ivoidStone > 0 && iRingofHealth > 0){
+    $('.perseverance > img').css('opacity', '1.0');
+    iperseverance = 1;
+  }else{
+    $('.perseverance > img').css('opacity', '0.5');
+    iperseverance = 0;
+  }
+  if(icloak > 0 && iRingofHealth > 0 && iRingofRegen > 0){
+    $('.hoodOfDefiance > img').css('opacity', '1.0');
+  }else{
+    $('.hoodOfDefiance > img').css('opacity', '0.5');
+  }
+  if(istoutSheild > 0 && iRingofHealth > 0 && ivitalityBooster > 0){
+    $('.vanguard > img').css('opacity', '1.0');
+  }else{
+    $('.vanguard > img').css('opacity', '0.5');
+  }
+  if(ireaver > 0 && ivitalityBooster > 0){
+    $('.heartOfTarrasque > img').css('opacity', '1.0');
+  }else{
+    $('.heartOfTarrasque > img').css('opacity', '0.5');
+  }
+  if(iperseverance > 0){
+    $('.refresherOrb > img').css('opacity', '1.0');
+  }else{
+    $('.refresherOrb > img').css('opacity', '0.5');
+  }
+  if(ivoidStone > 0 && iultimageOrb > 0 && imysticStaff > 0){
+    $('.scytheOfVyse > img').css('opacity', '1.0');
+  }else{
+    $('.scytheOfVyse > img').css('opacity', '0.5');
+  }
+}
+
+$(function(){
+  $('input#reset').click(function(){
+    $('.pieces > img').css('opacity', '0.3');
+    $('span.star').text('　');
+    squad_synergy();
+  });
+  $('input#tier').click(function(){
+    if($('.tier').css('display')!='none') {
+      $('.tier').css('display','none');
+    } else {
+      $('.tier').css('display','block');
+    }
+  });
+  $('input#star_button').click(function(){
+    if ( star_ == 0) {
+      star_ = 1;
+      $('#star_button').val('별 OFF');
+      $('span.star').text('　');
+    } else {
+      star_ = 0;
+      $('#star_button').val('별 ON');
+      $('.pieces > img').css('opacity', '0.3');
+      squad_synergy();
+    }
+  });
+  $('input#link').click(function(){
+    $('#link_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+  });
+  $('input#creepitem').click(function(){
+    $('#creepitem_popup').bPopup({
+          follow: [false, false], //x, y
+          position: ['auto', 'auto'], //x, y
+          onOpen: function() {$('body').css('overflow', 'hidden');},
+          onClose: function() {$('body').css('overflow', '');},
+        });
+  });
+  $('input#creepround').click(function(){
+    
+  });
+});
+</script>
+
+</head>
+<body>
+  <div style="float: right;display: block; text-align: right; overflow: auto;"><input type="button" class="btnOpgg" id="opgg" onclick="window.open('https://autochess.op.gg/')";><input type="button" class="btnGall" id="gall" onclick="window.open('https://gall.dcinside.com/mgallery/board/lists?id=dota2autochess')";><br>
+    <input type="button" id="creepitem" value="크립 아이템 드랍 확률" >
+  </div>
+  <br><b>
+  </b><br>
+  <table style="display:inline;">
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 attackBlade"><img src=item\ab.png><div class="name"><span class="star">　</span><br>갈퀴 발톱</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 blightStone"><img src=item\bs.png><div class="name"><span class="star">　</span><br>황폐석</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 chainMail"><img src=item\cm.png><div class="name"><span class="star">　</span><br>사슬 갑옷</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 cloak"><img src=item\cl.png><div class="name"><span class="star">　</span><br>망토</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 crown"><img src=item\cr.png><div class="name"><span class="star">　</span><br>왕관</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 stoutSheild"><img src=item\ss.png><div class="name"><span class="star">　</span><br>튼튼한 방패</div></div></td>
+    </tr>
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 morbidMask"><img src=item\mm.png><div class="name"><span class="star">　</span><br>섬뜩한 가면</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 quarterstaff"><img src=item\qu.png><div class="name"><span class="star">　</span><br>전투 지팡이</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 RingofRegen"><img src=item\ror.png><div class="name"><span class="star">　</span><br>재생의 반지</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 RingofHealth"><img src=item\roh.png><div class="name"><span class="star">　</span><br>체력 반지</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 robeoftheMagi"><img src=item\rotm.png><div class="name"><span class="star">　</span><br>법사의 로브</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_1 voidStone"><img src=item\vs.png><div class="name"><span class="star">　</span><br>공허석</div></div></td>
+    </tr>
+  </table>
+
+  <table style="display:inline;">
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 broadSword"><img src=item\bsword.png><div class="name"><span class="star">　</span><br>장검</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 javellin"><img src=item\ja.png><div class="name"><span class="star">　</span><br>투창</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 mithrilHammer"><img src=item\mh.png><div class="name"><span class="star">　</span><br>미스릴 망치</div></div></td>
+    </tr>
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 staffOfWizardry"><img src=item\sow.png><div class="name"><span class="star">　</span><br>마법의 지팡이</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 plateMail"><img src=item\pm.png><div class="name"><span class="star">　</span><br>판금갑옷</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 vitalityBooster"><img src=item\vb.png><div class="name"><span class="star">　</span><br>활력 강화석</div></div></td>
+    </tr>
+  </table>
+  <table style="display:inline;">
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 demonEdge"><img src=item\de.png><div class="name"><span class="star">　</span><br>악마의 검</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 hyperStone"><img src=item\hyper.png><div class="name"><span class="star">　</span><br>극도석</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_3 ultimageOrb"><img src=item\uo.png><div class="name"><span class="star">　</span><br>궁극구</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_2 blinkDagger"><img src=item\bd.png><div class="name"><span class="star">　</span><br>점멸 단검</div></div></td>
+    </tr>
+    <tr class="species">
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 mysticStaff"><img src=item\ms.png><div class="name"><span class="star">　</span><br>신비의 지팡이</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 reaver"><img src=item\rea.png><div class="name"><span class="star">　</span><br>재앙의 도끼</div></div></td>
+      <td><img class="info_icon" src="img\info.png"><div class="pieces cost_4 sacredRelic"><img src=item\sr.png><div class="name"><span class="star">　</span><br>성스러운 유물</div></div></td>
+    </tr>
+  </table>
+  <br>
+  <br><b>
+  </b><br>
+  <table style="display: inline;">
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 bladeMail"><img src=item\bm.png><div class="name2">칼날 갑옷</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div></td>
+      <td><div class="pieces2 cost_1 chainMail"><img src=item\cm.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 crystalys"><img src=item\cry.png><div class="name2">수정검</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 broadSword"><img src=item\bsword.png></div></td>
+      <td><div class="pieces2 cost_1 attackBlade"><img src=item\ab.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 battleFury"><img src=item\bf.png><div class="name2">전장격노</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
+      <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 daedalus"><img src=item\dae.png><div class="name2">다이달로스</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_5 crystalys"><img src=item\cry.png></div></td>
+      <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 divineRapier"><img src=item\dr.png><div class="name2">신의 양날검</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_4 sacredRelic"><img src=item\sr.png></div></td>
+      <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 monkeykingBar"><img src=item\mkb.png><div class="name2">여의봉</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div></td>
+      <td><div class="pieces2 cost_2 javellin"><img src=item\ja.png></div></td>
+      <td><div class="pieces2 cost_3 demonEdge"><img src=item\de.png></div></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table style="display: inline;" >
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mom"><img src=item\mom.png><div class="name2">광기의 가면</div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 morbidMask"><img src=item\mm.png></div></td>
+      <td><div class="pieces2 cost_1 quarterstaff"><img src=item\qu.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 desolator"><img src=item\des.png><div class="name2">심판도</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 blightStone"><img src=item\bs.png></div></td>
+      <td><div class="pieces2 cost_2 mithrilHammer"><img src=item\mh.png></div></td>
+      <td><div class="pieces2 cost_2 mithrilHammer"><img src=item\mh.png></div></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 maelstrom"><img src=item\mae.png><div class="name2">혼돈의 망치</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 javellin"><img src=item\ja.png></div></td>
+      <td><div class="pieces2 cost_2 mithrilHammer"><img src=item\mh.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 mjollnir"><img src=item\mjo.png><div class="name2">묠니르</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
+      <td><div class="pieces2 cost_5 maelstrom"><img src=item\mae.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 assultCuirass"><img src=item\ac.png><div class="name2">돌격 흉갑</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
+      <td><div class="pieces2 cost_2 plateMail"><img src=item\pm.png></div></td>
+      <td><div class="pieces2 cost_1 chainMail"><img src=item\cm.png></div></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 moonShard"><img src=item\msh.png><div class="name2">달 조각</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
+      <td><div class="pieces2 cost_3 hyperStone"><img src=item\hyper.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <table style="display: inline;">
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 perseverance"><img src=item\per.png><div class="name2">인내의 반지</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 voidStone"><img src=item\vs.png></div></td>
+      <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 hoodOfDefiance"><img src=item\hod.png><div class="name2">도전의 두건</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 cloak"><img src=item\cl.png></div></td>
+      <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
+      <td><div class="pieces2 cost_1 RingofRegen"><img src=item\ror.png></div></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 vanguard"><img src=item\van.png><div class="name2">선봉 방패</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 stoutSheild"><img src=item\ss.png></div></td>
+      <td><div class="pieces2 cost_1 RingofHealth"><img src=item\roh.png></div></td>
+      <td><div class="pieces2 cost_2 vitalityBooster"><img src=item\vb.png></div></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 heartOfTarrasque"><img src=item\hot.png><div class="name2" style="font-size:12px">타라스크의 심장</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_4 reaver"><img src=item\rea.png></div></td>
+      <td><div class="pieces2 cost_2 vitalityBooster"><img src=item\vb.png></div></td>
+      <td><div class="pieces2 cost_2 vitalityBooster"><img src=item\vb.png></div></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 refresherOrb"><img src=item\ro.png><div class="name2">재생의 구슬</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
+      <td><div class="pieces2 cost_5 perseverance"><img src=item\per.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 scytheOfVyse"><img src=item\sov.png><div class="name2">바이스의 낫</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_1 voidStone"><img src=item\vs.png></div></td>
+      <td><div class="pieces2 cost_3 ultimageOrb"><img src=item\uo.png></div></td>
+      <td><div class="pieces2 cost_4 mysticStaff"><img src=item\ms.png></div></td>
+      <td></td>
+    </tr>
+  </table>
+  <table style="display: inline;">
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 kaya"><img src=item\kaya.png><div class="name2">카야</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_2 robeoftheMagi"><img src=item\rotm.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon1"><img src=item\d1.png><div class="name2">다곤 1</div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_1 crown"><img src=item\cr.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon2"><img src=item\d2.png><div class="name2">다곤 2</div></div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_5 dagon1"><img src=item\d1.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon3"><img src=item\d3.png><div class="name2">다곤 3</div></div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_5 dagon2"><img src=item\d2.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon4"><img src=item\d4.png><div class="name2">다곤 4</div></div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_5 dagon3"><img src=item\d3.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="speciesCombine">
+      <td><img class="info_icon" src="img\info.png"><div class="combin cost_5 dagon5"><img src=item\d5.png><div class="name2">다곤 5</div></div></div></td>
+      <td></td>
+      <td><div class="pieces2 cost_2 staffOfWizardry"><img src=item\sow.png></div></td>
+      <td><div class="pieces2 cost_5 dagon4"><img src=item\d4.png></div></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <!--기물 정보 -->
+  <div id="attackBlade_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Attack Blade(티어 1)</li>
+      <br>
+      <li>공격력 +10</li>
+    </ul>
+  </div>
+  <div id="blightStone_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Blight Stone(티어 1)</li>
+      <br>
+      <li>일반 공격 대상의 방어력 -3</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="chainMail_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Chain Mail(티어 1)</li>
+      <br>
+      <li>방어력 +5</li>
+    </ul>
+  </div>
+  <div id="cloak_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Cloak(티어 1)</li>
+      <br>
+      <li>마법 저항력 +15%</li>
+    </ul>
+  </div>
+  <div id="crown_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Crown(티어 1)</li>
+      <br>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관,다곤1,다곤2,다곤3,다곤4,다곤5)</li>
+    </ul>
+  </div>
+  <div id="morbidMask_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Morbid Mask(티어 1)</li>
+      <br>
+      <li>(일반 공격)흡혈 5%</li>
+    </ul>
+  </div>
+  <div id="quarterstaff_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Quarterstaff(티어 1)</li>
+      <br>
+      <li>공격력 +5, 공격속도 +10</li>
+    </ul>
+  </div>
+  <div id="RingofRegen_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>재생의 반지(티어 1)</li>
+      <br>
+      <li>체력 재생 +5</li>
+    </ul>
+  </div>
+  <div id="RingofHealth_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>체력 반지(티어 1)</li>
+      <br>
+      <li>체력 재생 +10</li>
+    </ul>
+  </div>
+  <div id="robeoftheMagi_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>법사의 로브(티어 1)</li>
+      <br>
+      <li>공격 대상의 마법 저항력 -20%</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="stoutSheild_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Stout Sheild(티어 1)</li>
+      <br>
+      <li>피해 10 방어</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(튼튼한 방패, 선봉 방패)</li>
+    </ul>
+  </div>
+  <div id="voidStone_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Voidstone(티어 1)</li>
+      <br>
+      <li>공격 시 마나 획득량 100%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(공허석, 신비의 지팡이, 바이스의 낫)</li>
+    </ul>
+  </div>
+  <div id="broadSword_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Broad Sword(티어 2)</li>
+      <br>
+      <li>공격력 +20</li>
+    </ul>
+  </div>
+  <div id="mithrilHammer_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Mithrill Hammer(티어 2)</li>
+      <br>
+      <li>공격력 +15</li>
+    </ul>
+  </div>
+  <div id="javellin_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Javelin(티어 2)</li>
+      <br>
+      <li>공격력 +15</li>
+    </ul>
+  </div>
+  <div id="plateMail_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Plate Mail(티어 2)</li>
+      <br>
+      <li>방어력 +10</li>
+    </ul>
+  </div>
+  <div id="staffOfWizardry_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Staff of Wizardry(티어 2)</li>
+      <br>
+      <li>일반 공격 대상의 마법 저항력 -30%</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="vitalityBooster_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Vitality Booster(티어 2)</li>
+      <br>
+      <li>체력 +250</li>
+    </ul>
+  </div>
+  <div id="demonEdge_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Demon Edge(티어 3)</li>
+      <br>
+      <li>공격력 +30</li>
+    </ul>
+  </div>
+  <div id="hyperStone_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>HyperStone(티어 3)</li>
+      <br>
+      <li>공격속도 +30</li>
+    </ul>
+  </div>
+  <div id="ultimageOrb_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Ultimate Orb(티어 3)</li>
+      <br>
+      <li>체력 +250, 피격 시 마나 획득량 +25%</li>
+      <li>동일 아이템 중복 적용 불가</li>
+    </ul>
+  </div>
+  <div id="mysticStaff_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Mystic Staff(티어 4)</li>
+      <br>
+      <li>공격 대상의 마법 저항력 -40%</li>
+      <li>공격 시 마나 획득량 +100%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(공허석, 신비의 지팡이, 바이스의 낫)</li>
+    </ul>
+  </div>
+  <div id="reaver_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Reaver(티어 4)</li>
+      <br>
+      <li>체력 +500, 체력 재생 +10</li>
+    </ul>
+  </div>
+  <div id="sacredRelic_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>Sacred Relic(티어 4)</li>
+      <br>
+      <li>공격력 +50</li>
+    </ul>
+  </div>
+  <div id="assultCuirass_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>돌격 흉갑(Assault Cuirass)</li>
+      <br>
+      <li>오라 : 1칸 내 아군 유닛에게 방어력 +10, 공격 속도 +15% 부여</li>
+      <li>오라 : 1칸 내 적군 유닛에게 방어력 -10, 공격 속도 -15% 부여</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="battleFury_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>전장격노(Battle Fury)</li>
+      <br>
+      <li>공격력 +30, 체력 재생 +10</li>
+      <li>근접 공격이 2칸 이내 영역에 30%의 순수 피해를 줌</li>
+      <li>(동일 아이템 중복 적용 가능)</li>
+      <li>공격 시 마나 획득량 +100%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(인내의 반지, 전장격노)</li>
+    </ul>
+  </div>
+  <div id="bladeMail_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>칼날 갑옷(Blade Mail)</li>
+      <br>
+      <li>방어력 +5, 공격력 +10</li>
+      <li>받은 피해의 20%를 공격자에게 되돌림</li>
+      <li>(동일 아이템 중복 적용 가능)</li>
+    </ul>
+  </div>
+  <div id="crystalys_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>수정검(Crystalys)</li>
+      <br>
+      <li>공격력 +15</li>
+      <li>매 공격시 20% 확률로 1.5배의 피해를 줌</li>
+    </ul>
+  </div>
+  <div id="daedalus_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다이달로스(Daedalus)</li>
+      <br>
+      <li>공격력 +40</li>
+      <li>매 공격시 10% 확률로 4배의 피해를 줌</li>
+    </ul>
+  </div>
+  <div id="dagon1_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다곤 1(Dagon 1)</li>
+      <br>
+      <li>자동 시전 : 무작위 적 하나에게 400의 피해를 줌.</li>
+      <li>쿨다운 : 15초</li>
+      <li>일반 공격 대상의 마법 저항력 -30%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관, 다곤 시리즈)</li>
+    </ul>
+  </div>
+  <div id="dagon2_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다곤 2(Dagon 2)</li>
+      <br>
+      <li>자동 시전 : 무작위 적 하나에게 500의 피해를 줌.</li>
+      <li>쿨다운 : 12초</li>
+      <li>일반 공격 대상의 마법 저항력 -60%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관, 다곤 시리즈)</li>
+    </ul>
+  </div>
+  <div id="dagon3_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다곤 3(Dagon 3)</li>
+      <br>
+      <li>자동 시전 : 무작위 적 하나에게 600의 피해를 줌.</li>
+      <li>쿨다운 : 9초</li>
+      <li>일반 공격 대상의 마법 저항력 -90%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관, 다곤 시리즈)</li>
+    </ul>
+  </div>
+  <div id="dagon4_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다곤 4(Dagon 4)</li>
+      <br>
+      <li>자동 시전 : 무작위 적 하나에게 700의 피해를 줌</li>
+      <li>쿨다운 : 6초</li>
+      <li>일반 공격 대상의 마법 저항력 -120%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관, 다곤 시리즈)</li>
+    </ul>
+  </div>
+  <div id="dagon5_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>다곤 5(Dagon 5)</li>
+      <br>
+      <li>자동 시전 : 무작위 적 하나에게 800의 피해를 줌.</li>
+      <li>쿨다운 : 3초</li>
+      <li>일반 공격 대상의 마법 저항력 -150%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(왕관, 다곤 시리즈)</li>
+    </ul>
+  </div>
+  <div id="desolator_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>심판도(Desolator)</li>
+      <br>
+      <li>공격력 +30</li>
+      <li>일반 공격 대상의 방어력 -15</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="heartOfTarrasque_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>타라스크의 심장(Heart of Tarrasque)</li>
+      <br>
+      <li>체력 +1200</li>
+      <li>1초마다 최대 체력의 1% 재생</li>
+    </ul>
+  </div>
+  <div id="hoodOfDefiance_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>도전의 두건(Hood of Defiance)</li>
+      <br>
+      <li>체력 재생 +15</li>
+      <li>마법 저항력 +30%</li>
+    </ul>
+  </div>
+  <div id="kaya_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>카야(Kaya)</li>
+      <br>
+      <li>일반 공격 대상의 마법 저항력 -100%</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="mom_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>광기의 가면(Mask of Madness)</li>
+      <br>
+      <li>흡혈 10%, 공격 속도 +40</li>
+      <li>착용자를 침묵시킴</li>
+      <br>
+      <li>착용해도 괜찮은 영웅</li>
+      <li>드로우 레인저, 항마사, 루나, 수정의 여인</li>
+      <li>유령 자객, 트롤 전쟁군주</li>
+    </ul>
+  </div>
+  <div id="maelstrom_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>혼돈의 망치(Maelstrom)</li>
+      <br>
+      <li>공격력 +25</li>
+      <li>공격 시 25% 확률로 최대 3명에게 100의 피해를 주는 번개 발사</li>
+      <li>(동일 아이템 중복 적용 가능)</li>
+    </ul>
+  </div>
+  <div id="mjollnir_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>묠니르(Mjollnir)</li>
+      <br>
+      <li>공격력 +50, 공격 속도 +30</li>
+      <li>공격 시 25% 확률로 최대 5명에게 200의 피해를 주는 번개 발사</li>
+      <li>(동일 아이템 중복 적용 가능)</li>
+    </ul>
+  </div>
+  <div id="monkeykingBar_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>여의봉(Monkey King Bar)</li>
+      <br>
+      <li>공격력 +80, 공격 속도 +10</li>
+      <li>공격이 회피를 무시하고 반드시 적중</li>
+    </ul>
+  </div>
+  <div id="moonShard_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>달 조각(Moon Shard)</li>
+      <br>
+      <li>공격 속도 +70</li>
+    </ul>
+  </div>
+  <div id="perseverance_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>인내의 반지(Perseverance)</li>
+      <br>
+      <li>체력 재생 +10</li>
+      <li>공격 시 마나 획득량 +100%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(전장격노, 인내의 반지)</li>
+    </ul>
+  </div>
+  <div id="refresherOrb_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>재생의 구슬(Refresher Orb)</li>
+      <br>
+      <li>체력 재생 +20</li>
+      <li>공격 시 마나 획득량 +200%</li>
+      <li>첫 번째 스킬 시전 시 해당 스킬 쿨다운 초기화</li>
+      <li>쿨다운 30초</li>
+      <li>(동일 아이템 중복 적용 불가)</li>
+    </ul>
+  </div>
+  <div id="scytheOfVyse_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>바이스의 낫(Scythe of Vyse)</li>
+      <br>
+      <li>최대 체력 +250</li>
+      <li>적 하나를 8초 동안 양으로 만든다.</li>
+      <li>공격 시 대상의 마법 저항력 -20%</li>
+      <li>공격 시 마나 획득량 +50%</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(공허석, 신비의 지팡이, 바이스의 낫)</li>
+    </ul>
+  </div>
+  <div id="vanguard_info" class="info">
+    <a class="b-close">x</a>
+    <ul class="info_list">
+      <li>선봉 방패(Vanguard)</li>
+      <br>
+      <li>최대 체력 +250</li>
+      <li>공격받을 때 50% 확률로 해당 피해 50만큼 감소</li>
+      <li>(동일 아이템 계열 중복 적용 불가)</li>
+      <li>(튼튼한 방패, 선봉 방패)</li>
+    </ul>
+  </div>
+  <div id="creepitem_popup" class="info2">
+    <a class="b-close">x</a>
+    <div class="info_explain" >
+      <p style="display: inline; float: left"><img src="img\creepround.PNG"/></p>
+      <p style="display: inline; float: left; position: relative;"><img src="img\creepitem.PNG"/></p>
+    </div>
+  </div>
+  <div id="creepround_popup" class="info2">
+    <a class="b-close">x</a>
+  </div>
+<div style="text-align: right;line-height: 80%"><span style="font-size: 10px;">원작자 : DC 체크메이트 갤러리 26, 수정자 : UJ, 메일 주소 : wnddpd01@naver.com</span><input type="button" style="font-size: 11px; height: 18px;" id="drink" value="후원하기"></div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
